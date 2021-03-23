@@ -21,7 +21,11 @@
 # Project Overview
 
 This project is my Milestone Two project with the Code Institute. This project augments the lessons from module 1 regarding HTML5 and CSS, and introduces JavaScript and jQuery.
-Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 6 years old. One item of fruit is displayed in the middle of the playing area (Image A), with three images underneath (Images A, B and C), one of which is always the same as Image A. Image A fades out after 15 or 10 seconds depending on the level selected, then the player must select the same item from the three images below. There are three levels, each slightly more difficult than the last level.
+Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 6 years old. One item of fruit is displayed in the middle of the playing area (Image A), with three images underneath (Images A, B and C), one of which is always the same as Image A ([see wireframe below](#play_detail)). Image A fades out after 15 or 10 seconds depending on the level selected, then the player must select the same item from the three images below. There are three levels, each slightly more difficult than the last level.
+
+<INSERT IMAGE>
+
+<VIEW LIVE SITE HERE>
 
 # User Experience Design
 
@@ -43,4 +47,95 @@ The images shown now contain 3 items of fruit, but the options below still diffe
 
 Designed as the hardest option, this will show a quantity of fruit Image A. The three options below will be of the same fruit, but different quantities so the user must count to select the correct answer, making it slightly more difficult. The target age for this level is 5.
 
-Although there are three levels of difficulty, each level is loosely based on age range, but it is not intended as a test to see what "level" the child is at. The game is for fun. The game can be played as many times as required.
+Although there are three levels of difficulty, each level is loosely based on age range, but it is not intended as a test to see what "level" the child is at. The game is for fun can be played as many times as required.
+
+### Target Audience
+
+The target audience is both parents / adults with young children, as they will connect to the game and if needed, help the child to play, and also children from approx. age 3 to 5. The game must therefore be colorful and appealing to the player, whilst to a degree, educational.
+
+## User Stories
+
+**Adult first-time site visitors**
+
+a. As an adult first-time visitor, I want to easily navigate the site and quickly start a game.
+
+b. As an adult first-time visitor, I want to understand how to play the game, so I can explain it to my child if necessary.
+
+c. As an adult first-time visitor, I want to feel confident that the game is free-to-play and age appropriate.
+
+d. As an adult first-time visitor, I want to understand what my child can gain from the game.
+
+e. As an adult first-time visitor, I want to know how to make the game more personal such as changing the level or some aspect of the site.
+
+**Child first-time visitor goals:**
+
+a. As a child first-time visitor, I want to quickly understand the rules of the game.
+
+b. As a child first-time visitor, I want to have fun playing an online game.
+
+c. As a child first-time visitor, I want to have some independence in play and feel the game is personally for me, by making my own choices.
+
+d. As a child first-time visitor, I want to feel good when I select the correct option.
+
+e. As a child first-time visitor, I want to understand that I got an answer wrong, but feel motivated to try again.
+
+f. As a child first-time visitor, I want to feel encouraged to try the next level.
+
+## Scope
+
+**Existing Features**
+
+Based on the User Stories from the target audience, the game contains the following features:
+
+ Feature  | Details  |
+|---|---|
+| Introduction pop-up modal | Basic information about the game and how to play. This is a pop-up modal which displays automatically on site opening, so there is only one file / page. This can always be opened via a link at the top of the playing page.  |
+| Footer | Game name, contact email address.  |
+| Images | Fun, colorful, age appropriate. The images of the fruit will be very simple, with nothing else included (i.e. not in a basket or on a tree).  |
+| About | Background information about why the game exists and it's purpose for education and fun. This will be displayed in the pop-up modal. |
+| Play | Large colorful buttons, to start and play the game, so it is clear to the player what they should do.  |
+| Favicon  | A constant reminder to the site user of the site they are on.  |
+| Color options | Color options to change the background so the player can personalise the game and have an appropriate level of control. |
+| Correct / Incorrect answer pop-up modal | Clear information, whether the player selected the correct or incorrect answer. |
+| Correct answer marker | Clear information that the player has answered the questions correctly which increments the score after every correct answer. There will not be a counter for incorrect answers. |
+
+**Future features**
+
+**Feature 1:** Animation. In the future I would like to show the Egg changing into a Caterpillar, then growing wings into a Butterfly and flying as the player moves through each level, to give more life to the game. At present I do not have the knowledge to create this feature.
+
+**Feature 2:** More levels. The game is very basic, but if I had more time would like to build on the levels and include more options in each level, then more levels, up to age 7.
+
+## Structure
+
+**Wireframes**
+
+**Welcome pop-up modal | Desktop**
+
+![wireframe_desktop_welcome](https://user-images.githubusercontent.com/76033080/112113000-88c73f00-8bb6-11eb-91fc-91856edfac3c.jpg)
+
+**Welcome pop-up modal | Tablet**
+
+![wireframe_tablet_welcome](https://user-images.githubusercontent.com/76033080/112112973-81079a80-8bb6-11eb-9f97-c59939025fc0.jpg)
+
+**Welcome pop-up modal | Mobile**
+
+![wireframe_mobile_welcome](https://user-images.githubusercontent.com/76033080/112112982-8533b800-8bb6-11eb-9a67-53fdb32f1190.jpg)
+
+**Play | Desktop**
+
+![wireframe_desktop_play](https://user-images.githubusercontent.com/76033080/112112761-3ab23b80-8bb6-11eb-8df1-3f96564a18ab.jpg)
+
+**Play | Tablet**
+
+![wireframe_tablet_play](https://user-images.githubusercontent.com/76033080/112113499-291d6380-8bb7-11eb-9143-451333fba4a7.jpg)
+
+**Play | Mobile**
+
+![wireframe_mobile_play](https://user-images.githubusercontent.com/76033080/112112752-38e87800-8bb6-11eb-87ea-600ec6e16abe.jpg)
+
+**Play area detail** <a name="play_detail"></a>
+
+![wireframe_images](https://user-images.githubusercontent.com/76033080/112113941-c11b4d00-8bb7-11eb-846c-654270c13d12.jpg)
+
+
+
