@@ -137,5 +137,32 @@ Based on the User Stories from the target audience, the game contains the follow
 
 ![wireframe_images](https://user-images.githubusercontent.com/76033080/112113941-c11b4d00-8bb7-11eb-846c-654270c13d12.jpg)
 
+The game will have one file only, with the pop-up modal displaying over it. The images will be changed depending on the level selected using JavaScript.
+
+**Workflow**
+
+**Main game workflow**
+
+![workflow](https://user-images.githubusercontent.com/76033080/112114572-81089a00-8bb8-11eb-9ea9-6cdb3f84dba7.jpg)
+
+**Level selection workflow**
+
+![level_workflow](https://user-images.githubusercontent.com/76033080/112114766-b8774680-8bb8-11eb-81f9-951cec1f8830.jpg)
+
+## Surface
+
+### Typography
+
+The site uses Rocknroll from Google fonts, with sans-serif as a back up if needed. It has been chosen as it looked "fun" and engaging to meet the requirements of the child target audience, but also easy to read for those just starting to learn.
+
+[Google Fonts - Rocknroll](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One)
+
+### Imagery
+
+[See separate Imagery file.]()
+
+
+
+
 
 
