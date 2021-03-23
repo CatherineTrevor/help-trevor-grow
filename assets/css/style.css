@@ -6,16 +6,17 @@ body {
     padding: 0;
     margin: 0;
     background-color: red;
-    color: darkslategray;    
+    color: darkslategray;   
 }
 
+/***Link at the top of the page to open the welcome pop-up modal***/
+
 #modal_link {
-    position: relative;
     width: 80%;
     text-align: right;
     margin: 0 auto;
-    height: 25px;
-    margin-top: 25px;
+    height: 30px;
+    margin-top: 10px;
 }
 
 #modal_link a {
@@ -26,4 +27,43 @@ body {
 
 #modal_link a:hover {
     color: white;
+}
+
+/***Main playing area container***/
+
+#play_area {
+    background-color: white;
+    width: 80%;
+    height: 85vh;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+/***Footer***/
+
+footer {
+    margin-bottom: 10px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+footer a {
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#bottom_left {
+    float: left;
+    font-size: 15px;
+}
+
+#bottom_right {
+    float: right;
+    font-size: 15px;
 }

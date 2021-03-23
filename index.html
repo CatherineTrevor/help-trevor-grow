@@ -13,51 +13,53 @@
 <!--main body background color to change when player selects relevant button-->
 <body>
 <!--link to open welcome pop-up modal-->
-        <div id="modal_link">
-            <a href=" ">How to play</a>
-        </div>
-<!--background color options-->
-        <div id="bg_color_buttons">
-            <p>
-                Pick the color background you want!
-            </p>
-            <button id="green" class="color_btn">GREEN</button>
-            <button id="purple" class="color_btn">PURPLE</button>
-            <button id="pink" class="color_btn">PINK</button>
-            <button id="red" class="color_btn">RED</button>
-            <button id="blue" class="color_btn">BLUE</button>
-            <button id="orange" class="color_btn">ORANGE</button>                                                            
-        </div>
-<!--game level options-->
-        <div id="level_select_buttons">
-            <p>
-                Pick the level you want to play!
-            </p>
-            <button id="egg_btn" class="level_btn">EGG</button>
-            <button id="caterpillar_btn" class="level_btn">CATERPILLAR</button>
-            <button id="butterfly_btn" class="level_btn">BUTTERFLY</button>                        
-        </div>
-<!--correct answer counter increments 1 after every correct answer selected-->
-        <div id="correct_answer_counter">
-            <p>
-                Correct answers:
-            </p>
-            <span>
-                0
-            </span>
-        </div>
-<!--main playing section-->
-        <div id="play_container">
-            <p>
-                Select the fruit and help Trevor grow from an egg, to a caterpillar and into a butterfly!
-            </p>
-            <div id="answer_image">
-                Image A: Answer image displayed here
+    <div id="modal_link">
+        <a href=" ">How to play</a>
+    </div>
+        <div id="play_area">
+        <!--background color options-->
+            <div id="bg_color_buttons">
+                <p>
+                    Pick the color background you want!
+                </p>
+                <button id="green" class="color_btn">GREEN</button>
+                <button id="purple" class="color_btn">PURPLE</button>
+                <button id="pink" class="color_btn">PINK</button>
+                <button id="red" class="color_btn">RED</button>
+                <button id="blue" class="color_btn">BLUE</button>
+                <button id="orange" class="color_btn">ORANGE</button>                                                            
             </div>
-            <div id="option_images_container">
-                <div class="option_image">Option Image A, B or C displayed here</div>
-                <div class="option_image">Option Image A, B or C displayed here</div>
-                <div class="option_image">Option Image A, B or C displayed here</div>                                
+<!--game level options-->
+            <div id="level_select_buttons">
+                <p>
+                    Pick the level you want to play!
+                </p>
+                <button id="egg_btn" class="level_btn">EGG</button>
+                <button id="caterpillar_btn" class="level_btn">CATERPILLAR</button>
+                <button id="butterfly_btn" class="level_btn">BUTTERFLY</button>                        
+            </div>
+<!--correct answer counter increments 1 after every correct answer selected-->
+            <div id="correct_answer_counter">
+                <p>
+                    Correct answers:
+                </p>
+                <span>
+                    0
+                </span>
+            </div>
+<!--main playing section-->
+            <div id="play_container">
+                <p>
+                    Select the fruit and help Trevor grow from an egg, to a caterpillar and into a butterfly!
+                </p>
+                <div id="answer_image">
+                    Image A: Answer image displayed here
+                </div>
+                <div id="option_images_container">
+                    <div class="option_image">Option Image A, B or C displayed here</div>
+                    <div class="option_image">Option Image A, B or C displayed here</div>
+                    <div class="option_image">Option Image A, B or C displayed here</div>                                
+                </div>
             </div>
         </div>
 <!--welcome pop-up modal. Displays on page open and when link is clicked-->
@@ -65,14 +67,16 @@
 
     </div>
 <!--footer with game name and email address-->
-        <footer>
-            <div>
-                Help Trevor Grow!
-            </div>
-            <div>
-                For questions or suggestions, send an email to: <a mailto="catfinlayson@icloud.com">catfinlayson@icloud.com</a>
-            </div>
-        </footer>
+<footer class="fixed-bottom">
+    <div>
+        <span id="bottom_left">
+            This game has been developed for educational purposes.
+        </span>
+        <span id="bottom_right">
+            For questions or suggestions, send an email to: <a href="mailto:catfinlayson@icloud.com">catfinlayson@icloud.com</a>
+        </span>
+    </div>
+</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
