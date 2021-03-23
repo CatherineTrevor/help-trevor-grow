@@ -32,22 +32,23 @@
                 </div>                    
             </div>
 <!--game level options-->
-            <div id="level_select_buttons">
-                <p>
-                    Pick the level you want to play!
-                </p>
-                <button id="egg_btn" class="level_btn">EGG</button>
-                <button id="caterpillar_btn" class="level_btn">CATERPILLAR</button>
-                <button id="butterfly_btn" class="level_btn">BUTTERFLY</button>                        
-            </div>
+            <div class="row">
+                <div id="level_select_buttons" class="col-lg-8">
+                    <span>
+                        Pick a level to play:
+                    </span>
+                    <button id="egg_btn" class="level_btn"></button>
+                    <button id="caterpillar_btn" class="level_btn"></button>
+                    <button id="butterfly_btn" class="level_btn"></button>                        
+                 </div>
 <!--correct answer counter increments 1 after every correct answer selected-->
-            <div id="correct_answer_counter">
-                <p>
-                    Correct answers:
-                </p>
-                <span>
-                    0
-                </span>
+                <div id="correct_answer_counter" class="col-lg-4">
+                        <span>
+                            Correct answers:
+                            <i class="far fa-star" id="star"></i>
+                            0
+                        </span>
+                </div>
             </div>
 <!--main playing section-->
             <div id="play_container">
