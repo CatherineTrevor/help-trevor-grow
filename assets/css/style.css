@@ -37,6 +37,7 @@ body {
     height: 85vh;
     margin: 0 auto;
     margin-top: 25px;
+    padding-left: 10px;
 }
 
 /***Footer***/
@@ -66,4 +67,80 @@ footer a:hover {
 #bottom_right {
     float: right;
     font-size: 15px;
+}
+
+/***Background color buttons***/
+
+#bg_color_buttons {
+    padding-top: 20px;
+}
+
+.color_btn {
+    border-radius: 8px;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 50px;
+    width: 120px;
+}
+
+#green_btn {
+    background-color: green;
+}
+
+#purple_btn {
+    background-color: purple;
+}
+
+#pink_btn {
+    background-color: pink;
+}
+
+#red_btn {
+    background-color: red;
+}
+
+#blue_btn {
+    background-color: blue;
+}
+
+#orange_btn {
+    background-color: orangered;
+}
+
+#green_btn:hover {
+    color: green;
+    border: 3px solid green;
+    background-color: white;    
+}
+
+#purple_btn:hover {
+    color: purple;
+    border: 3px solid purple;    
+    background-color: white;        
+}
+
+#pink_btn:hover {
+    color: pink;
+    border: 3px solid pink;    
+    background-color: white;        
+}
+
+#red_btn:hover {
+    color: red;
+    border: 3px solid red;    
+    background-color: white;        
+}
+
+#blue_btn:hover {
+    color: blue;
+    border: 3px solid blue;    
+    background-color: white;        
+}
+
+#orange_btn:hover {
+    color: orangered;
+    border: 3px solid orangered;    
+    background-color: white;        
 }
