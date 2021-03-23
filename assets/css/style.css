@@ -2,6 +2,28 @@
 
 body {
     font-family: 'RocknRoll One', sans-serif;
+    font-size: 20px;
     padding: 0;
     margin: 0;
+    background-color: red;
+    color: darkslategray;    
+}
+
+#modal_link {
+    position: relative;
+    width: 80%;
+    text-align: right;
+    margin: 0 auto;
+    height: 25px;
+    margin-top: 25px;
+}
+
+#modal_link a {
+    text-decoration: none;
+    font-size: 120%;   
+    color: darkslategray; 
+}
+
+#modal_link a:hover {
+    color: white;
 }
