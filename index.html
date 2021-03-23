@@ -68,8 +68,25 @@
             </div>
         </div>
 <!--welcome pop-up modal. Displays on page open and when link is clicked-->
-    <div id="welcome_modal">
-
+    <div id="welcome_modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Welcome to Transforming Trevor!</h1>
+            <br>
+            <p>
+                This free-to-play memory game is designed to help young children, between approx. 2 and 6 years old, learn and remember basic fruits
+                and numbers up to 10!
+            </p>
+            <div>
+            <img src="assets/images/egg.jpg" class="modal_image" id="egg">
+            <img src="assets/images/caterpillar.jpg" class="modal_image">
+            <img src="assets/images/butterfly.jpg" class="modal_image">      
+            </div>              
+            <br>
+            <p>
+                Feed Trevor and help him grow from an Egg, into a Caterpillar and then a Butterfly!
+            </p>                                      
+        </div>    
     </div>
 <!--footer with game name and email address-->
 <footer class="fixed-bottom">
@@ -86,5 +103,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/modal.js" defer></script>
 </body>
 </html>
