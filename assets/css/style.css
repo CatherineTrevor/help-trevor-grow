@@ -209,3 +209,45 @@ footer a:hover {
     font-size: 100px;
     color: purple;
 }
+
+/***Play area text***/
+
+#play_container p {
+    text-align: right;
+}
+
+/***Image A: answer***/
+
+#answer_image {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#answer_image img {
+    max-height: 100%;
+    max-width: 100%;    
+}
+
+/***Images A, B and C: options***/
+
+.option_image {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.option_image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
