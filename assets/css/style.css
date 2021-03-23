@@ -22,11 +22,11 @@ body {
 #modal_link a {
     text-decoration: none;
     font-size: 120%;   
-    color: darkslategray; 
+    color: white; 
 }
 
 #modal_link a:hover {
-    color: white;
+    color: darkslategray;
 }
 
 /***Main playing area container***/
@@ -46,16 +46,17 @@ footer {
     margin-bottom: 10px;
     margin-right: 8px;
     margin-left: 8px;
+    color: white;
 }
 
 footer a {
     text-decoration: none;
-    color: darkslategray;
+    color: white;
     font-weight: bold;
 }
 
 footer a:hover {
-    color: white;
+    color: darkslategray;
     text-decoration: none;
 }
 
