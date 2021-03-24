@@ -106,6 +106,12 @@ let answerImage = Math.floor(Math.random()*answers.length);
   document.getElementById("answer").src = answers[answerImage];
 };
 
+// If correct answer selected increment score in correct answer counter. Taken from CI challenge and modified
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById("correct_score").innerText);
+    document.getElementById("correct_score").innerText = ++oldScore;
+}
+
 // Check answer. When player clicks on an answer image, compare if it is the same as the image in result box. Base code on CI challenge and modified
 //https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class - understand how to target all elements will class 'option_image'
 
@@ -124,16 +130,16 @@ function checkAnswer (event) {
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
         incrementScore(); // increment correct score
         correctAnswerModal(); // well done message        
-        shuffleImagesEgg(); // reshuffle three images
-        displayImage(); // restart timer and display image
-        displayAnswer(); // make sure answer is the same as image A, B or C
       } else if (btnClick !== answerImage) {
         incorrectAnswerModal();
       }
 }
 
-// If correct increment correct answer counter. Taken from CI challenge and modified
-function incrementScore() {
-    let oldScore = parseInt(document.getElementById("correct_score").innerText);
-    document.getElementById("correct_score").innerText = ++oldScore;
-}
+// Once playing game, image to fade after the correct modal has been selected
+let modalBtn = document.getElementById('modal_close_button');
+modalBtn.addEventListener('click', () => {
+    displayImage(); // restart timer and display image
+    shuffleImagesEgg(); // reshuffle three images
+    displayAnswer(); // make sure answer is the same as image A, B or C
+    document.getElementById("countdown_timer").innerHTML = "5";
+});
