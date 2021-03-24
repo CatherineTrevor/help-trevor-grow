@@ -69,7 +69,7 @@
         </div>
 <!--welcome pop-up modal. Displays on page open and when link is clicked-->
     <div id="welcome_modal" class="modal">
-        <div class="modal-content">
+        <div class="modal_content">
             <span class="close">&times;</span>
             <h1>Welcome to Help Trevor Grow!</h1>
             <br>
@@ -78,7 +78,7 @@
                 and numbers up to 10!
             </p>
             <div>
-            <img src="assets/images/egg.jpg" class="modal_image" id="egg">
+            <img src="assets/images/egg.jpg" class="modal_image egg">
             <img src="assets/images/caterpillar.jpg" class="modal_image">
             <img src="assets/images/butterfly.jpg" class="modal_image">      
             </div>              
@@ -101,6 +101,22 @@
             </p>                                          
         </div>    
     </div>
+<!--Correct pop-up modal for correct answer-->
+    <div id="correctAnswerModal" class="modal">
+        <div class="modal_content">
+            <span class="close" id="modal_close_button">&times;</span><!--target close on correct pop-up modal to display new fruit image after fade out-->
+            <h1>Excellent job, well done!</h1>
+            <br>
+            <p>
+                You picked the correct fruit! Keep going - he's one hungry insect!
+            </p>
+            <div>
+                <img src="assets/images/egg.jpg" class="modal_image egg">
+                <img src="assets/images/caterpillar.jpg" class="modal_image">
+                <img src="assets/images/butterfly.jpg" class="modal_image"> 
+            </div>            
+        </div>                                    
+    </div>    
 <!--footer with game name and email address-->
 <footer class="fixed-bottom">
     <div>

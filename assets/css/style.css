@@ -276,7 +276,6 @@ footer a:hover {
     text-align: center;
 }
 
-
 .option_image img {
     max-height: 100%;
     max-width: 100%;
@@ -299,7 +298,7 @@ footer a:hover {
 }
 
 /*** Modal Content ***/
-.modal-content {
+.modal_content {
   background-color: white;
   color: darkslategray;
   margin: auto;
@@ -312,12 +311,13 @@ footer a:hover {
 
 /* Style images in modal */
 .modal_image {
-    height: 200px;
+    height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
     display: inline-block; 
 }
-#egg {
+
+.egg {
     height: 100px;
 }
 

@@ -122,7 +122,8 @@ function checkAnswer (event) {
     btnClick = event.target.src;
 
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
-        incrementScore(); // well done message
+        incrementScore(); // increment correct score
+        correctAnswerModal(); // well done message        
         shuffleImagesEgg(); // reshuffle three images
         displayImage(); // restart timer and display image
         displayAnswer(); // make sure answer is the same as image A, B or C
