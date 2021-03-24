@@ -19,14 +19,15 @@ body {
     margin-top: 10px;
 }
 
-#modal_link a {
+#modal_link p {
     text-decoration: none;
     font-size: 120%;   
     color: white; 
 }
 
-#modal_link a:hover {
+#modal_link p:hover {
     color: darkslategray;
+    cursor: pointer;
 }
 
 /***Main playing area container***/

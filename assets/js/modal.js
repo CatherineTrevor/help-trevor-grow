@@ -8,6 +8,13 @@ window.onload = (function() {
   modal.style.display = "block";
 });
 
+// When How to play is clicked display welcome modal
+var playBtn = document.getElementById('modal_link');
+
+playBtn.onclick = function() {
+  modal.style.display = "block";
+};
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
