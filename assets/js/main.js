@@ -29,6 +29,16 @@ function changeBgColor() {
     }
 }
 
+// Onclick of new level clear correct score counter
+let level = document.querySelectorAll('.level_btn');
+for (let i = 0; i < level.length; i++){
+    level[i].addEventListener('click', resetScore);
+}
+
+function resetScore() {
+    document.getElementById("correct_score").innerHTML = "0";
+}
+
 // Results image to take 15 seconds to fade out from when welcome modal is closed
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
 /*$(".close").click(function(){ // when 'close' button clicked on welcome pop-up modal
