@@ -10,16 +10,22 @@ function changeBgColor() {
     btnSelect = event.target.innerHTML;
       if (btnSelect == "GREEN") {
         document.getElementById("bg_color").style.backgroundColor = "green";
+        document.getElementById("star").style.color = "green";
     } if (btnSelect == "PURPLE") {
           document.getElementById("bg_color").style.backgroundColor = "purple";
+        document.getElementById("star").style.color = "purple";          
     } if (btnSelect == "PINK") {
           document.getElementById("bg_color").style.backgroundColor = "pink";
+        document.getElementById("star").style.color = "pink";          
     } if (btnSelect == "RED") {
            document.getElementById('bg_color').style.backgroundColor = "red";  
+        document.getElementById("star").style.color = "red";           
     } if (btnSelect == "BLUE") {
             document.getElementById('bg_color').style.backgroundColor = "blue";
+        document.getElementById("star").style.color = "blue";            
     } if (btnSelect == "ORANGE") {
            document.getElementById('bg_color').style.backgroundColor = "orangered"; 
+        document.getElementById("star").style.color = "orangered"; 
     }
 }
 
