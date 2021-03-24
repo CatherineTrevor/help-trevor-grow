@@ -122,11 +122,17 @@ function checkAnswer (event) {
     btnClick = event.target.src;
 
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
-        alert('correct answer!'); // well done message
+        incrementScore(); // well done message
         shuffleImagesEgg(); // reshuffle three images
         displayImage(); // restart timer and display image
         displayAnswer(); // make sure answer is the same as image A, B or C
       } else if (btnClick !== answerImage) {
         alert("that's not right, try again...");
       }
+}
+
+// If correct increment correct answer counter. Taken from CI challenge and modified
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById("correct_score").innerText);
+    document.getElementById("correct_score").innerText = ++oldScore;
 }
