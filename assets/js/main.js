@@ -128,7 +128,7 @@ function checkAnswer (event) {
         displayImage(); // restart timer and display image
         displayAnswer(); // make sure answer is the same as image A, B or C
       } else if (btnClick !== answerImage) {
-        alert("that's not right, try again...");
+        incorrectAnswerModal();
       }
 }
 
