@@ -161,8 +161,59 @@ The site uses Rocknroll from Google fonts, with sans-serif as a back up if neede
 
 [See separate Imagery file.](IMAGERY.md)
 
+### Color Scheme
 
+The site uses the following standard HTML colors:
 
+**Header and footer text:** white
+
+**Main play area and pop-up modal text:** darkslategray
+
+**Background colors:** red; green; purple; pink; orangered; blue
+
+### Favicon
+
+## Technologies Used
+
+This project uses the following languages:
+
+HTML 5
+CSS
+JavaScript
+jQuery
+
+This project was created on [GitHub](http://www.github.com/).
+
+This project uses the following libraries and frameworks:
+
+* [Balsamiq](http://www.balsamiq.com/) - used to create all wireframes
+* [Bootstrap](http://bootstrap.com/) - Bootstrap was used for part of grid structure and was heavily modified to meet the needs of the project
+* [Google Fonts](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One) - RocknRoll
+* [Font Awesome](http://www.fontawsome.com/) - used for the [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter; [sad face](https://fontawesome.com/icons/frown?style=regular) 
+for the incorrect answer pop-up modal
+
+Tiny PNG - used to resize images to reduce site loading time
+Free Formatter HTML - for HTML code formatting
+Free Formatter CSS - to beautify CSS code
+Grammarly (Example) - the free service to double check grammar and spelling
+Monday.com - used for project/task management
+Am I responsive - supplied the responsive image for the top of README.md
+
+## Testing
+
+### Issues
+
+## Deployment
+
+## Credits
+
+* Tutors at Code Institute: help with how to store used images in an array to ensure they didn't duplicate.
+* YouTube tutorials on JavaScript, including 
+* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp)
+* [Stackoverflow](https://www.stackoverflow.com/) - [countdown timer](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown); 
+[target elements](https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class); 
+[find a clicked button value](https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div)
+* MDN - JavaScript help
 
 
 
