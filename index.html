@@ -67,44 +67,68 @@
                 </div>
             </div>
         </div>
-<!--welcome pop-up modal. Displays on page open and when link is clicked-->
+<!--Welcome pop-up modal. Displays on page open and when link is clicked-->
     <div id="welcome_modal" class="modal">
         <div class="modal_content">
             <span class="close">&times;</span>
+            <br>
+            <br>
             <h1>Welcome to Help Trevor Grow!</h1>
             <br>
             <p>
-                This free-to-play memory game is designed to help young children, between approx. 3 and 5 years old, learn and remember basic fruits
-                and numbers up to 10!
+                This is Trevor! He needs your help to grow from an Egg, into a Caterpillar and then a Butterfly!
             </p>
-            <div>
-            <img src="assets/images/egg.jpg" class="modal_image egg">
-            <img src="assets/images/caterpillar.jpg" class="modal_image">
-            <img src="assets/images/butterfly.jpg" class="modal_image">      
-            </div>              
             <br>
+            <div class="modal_image_div">
+                <img src="assets/images/egg.jpg" class="modal_image egg">
+                <img src="assets/images/caterpillar.jpg" class="modal_image">
+                <img src="assets/images/butterfly.jpg" class="modal_image">      
+            </div>  
             <p>
-                Pick the correct fruit to feed Trevor and help him grow from an Egg, into a Caterpillar and then a Butterfly!
+                Pick the correct fruit to feed Trevor and help him grow, but you need to be quick as the fruit will disappear!
             </p> 
-            <p>
+            <br>
+            <div class="intro_text">
+                <h2>
+                    About the game
+                </h2>
+                <p>
+                    This free-to-play memory game is designed to help young children, between approx. 3 and 5 years old, learn and remember basic fruits
+                    and numbers up to 10.
+                </p>
+                <p>
                     The game has three levels: 
-                <p>
-                    Egg - the simplest level, designed for approx. 3 years old.
                 </p>
                 <p>
-                    Caterpillar - a bit harder, designed for approx 4 years old.
+                    <strong>Egg</strong> - the simplest level, designed for approx. 3 years old.
                 </p>
                 <p>
-                    Butterfly - the hardest level, designed for approx. 5 years old. 
+                    <strong>Caterpillar</strong> - a bit harder, designed for approx 4 years old.
                 </p>
-                These ages are just a guidance on the level of difficult involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
-            </p>                                          
+                 <p>
+                    <strong>Butterfly</strong> - the hardest level, designed for approx. 5 years old. 
+                </p>
+                <br>
+                <p>
+                    These ages are just a guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
+                </p> 
+                <p>
+                    The fruit that Trevor wants to eat is shown, with three options below. Select the correct option to gain a point and start a new turn. Be careful though, as the fruit may disappear...
+                </p> 
+                <p>
+                    From the playing page, select the level to play, as well as a color theme for the page!
+                </p> 
+                <h2 id="play">
+                    Ready? Let's play!
+                </h2>                                
+            </div>                                
         </div>    
     </div>
 <!--Correct pop-up modal for correct answer-->
     <div id="correctAnswerModal" class="modal">
         <div class="modal_content">
             <span class="close" id="modal_close_button">&times;</span><!--target close on correct pop-up modal to display new fruit image after fade out-->
+            <br>
             <h1>Excellent job, well done!</h1>
             <br>
             <p>
@@ -121,6 +145,7 @@
     <div id="incorrectAnswerModal" class="modal">
         <div class="modal_content">
             <span class="close">&times;</span>
+            <br>
             <h1>Ah, sadly that's not the right answer</h1>
             <br>
             <i class="far fa-frown" id="frown"></i>               

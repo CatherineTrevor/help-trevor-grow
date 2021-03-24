@@ -25,10 +25,15 @@ function changeBgColor() {
 
 // Results image to take 15 seconds to fade out from when welcome modal is closed
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
-$(".close").click(function(){ // when 'close' button clicked on welcome pop-up modal
+/*$(".close").click(function(){ // when 'close' button clicked on welcome pop-up modal
   $("#answer").fadeTo(5000, 0.01);  // fade opacity so div box doesn't disappear but image does after 15 seconds
-  timer();
-});  
+  timer(); // start countdown timer
+});  */
+
+$('#modal_close_button').click(function(){ // when 'close' button clicked on correct answer pop-up modal
+  $("#answer").fadeTo('fast', 1);  // fade opacity so div box doesn't disappear but image does after 15 seconds
+  timer(); // start countdown timer
+});
 
 function displayImage() {
      $("#answer_image").fadeTo('fast', 1); // change opacity back to 1 so new image displays
@@ -49,6 +54,11 @@ function timer() {
     } 
     timeleft -= 1;
     }, 1000);
+
+    $("#modal_close_button").click(function(){ // when correct answer modal is closed clear timer
+        clearInterval(downloadTimer);
+        document.getElementById("countdown_timer").innerHTML = "5";
+    });
 };
 
 // Randomize and display images A, B and C for Egg level
