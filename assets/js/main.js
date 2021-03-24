@@ -42,9 +42,9 @@ $('#modal_close_button').click(function(){ // when 'close' button clicked on cor
 });
 
 function displayImage() {
-     $("#answer_image").fadeTo('fast', 1); // change opacity back to 1 so new image displays
+     $("#answer").fadeTo('fast', 1); // change opacity back to 1 so new image displays
      timer(); // recall countdown timer function on image reload
-     $("#answer_image").fadeTo(5000, 0.01); // fade opacity so div box doesn't disappear but image does after 15 seconds
+     $("#answer").fadeTo(5000, 0.01); // fade opacity so div box doesn't disappear but image does after 15 seconds
 };
 
 // Countdown timer over results image to countdown from 15 as the image disappers
@@ -61,7 +61,7 @@ function timer() {
     timeleft -= 1;
     }, 1000);
 
-    $("#modal_close_button").click(function(){ // when correct answer modal is closed clear timer
+   $("#modal_close_button").click(function(){ // when correct answer modal is closed clear timer
         clearInterval(downloadTimer);
         document.getElementById("countdown_timer").innerHTML = "5";
     });
