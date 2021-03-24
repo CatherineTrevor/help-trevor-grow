@@ -274,6 +274,12 @@ footer a:hover {
     text-align: center;
 }
 
+/** help with transform on hover https://www.w3schools.com/howto/howto_css_zoom_hover.asp***/
+.option_image img:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
 .option_image img {
     max-height: 100%;
     max-width: 100%;
