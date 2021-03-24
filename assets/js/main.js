@@ -23,9 +23,9 @@ function changeBgColor() {
     }
 }
 
-// Results image to take 15 seconds to fade out on initial image load
+// Results image to take 15 seconds to fade out from when welcome modal is closed
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
-$("#answer").ready(function(){ // on initial results image loading
+$(".close").click(function(){ // when 'close' button clicked on welcome pop-up modal
   $("#answer").fadeTo(5000, 0.01);  // fade opacity so div box doesn't disappear but image does after 15 seconds
   timer();
 });  
