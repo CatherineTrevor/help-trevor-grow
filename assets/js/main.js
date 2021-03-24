@@ -103,5 +103,30 @@ let answers = [
  
 // generate random number and assign to results image      
 let answerImage = Math.floor(Math.random()*answers.length); 
-  document.getElementById("answer").src = answers[answerImage];  
+  document.getElementById("answer").src = answers[answerImage];
 };
+
+// Check answer. When player clicks on an answer image, compare if it is the same as the image in result box. Base code on CI challenge and modified
+//https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class - understand how to target all elements will class 'option_image'
+
+// target all three potential option boxes with class option_image
+let imageSelect = document.querySelectorAll('.option_image'); 
+for (let i = 0 ; i < imageSelect.length ; i++){
+  imageSelect[i].addEventListener('click', checkAnswer); // check which image was selected
+}
+
+// https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div - how to find the source of the clicked button
+function checkAnswer (event) {
+
+    let answerImage = document.getElementById('answer').src;
+    btnClick = event.target.src;
+
+    if (btnClick == answerImage) { // is the image clicked on is the same as the results image
+        alert('correct answer!'); // well done message
+        shuffleImagesEgg(); // reshuffle three images
+        displayImage(); // restart timer and display image
+        displayAnswer(); // make sure answer is the same as image A, B or C
+      } else if (btnClick !== answerImage) {
+        alert("that's not right, try again...");
+      }
+}
