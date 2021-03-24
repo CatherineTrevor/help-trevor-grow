@@ -90,3 +90,18 @@ if (answer1 === answer2) {
 } if (answer2 === answer3) {
     shuffleImagesEgg();
 }};
+
+// Ensure result images is always a randomly selected image from the three options so the answer is always available
+function displayAnswer() {
+
+// array to store randomly selected images
+let answers = [
+  document.getElementById("imageA").src, // option 1 (left)
+  document.getElementById("imageB").src, // option 2 (center)
+  document.getElementById("imageC").src, /// option 3 (right)
+      ]; 
+ 
+// generate random number and assign to results image      
+let answerImage = Math.floor(Math.random()*answers.length); 
+  document.getElementById("answer").src = answers[answerImage];  
+};
