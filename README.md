@@ -191,6 +191,7 @@ This project uses the following libraries and frameworks:
 * [Google Fonts](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One) - RocknRoll
 * [Font Awesome](http://www.fontawsome.com/) - used for the [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter; [sad face](https://fontawesome.com/icons/frown?style=regular) 
 for the incorrect answer pop-up modal
+* * [BEM](http://getbem.com/introduction/)
 
 Tiny PNG - used to resize images to reduce site loading time
 Free Formatter HTML - for HTML code formatting
@@ -214,6 +215,7 @@ Am I responsive - supplied the responsive image for the top of README.md
 [target elements](https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class); 
 [find a clicked button value](https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div)
 * MDN - JavaScript help
-
+* [Coding Sight](https://codingsight.com/git-branching-naming-convention-best-practices/) - help in understanding standard convention for branch naming in Github
+* [The Coding Train](https://www.youtube.com/watch?v=oPpnCh7InLY) - YouTube video to help understand branching in Github
 
 

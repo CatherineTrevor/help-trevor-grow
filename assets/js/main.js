@@ -38,7 +38,6 @@ for (let i = 0; i < level.length; i++){
 function resetScore() {
     document.getElementById("correct_score").innerHTML = "0";
 }
-
 // Results image to take 15 seconds to fade out from when welcome modal is closed
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
 /*$(".close").click(function(){ // when 'close' button clicked on welcome pop-up modal
@@ -77,7 +76,7 @@ function timer() {
     });
 };
 
-// Ensure result images is always a randomly selected image from the three options so the answer is always available
+// Ensure answer image is randomly selected from the three options so the answer is always available
 function displayAnswer() {
 
 // array to store randomly selected images
@@ -90,6 +89,22 @@ let answers = [
 // generate random number and assign to results image      
 let answerImage = Math.floor(Math.random()*answers.length); 
   document.getElementById("answer").src = answers[answerImage];
+  timer(); // recall countdown timer function on image reload
+  imageFadeOut();
+ /* $("#answer").fadeTo(5000, 0.01); // fade opacity so div box doesn't disappear but image does after 15 seconds*/
+};
+
+// change opacity to 0.1 over 15 seconds to fade out
+function imageFadeOut() {
+     $("#answer").fadeOut(5000, 0.1); 
+     /*   $("#modal_close_button").click(function(){ // when correct answer modal is closed stop function
+            console.log("stop functon");
+});*/
+};
+
+// change opacity back to 1 so new image displays
+function imageFadeIn() {
+     $("#answer").fadeTo('fast', 1); 
 };
 
 // If correct answer selected increment score in correct answer counter. Taken from CI challenge and modified
@@ -121,11 +136,24 @@ function checkAnswer (event) {
       }
 }
 
-// Once playing game, image to fade after the correct modal has been selected
+// Once playing game, image to fade after the correct modal has been closed
 let modalBtn = document.getElementById('modal_close_button');
 modalBtn.addEventListener('click', () => {
-    displayImage(); // restart timer and display image
+    imageFadeIn(); // answer image fade back to opacity 1
     shuffleImagesEgg(); // reshuffle three images
     displayAnswer(); // make sure answer is the same as image A, B or C
     document.getElementById("countdown_timer").innerHTML = "5";
 });
+
+// Results image to take 15 seconds to fade out from when welcome modal is closed
+// https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
+$("#welcome_close").click(function(){ // when 'close' button clicked on welcome pop-up modal
+  $("#answer").fadeTo(5000, 0.01);  // fade opacity so div box doesn't disappear but image does after 15 seconds
+  timer(); // start countdown timer
+});
+
+$('#modal_close_button').click(function(){ // when 'close' button clicked on correct answer pop-up modal
+  timer(); // start countdown timer
+});
+
+
