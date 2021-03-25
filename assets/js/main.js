@@ -32,7 +32,7 @@ function changeBgColor() {
 // Results image to take 5 seconds to fade out
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
 // https://stackoverflow.com/questions/2510115/jquery-can-i-call-delay-between-addclass-and-such - help to delay addClass to images
-$(".level_icon").click(function(){ // when egg button clicked 
+$(".game_level_icon").click(function(){ // when egg button clicked 
   $("#answer").fadeTo(5000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
     $('.option_image').addClass('show');
     next(); 
@@ -80,9 +80,23 @@ function checkAnswer (event) {
         correctAnswerAlert(); // well done message
         shuffleImagesEgg();      
         displayAnswer();
+        checkScore();
       } else if (btnClick !== answerImage) {
         incorrectAnswerAlert();
       }
+}
+
+function checkScore () {
+    let score = document.getElementById('correct_score').innerHTML;
+    console.log(score);
+    if (score == 3) {
+        swal({
+            title: "You reached 10 - Great job!",
+            text: "Well done for completing this level!",
+            text: "Would you like to move onto the next level?",
+            buttons: ["No, I'd like to play this level again", "Yes! Let's go!"],
+});
+    }
 }
 
 function correctAnswerAlert (event) {
@@ -100,7 +114,6 @@ function incorrectAnswerAlert (event) {
         icon: "error",
         button: "Try again",
 });};
-
 
 /**Temp not in use ***/
 
