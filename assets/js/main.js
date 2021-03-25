@@ -29,52 +29,15 @@ function changeBgColor() {
     }
 }
 
-// Onclick of new level clear correct score counter
-let level = document.querySelectorAll('.level_btn');
-for (let i = 0; i < level.length; i++){
-    level[i].addEventListener('click', resetScore);
-}
-
-function resetScore() {
-    document.getElementById("correct_score").innerHTML = "0";
-}
-// Results image to take 15 seconds to fade out from when welcome modal is closed
+// Results image to take 5 seconds to fade out
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
-/*$(".close").click(function(){ // when 'close' button clicked on welcome pop-up modal
-  $("#answer").fadeTo(5000, 0.01);  // fade opacity so div box doesn't disappear but image does after 15 seconds
-  timer(); // start countdown timer
-});  */
-
-$('#modal_close_button').click(function(){ // when 'close' button clicked on correct answer pop-up modal
-  $("#answer").fadeTo('fast', 1);  // fade opacity so div box doesn't disappear but image does after 15 seconds
-  timer(); // start countdown timer
+// https://stackoverflow.com/questions/2510115/jquery-can-i-call-delay-between-addclass-and-such - help to delay addClass to images
+$(".level_icon").click(function(){ // when egg button clicked 
+  $("#answer").fadeTo(5000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+    $('.option_image').addClass('show');
+    next(); 
+  });  
 });
-
-function displayImage() {
-     $("#answer").fadeTo('fast', 1); // change opacity back to 1 so new image displays
-     timer(); // recall countdown timer function on image reload
-     $("#answer").fadeTo(5000, 0.01); // fade opacity so div box doesn't disappear but image does after 15 seconds
-};
-
-// Countdown timer over results image to countdown from 15 as the image disappers
-// https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown - code copied and modified
-function timer() {
-    let timeleft = 4;
-    let downloadTimer = setInterval(function(){
-    if(timeleft <= 0){
-        clearInterval(downloadTimer);
-        document.getElementById("countdown_timer").innerHTML = "Pick the fruit to feed Trevor!";
-    } else {
-        document.getElementById("countdown_timer").innerHTML = timeleft;
-    } 
-    timeleft -= 1;
-    }, 1000);
-
-   $("#modal_close_button").click(function(){ // when correct answer modal is closed clear timer
-        clearInterval(downloadTimer);
-        document.getElementById("countdown_timer").innerHTML = "5";
-    });
-};
 
 // Ensure answer image is randomly selected from the three options so the answer is always available
 function displayAnswer() {
@@ -86,25 +49,9 @@ let answers = [
   document.getElementById("imageC").src, /// option 3 (right)
       ]; 
  
-// generate random number and assign to results image      
+// generate random number and assign to answer image      
 let answerImage = Math.floor(Math.random()*answers.length); 
   document.getElementById("answer").src = answers[answerImage];
-  timer(); // recall countdown timer function on image reload
-  imageFadeOut();
- /* $("#answer").fadeTo(5000, 0.01); // fade opacity so div box doesn't disappear but image does after 15 seconds*/
-};
-
-// change opacity to 0.1 over 15 seconds to fade out
-function imageFadeOut() {
-     $("#answer").fadeOut(5000, 0.1); 
-     /*   $("#modal_close_button").click(function(){ // when correct answer modal is closed stop function
-            console.log("stop functon");
-});*/
-};
-
-// change opacity back to 1 so new image displays
-function imageFadeIn() {
-     $("#answer").fadeTo('fast', 1); 
 };
 
 // If correct answer selected increment score in correct answer counter. Taken from CI challenge and modified
@@ -130,31 +77,13 @@ function checkAnswer (event) {
 
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
         incrementScore(); // increment correct score
-        correctAnswerAlert(); // well done message        
+        correctAnswerAlert(); // well done message
+        shuffleImagesEgg();      
+        displayAnswer();
       } else if (btnClick !== answerImage) {
         incorrectAnswerAlert();
       }
 }
-
-// Once playing game, image to fade after the correct modal has been closed
-let modalBtn = document.getElementById('modal_close_button');
-modalBtn.addEventListener('click', () => {
-    imageFadeIn(); // answer image fade back to opacity 1
-    shuffleImagesEgg(); // reshuffle three images
-    displayAnswer(); // make sure answer is the same as image A, B or C
-    document.getElementById("countdown_timer").innerHTML = "5";
-});
-
-// Results image to take 15 seconds to fade out from when welcome modal is closed
-// https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
-$("#welcome_close").click(function(){ // when 'close' button clicked on welcome pop-up modal
-  $("#answer").fadeTo(5000, 0.01);  // fade opacity so div box doesn't disappear but image does after 15 seconds
-  timer(); // start countdown timer
-});
-
-$('#modal_close_button').click(function(){ // when 'close' button clicked on correct answer pop-up modal
-  timer(); // start countdown timer
-});
 
 function correctAnswerAlert (event) {
     swal({
@@ -162,8 +91,7 @@ function correctAnswerAlert (event) {
         text: "You got the right answer, well done!",
         icon: "success",
         button: "Keep playing",
-});
-}
+});};
 
 function incorrectAnswerAlert (event) {
     swal({
@@ -171,6 +99,17 @@ function incorrectAnswerAlert (event) {
         text: "Try again - Trevor knows you will get it right!",
         icon: "error",
         button: "Try again",
-});
+});};
+
+
+/**Temp not in use ***/
+
+// Onclick of new level clear correct score counter
+/*let level = document.querySelectorAll('.level_btn');
+for (let i = 0; i < level.length; i++){
+    level[i].addEventListener('click', resetScore);
 }
 
+function resetScore() {
+    document.getElementById("correct_score").innerHTML = "0";
+}*/
