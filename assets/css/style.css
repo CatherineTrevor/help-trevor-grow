@@ -11,21 +11,16 @@ body {
 
 /***Top navigation***/
 
-.modal_link {
-    width: 80%;
-    text-align: right;
-    margin: 0 auto;
-    height: 20px;
+.nav {
     margin-top: 10px;
 }
-
-.modal_link p {
+.nav-link {
     text-decoration: none;
     font-size: 120%;   
     color: white; 
 }
 
-.modal_link p:hover {
+.nav-link:hover {
     color: darkslategray;
     cursor: pointer;
 }
@@ -67,7 +62,7 @@ footer a:hover {
 .play_area {
     background-color: white;
     width: 80%;
-    height: 90vh;
+    height: 80vh;
     margin: 0 auto;
     margin-top: 25px;
     padding-left: 10px;
