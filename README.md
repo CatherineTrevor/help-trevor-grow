@@ -191,7 +191,8 @@ This project uses the following libraries and frameworks:
 * [Google Fonts](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One) - RocknRoll
 * [Font Awesome](http://www.fontawsome.com/) - used for the [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter; [sad face](https://fontawesome.com/icons/frown?style=regular) 
 for the incorrect answer pop-up modal
-* * [BEM](http://getbem.com/introduction/)
+* [BEM](http://getbem.com/introduction/)
+* [Sweet Alert](https://sweetalert.js.org/) - used to replace the pop-up modal for correct and incorrect answers
 
 Tiny PNG - used to resize images to reduce site loading time
 Free Formatter HTML - for HTML code formatting
