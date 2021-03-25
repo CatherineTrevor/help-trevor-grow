@@ -13,10 +13,10 @@
 <!--main body background color to change when player selects relevant button-->
 <body id="bg_color"> 
 <!--link to open welcome pop-up modal-->
-    <div id="modal_link">
+    <div class="modal_link">
         <p>How to play</p>
     </div>
-    <div id="play_area">
+    <div class="play_area">
 <!--background color options-->
         <div>
             <h2 class="text_center page_title">
@@ -42,11 +42,11 @@
                 <p>
                     Current playing level:
                 </p>
-                    <div class="level_icon egg"></div>  
+                    <div class="game_level_icon egg"></div>  
                 </div>                   
 <!--correct answer counter increments 1 after every correct answer selected-->
-                <div id="correct_answer_counter" class="col-4">
-                    <i class="far fa-star icon" id="star"></i>
+                <div class="col-4 correct_answer_counter">
+                    <i class="far fa-star" id="star"></i>
                     <p id="correct_score">0</p>
                 </div>                           
             </div>
@@ -55,7 +55,7 @@
                 <div class="col-4 clock text_center">
                     <i class="far fa-clock"></i>
                 </div>
-                <div class="col-4" id="answer_image">
+                <div class="col-4 answer_image">
                    <img src="/assets/images/egg_level/orange_single.jpg" id="answer"/>
                 </div>
                 <div class="col-4"></div>
@@ -77,14 +77,10 @@
     <div id="welcome_modal" class="modal">
         <div class="modal_content">
             <span class="close" id="welcome_close">&times;</span>
-            <br>
-            <br>
             <h1>Welcome to Help Trevor Grow!</h1>
-            <br>
             <p>
                 This is Trevor! He needs your help to grow from an Egg, into a Caterpillar and then a Butterfly!
             </p>
-            <br>
             <div class="modal_image_div">
                 <img src="assets/images/egg.jpg" class="modal_image egg">
                 <img src="assets/images/caterpillar.jpg" class="modal_image">
@@ -93,7 +89,6 @@
             <p>
                 Pick the correct fruit to feed Trevor and help him grow, but you need to be quick as the fruit will disappear!
             </p> 
-            <br>
             <div class="intro_text">
                 <h2>
                     About the game
@@ -114,7 +109,6 @@
                  <p>
                     <strong>Butterfly</strong> - the hardest level, designed for approx. 5 years old. 
                 </p>
-                <br>
                 <p>
                     These ages are just a guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
                 </p> 
@@ -133,10 +127,10 @@
 <!--footer with game name and email address-->
 <footer class="fixed-bottom">
     <div>
-        <span id="bottom_left">
+        <span class="bottom left">
             This game has been developed for educational purposes.
         </span>
-        <span id="bottom_right">
+        <span class="bottom right">
             For questions or suggestions, send an email to: <a href="mailto:catfinlayson@icloud.com">catfinlayson@icloud.com</a>
         </span>
     </div>
