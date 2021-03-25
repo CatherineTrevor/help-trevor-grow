@@ -46,23 +46,29 @@
                 </div>                   
 <!--correct answer counter increments 1 after every correct answer selected-->
                 <div id="correct_answer_counter" class="col-4">
-                    <i class="far fa-star" id="star"></i>
+                    <i class="far fa-star icon" id="star"></i>
                     <p id="correct_score">0</p>
                 </div>                           
             </div>
-<!--main playing section-->
-            <div id="play_container" class="row container-fluid">
-                <div class="col-lg-12" id="answer_image">
-                   <img src="/assets/images/egg_level/orange_single.jpg" id="answer"/>
-                   <span id="countdown_timer">5</span>
+<!--Countdown timer and Image A-->
+            <div id="play_container" class="row">
+                <div class="col-4 clock text_center">
+                    <i class="far fa-clock"></i>
                 </div>
-                <div class="option_image">
+                <div class="col-4" id="answer_image">
+                   <img src="/assets/images/egg_level/orange_single.jpg" id="answer"/>
+                </div>
+                <div class="col-4"></div>
+            </div>
+<!---Three option images-->            
+            <div class="row">
+                <div class="col-4 option_image">
                     <img src="assets/images/egg_level/lemon_single.jpg" id="imageA">
                 </div>
-                <div  class="option_image">
+                <div  class="col-4 option_image">
                     <img src="assets/images/egg_level/orange_single.jpg" id="imageB">
                 </div>
-                <div class="option_image">
+                <div class="col-4 option_image">
                     <img src="assets/images/egg_level/pear_single.jpg" id="imageC">   
                 </div>
             </div>

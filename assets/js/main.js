@@ -10,7 +10,7 @@ function changeBgColor() {
     btnSelect = event.target.innerHTML;
       if (btnSelect == "GREEN") {
         document.getElementById("bg_color").style.backgroundColor = "green";
-        document.getElementById("star").style.color = "green";
+        document.getElementsByClassName("star").style.color = "green";
     } if (btnSelect == "PURPLE") {
           document.getElementById("bg_color").style.backgroundColor = "purple";
         document.getElementById("star").style.color = "purple";          

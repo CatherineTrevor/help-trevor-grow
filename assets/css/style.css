@@ -212,22 +212,27 @@ footer a:hover {
     color: darkslategray;
 }
 
+/***Countdown clock***/
+
+.clock {
+    font-size: 150px;
+}
+
 /***Image A: answer***/
 
 #answer_image {
     height: 250px;
     width: 250px;
-    margin: 0 auto;
-    text-align: center;
     margin-top: 10px;
-    margin-bottom: 40px;
     display: block;
     position: relative;
 }
 
 #answer_image img {
     max-height: 100%;
-    max-width: 100%;    
+    max-width: 100%;   
+    display: block;
+    margin: 0 auto;
 }
 
 /*** help to position countdown timer over results image https://www.w3schools.com/howto/howto_css_image_text.asp ***/
