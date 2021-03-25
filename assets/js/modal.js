@@ -1,7 +1,7 @@
 // Pop-up modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal 
 // Code for modal taken from w3schools.com and CI Handling DOM Events > Loading Events lesson and modified for the site
 
-var modal = document.getElementById("welcome_modal"); // the welcome modal 
+/*var modal = document.getElementById("welcome_modal"); // the welcome modal 
 
 // Modal open upon page load
 window.onload = (function() {
@@ -36,4 +36,4 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+}*/

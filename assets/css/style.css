@@ -41,6 +41,19 @@ body {
     padding-left: 10px;
 }
 
+.row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
 /***Footer***/
 
 footer {
@@ -73,20 +86,15 @@ footer a:hover {
 
 /***Background color buttons***/
 
-#bg_color_buttons {
-    padding-top: 2px;
-}
-
 .color_btn {
     border-radius: 8px;
     color: white;
     border: none;
-    margin-right: 10px;
-    margin-left: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
     height: 50px;
     width: 120px;
+    column-gap: 6px;
 }
 
 #green_btn {
@@ -151,15 +159,7 @@ footer a:hover {
 
 /***Game level buttons***/
 
-#level_select_buttons {
-    padding-top: 8px;
-}
-
-#level_select_text {
-    margin-bottom: 50%;
-}
-
-.level_btn {
+.level_icon {
     border: none;
     margin-right: 10px;
     margin-left: 10px;
@@ -167,40 +167,20 @@ footer a:hover {
     margin-bottom: 10px;
     height: 100px;
     width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;  
+    margin: 0 auto;
 }
 
-.level_btn:hover {
+.level_icon:hover {
     border: 3px solid darkslategray;
     border-radius: 8px; 
 }
 
-.level_btn:checked {
-    border: 3px solid red;
-    border-radius: 8px; 
-}
-
-#egg_btn {
+.level_icon.egg {
     background-image: url(../images/egg.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-}
-
-#caterpillar_btn {
-    background-image: url(../images/caterpillar.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-color: white;       
-}
-
-#butterfly_btn {
-    background-image: url(../images/butterfly.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;   
-    background-color: white;     
 }
 
 /***Correct score increment***/

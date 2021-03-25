@@ -19,39 +19,36 @@
     <div id="play_area">
 <!--background color options-->
         <div>
-            <br>
-            <h2>
+            <h2 class="text_center page_title">
                 Help Trevor Grow!
             </h2>
         </div>
-            <div id="bg_color_buttons" class="row">
-                <div class="col-lg-12 col-sm-3">
+            <div class="row">
+                <div class="col-4 text_center">
                     <span>
                         Pick your background color:
                     </span>
-                    <button id="green_btn" class="color_btn">GREEN</button>
-                    <button id="purple_btn" class="color_btn">PURPLE</button>
-                    <button id="pink_btn" class="color_btn">PINK</button>
-                    <button id="red_btn" class="color_btn">RED</button>
-                    <button id="blue_btn" class="color_btn">BLUE</button>
-                    <button id="orange_btn" class="color_btn">ORANGE</button>       
-                </div>                    
-            </div>
-<!--game level options-->
-            <div class="row">
-                <div id="level_select_buttons" class="col-lg-8">
-                    <span id="level_select_text">
-                        Pick a level to play:
-                    </span>
-                    <button id="egg_btn" class="level_btn" onclick="shuffleImagesEgg(); displayAnswer();"></button>
-                    <button id="caterpillar_btn" class="level_btn" onclick="shuffleImagesCaterpillar(); displayAnswer();"></button>
-                    <button id="butterfly_btn" class="level_btn"></button>                        
-                 </div>
+                    <div>
+                        <button id="green_btn" class="color_btn">GREEN</button>
+                        <button id="purple_btn" class="color_btn">PURPLE</button>
+                        <button id="pink_btn" class="color_btn">PINK</button>
+                        <button id="red_btn" class="color_btn">RED</button>
+                        <button id="blue_btn" class="color_btn">BLUE</button>
+                        <button id="orange_btn" class="color_btn">ORANGE</button>   
+                    </div>
+                </div>    
+<!--current game level icon-->
+                <div class="col-4 text_center">
+                <p>
+                    Current playing level:
+                </p>
+                    <div class="level_icon egg"></div>  
+                </div>                   
 <!--correct answer counter increments 1 after every correct answer selected-->
-                <div id="correct_answer_counter" class="col-lg-4">
+                <div id="correct_answer_counter" class="col-4">
                     <i class="far fa-star" id="star"></i>
                     <p id="correct_score">0</p>
-                </div>
+                </div>                           
             </div>
 <!--main playing section-->
             <div id="play_container" class="row container-fluid">
