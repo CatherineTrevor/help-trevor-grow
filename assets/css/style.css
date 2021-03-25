@@ -132,7 +132,47 @@ footer a:hover {
 /***Countdown clock***/
 
 .clock {
-    font-size: 150px;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 85%; /* numbers were off-center so 85% used to improve position */
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1 { --rotation: 36deg; }
+.clock .number2 { --rotation: 72deg; }
+.clock .number3 { --rotation: 108deg; }
+.clock .number4 { --rotation: 144deg; }
+.clock .number5 { --rotation: 180deg; }
+.clock .number6 { --rotation: 216deg; }
+.clock .number7 { --rotation: 252deg; }
+.clock .number8 { --rotation: 288deg; }
+.clock .number9 { --rotation: 324deg; }
+
+.clock .hand {
+    --rotation: 36;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 8px;
+    height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+    background-color: orange;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
 /***Image A: answer***/
@@ -142,7 +182,8 @@ footer a:hover {
     width: 250px;
     margin-top: 10px;
     display: block;
-    position: relative;
+    position: absolute;
+    left: 50%;    
 }
 
 .answer_image img {
