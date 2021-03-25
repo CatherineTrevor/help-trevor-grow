@@ -127,37 +127,6 @@
             </div>                                
         </div>    
     </div>
-<!--Correct pop-up modal for correct answer-->
-    <div id="correctAnswerModal" class="modal">
-        <div class="modal_content">
-            <span class="close" id="modal_close_button">&times;</span><!--target close on correct pop-up modal to display new fruit image after fade out-->
-            <br>
-            <h1>Excellent job, well done!</h1>
-            <br>
-            <p>
-                You picked the correct fruit! Keep going - he's one hungry insect!
-            </p>
-            <div>
-                <img src="assets/images/egg.jpg" class="modal_image egg">
-                <img src="assets/images/caterpillar.jpg" class="modal_image">
-                <img src="assets/images/butterfly.jpg" class="modal_image"> 
-            </div>            
-        </div>                                    
-    </div>
-<!--Incorrect pop-up modal for wrong answer-->
-    <div id="incorrectAnswerModal" class="modal">
-        <div class="modal_content">
-            <span class="close">&times;</span>
-            <br>
-            <h1>Sadly that's not the right answer</h1>
-            <br>
-            <i class="far fa-frown" id="frown"></i>               
-            <br>
-            <p>
-                But keep going and try again! Trevor knows you will get it right!
-            </p>                        
-        </div>                                    
-    </div>        
 <!--footer with game name and email address-->
 <footer class="fixed-bottom">
     <div>
@@ -177,5 +146,6 @@
 <script src="assets/js/egg.js" defer></script>
 <script src="assets/js/caterpillar.js" defer></script>
 <script src="assets/js/butterfly.js" defer></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

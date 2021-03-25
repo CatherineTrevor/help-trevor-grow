@@ -130,9 +130,9 @@ function checkAnswer (event) {
 
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
         incrementScore(); // increment correct score
-        correctAnswerModal(); // well done message        
+        correctAnswerAlert(); // well done message        
       } else if (btnClick !== answerImage) {
-        incorrectAnswerModal();
+        incorrectAnswerAlert();
       }
 }
 
@@ -156,4 +156,21 @@ $('#modal_close_button').click(function(){ // when 'close' button clicked on cor
   timer(); // start countdown timer
 });
 
+function correctAnswerAlert (event) {
+    swal({
+        title: "You did it!",
+        text: "You got the right answer, well done!",
+        icon: "success",
+        button: "Keep playing",
+});
+}
+
+function incorrectAnswerAlert (event) {
+    swal({
+        title: "That's not right",
+        text: "Try again - Trevor knows you will get it right!",
+        icon: "error",
+        button: "Try again",
+});
+}
 
