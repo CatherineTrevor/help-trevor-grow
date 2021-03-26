@@ -10,22 +10,28 @@ function changeBgColor() {
     btnSelect = event.target.innerHTML;
       if (btnSelect == "GREEN") {
         document.getElementById("bg_color").style.backgroundColor = "green";
-        document.getElementsByClassName("star").style.color = "green";
+        document.getElementById("star").style.color = "green";
+        document.getElementById("clock_color_change").style.backgroundColor = "green";        
     } if (btnSelect == "PURPLE") {
           document.getElementById("bg_color").style.backgroundColor = "purple";
-        document.getElementById("star").style.color = "purple";          
+        document.getElementById("star").style.color = "purple";    
+        document.getElementById("clock_color_change").style.backgroundColor = "purple";                      
     } if (btnSelect == "PINK") {
           document.getElementById("bg_color").style.backgroundColor = "pink";
-        document.getElementById("star").style.color = "pink";          
+        document.getElementById("star").style.color = "pink";     
+        document.getElementById("clock_color_change").style.backgroundColor = "pink";                     
     } if (btnSelect == "RED") {
            document.getElementById('bg_color').style.backgroundColor = "red";  
-        document.getElementById("star").style.color = "red";           
+        document.getElementById("star").style.color = "red";    
+        document.getElementById("clock_color_change").style.backgroundColor = "red";                       
     } if (btnSelect == "BLUE") {
             document.getElementById('bg_color').style.backgroundColor = "blue";
-        document.getElementById("star").style.color = "blue";            
+        document.getElementById("star").style.color = "blue";  
+        document.getElementById("clock_color_change").style.backgroundColor = "blue";                          
     } if (btnSelect == "ORANGE") {
            document.getElementById('bg_color').style.backgroundColor = "orangered"; 
         document.getElementById("star").style.color = "orangered"; 
+        document.getElementById("clock_color_change").style.backgroundColor = "orangered";                
     }
 }
 
@@ -34,8 +40,8 @@ function changeBgColor() {
 // https://stackoverflow.com/questions/2510115/jquery-can-i-call-delay-between-addclass-and-such - help to delay addClass to images
 $(".game_level_icon").click(function(){ // when egg button clicked 
   $("#answer").fadeTo(5000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
-    $('.option_image').addClass('show');
-    next(); 
+  $('.option_image').addClass('show');
+  next(); 
   });  
 });
 
@@ -116,22 +122,22 @@ function incorrectAnswerAlert (event) {
 });};
 
 // Countdown clock
-setInterval(setClock, 1000)
+/*var i = 0;
+var timer = setInterval(setClock, 1000)
 
 const secondHand = document.querySelector('[data-second-hand]')
 
 function setClock() {
-    const currentDate = new Date()
-    const secondsRatio = currentDate.getSeconds() / 60
-
+    const currentDate = new Date();
+    const secondsRatio = currentDate.getSeconds() / 10;
+    console.log(i++);
+    if (i == 11) clearInterval(timer);
     setRotation(secondHand, secondsRatio)
 }
 
 function setRotation(element, rotationRatio) {
     element.style.setProperty('--rotation', rotationRatio * 360)
-}
-
-setClock()
+};
 
 /**Temp not in use ***/
 
