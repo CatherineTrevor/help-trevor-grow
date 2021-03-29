@@ -207,6 +207,14 @@ Am I responsive - supplied the responsive image for the top of README.md
 
 ## Deployment
 
+**Branches**
+
+When implementing and testing the following features, branches were used;
+
+* Clock
+* Change to pop-up modals
+* Implementing new levels
+
 ## Credits
 
 * Tutors at Code Institute: help with how to store used images in an array to ensure they didn't duplicate.
