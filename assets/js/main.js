@@ -39,35 +39,20 @@ function changeBgColor() {
 // https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
 // https://stackoverflow.com/questions/2510115/jquery-can-i-call-delay-between-addclass-and-such - help to delay addClass to images
 $(".game_level_icon").click(function(){ // when egg button clicked 
-  $("#answer").fadeTo(5000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+      $('.hand').addClass('rotate');  
+    $("#answer").fadeTo(10000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
   $('.option_image').addClass('show');
   next(); 
   });  
 });
 
-// Change level
-let levelSelect = document.querySelectorAll('.color_btn'); 
-for (let i = 0 ; i < levelSelect.length ; i++){
-  levelSelect[i].addEventListener('click', changeArray); // check which image was selected
-}
 
-function changeArray (event) {
-
-    levelToPlay = event.target.innerHTML;
-      if (levelToPlay == "GREEN") {
-         alert("You picked green");
-         selectPlayingImage();
-          } if (levelToPlay == "RED") {
-         alert("You picked red");
-          }
-};
-
-function selectPlayingImage () {
-
-    let levelOfPlay = document.querySelectorAll(".game_level_icon").css('background-image');
-    console.log(levelOfPlay); 
-}
-
+function imageFadeOut() {
+    $("#answer").fadeTo(5000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+        $('.option_image').addClass('show'); // show three image options below
+            next(); 
+      });
+    };
 
 // Ensure answer image is randomly selected from the three options so the answer is always available
 function displayAnswer() {
@@ -116,43 +101,38 @@ function checkAnswer (event) {
       }
 }
 
+// When score gets to 10 ask the player to move up a level
 function checkScore () {
     let score = document.getElementById('correct_score').innerHTML;
-    console.log(score);
-    if (score == 3) {
+    if (score == 1) {
         swal({
             title: "You reached 10 - Great job!",
             text: "Well done for completing this level!",
             text: "Would you like to move onto the next level?",
             buttons: ["No, I'd like to play this level again", "Yes! Let's go!"],
-});
-    }
+            })
+        ;}
 }
 
+// Alert when correct answer selected
 function correctAnswerAlert (event) {
     swal({
         title: "You did it!",
         text: "You got the right answer, well done!",
         icon: "success",
         button: "Keep playing",
-});};
+})
+    {$("#answer").fadeTo(1000, 1); // answer image back to opacity 1 so it is shown
+    imageFadeOut() // answer starts to fade again and then three images appear
+};};
 
+// Alert when incorrect answer selected
 function incorrectAnswerAlert (event) {
     swal({
         title: "That's not right",
         text: "Try again - Trevor knows you will get it right!",
         icon: "error",
-        button: "Try again",
+        button: {
+            text: "Try again!",
+            className: "closeBtn",}
 });};
-
-/**Temp not in use ***/
-
-// Onclick of new level clear correct score counter
-/*let level = document.querySelectorAll('.level_btn');
-for (let i = 0; i < level.length; i++){
-    level[i].addEventListener('click', resetScore);
-}*/
-
-/*function resetScore() {
-    document.getElementById("correct_score").innerHTML = "0";
-}*/

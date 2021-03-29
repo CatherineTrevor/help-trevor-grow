@@ -180,7 +180,7 @@ footer a:hover {
 
 /* help with rotating the clock hand https://flaviocopes.com/rotate-image/ and https://flaviocopes.com/css-transitions/ */
 .rotate {
-  animation: rotation 10s 1s linear; /* delay hand rotation by 1s */
+  animation: rotation 10s 0s linear;
 }
 
 @keyframes rotation {
@@ -233,7 +233,7 @@ footer a:hover {
 /** help with transform on hover https://www.w3schools.com/howto/howto_css_zoom_hover.asp***/
 .option_image img:hover {
     cursor: pointer;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .hide {
