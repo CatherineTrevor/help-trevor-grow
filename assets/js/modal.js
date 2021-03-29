@@ -1,39 +1,47 @@
 // Pop-up modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal 
 // Code for modal taken from w3schools.com and CI Handling DOM Events > Loading Events lesson and modified for the site
 
-/*var modal = document.getElementById("welcome_modal"); // the welcome modal 
+var welcomeModal = document.getElementById("welcome_modal"); // the welcome modal 
 
 // Modal open upon page load
 window.onload = (function() {
-  modal.style.display = "block";
+  welcomeModal.style.display = "block";
 });
 
-// When How to play is clicked display welcome modal
-var playBtn = document.getElementById('modal_link');
-
-playBtn.onclick = function() {
-  modal.style.display = "block";
-};
-
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+var modalCloseBtn = document.getElementsByClassName("close")[0];
+modalCloseBtn.addEventListener('click', startGameSwal); // close the modal
 
 // Get the Ready to play text in the welcome modal
-var readyToPlay = document.getElementById("play");
+var readyToPlay = document.getElementById("startPlayBtn");
+readyToPlay.addEventListener('click', startGameSwal)
 
 // When the user clicks on Ready to play, close the modal
-readyToPlay.onclick = function() {
-  modal.style.display = "none";
+function hideModal() {
+  welcomeModal.style.display = "none";
 }
+
+function startGameSwal(){
+    swal({
+        icon: "success",
+        button: "Let's play!",
+        })
+    .then(() => {imageFadeOut(); // answer starts to fade again and then three images appear
+          $('.hand').addClass('rotate');
+          hideModal(); // rotate clock hands
+    });
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    welcomeModal.style.display = "none";
   }
-}*/
+};
+
+// When How to play is clicked display welcome modal
+var playBtn = document.getElementById('modal_open_link');
+
+playBtn.onclick = function() {
+  welcomeModal.style.display = "block";
+};

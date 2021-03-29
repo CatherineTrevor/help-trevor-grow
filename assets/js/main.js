@@ -34,26 +34,12 @@ function changeBgColor() {
         document.getElementById("clock_color_change").style.backgroundColor = "orangered";                
     }
 }
-
-// Results image to take 5 seconds to fade out
-// https://www.w3schools.com/jquery/jquery_fade.asp - help with code. Changed to FadeTo so the page structure doesn't change
-// https://stackoverflow.com/questions/2510115/jquery-can-i-call-delay-between-addclass-and-such - help to delay addClass to images
-$(".game_level_icon").click(function(){ // when egg button clicked 
-      $('.hand').addClass('rotate');  
-    $("#answer").fadeTo(10000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
-  $('.option_image').addClass('show');
-  next(); 
-  });  
-});
-
-
 function imageFadeOut() {
-    $("#answer").fadeTo(5000, 0.01).delay(500).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+    $("#answer").fadeTo(10000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
         $('.option_image').addClass('show'); // show three image options below
             next(); 
       });
     };
-
 // Ensure answer image is randomly selected from the three options so the answer is always available
 function displayAnswer() {
 
@@ -96,22 +82,10 @@ function checkAnswer (event) {
         shuffleImagesEgg();      
         displayAnswer();
         checkScore();
+        $('.hand').removeClass('rotate'); // to start clock from beginning       
       } else if (btnClick !== answerImage) {
         incorrectAnswerAlert();
       }
-}
-
-// When score gets to 10 ask the player to move up a level
-function checkScore () {
-    let score = document.getElementById('correct_score').innerHTML;
-    if (score == 1) {
-        swal({
-            title: "You reached 10 - Great job!",
-            text: "Well done for completing this level!",
-            text: "Would you like to move onto the next level?",
-            buttons: ["No, I'd like to play this level again", "Yes! Let's go!"],
-            })
-        ;}
 }
 
 // Alert when correct answer selected
@@ -122,9 +96,11 @@ function correctAnswerAlert (event) {
         icon: "success",
         button: "Keep playing",
 })
-    {$("#answer").fadeTo(1000, 1); // answer image back to opacity 1 so it is shown
-    imageFadeOut() // answer starts to fade again and then three images appear
-};};
+    .then(() => {$("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown
+        imageFadeOut(); // answer starts to fade again and then three images appear
+          $('.hand').addClass('rotate'); // rotate clock hands
+    });
+};
 
 // Alert when incorrect answer selected
 function incorrectAnswerAlert (event) {
@@ -132,7 +108,21 @@ function incorrectAnswerAlert (event) {
         title: "That's not right",
         text: "Try again - Trevor knows you will get it right!",
         icon: "error",
-        button: {
-            text: "Try again!",
-            className: "closeBtn",}
-});};
+        button: "Try again!",
+        });
+};
+
+// When score gets to 10 ask the player to move up a level
+function checkScore () {
+    let score = document.getElementById('correct_score').innerHTML;
+    if (score == 10) {
+        swal({
+            title: "You reached 10 - Great job!",
+            text: "Well done for completing this level!",
+            text: "Would you like to move onto the next level?",
+            button: "No, I'd like to play this level again",
+            button: "Yes! Let's go!",
+            })
+        ;}
+}
+
