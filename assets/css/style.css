@@ -164,7 +164,7 @@ footer a:hover {
 .clock .number9 { --rotation: 324deg; }
 
 .clock .hand {
-    --rotation: 36;
+    /*--rotation: 36;*/
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -175,7 +175,21 @@ footer a:hover {
     z-index: 10;
     background-color: white;
     transform-origin: bottom;
-    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    /*transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));*/
+}
+
+/* help with rotating the clock hand https://flaviocopes.com/rotate-image/ and https://flaviocopes.com/css-transitions/ */
+.rotate {
+  animation: rotation 10s 1s linear; /* delay hand rotation by 1s */
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /***Image A: answer***/

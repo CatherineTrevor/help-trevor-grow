@@ -45,6 +45,30 @@ $(".game_level_icon").click(function(){ // when egg button clicked
   });  
 });
 
+// Change level
+let levelSelect = document.querySelectorAll('.color_btn'); 
+for (let i = 0 ; i < levelSelect.length ; i++){
+  levelSelect[i].addEventListener('click', changeArray); // check which image was selected
+}
+
+function changeArray (event) {
+
+    levelToPlay = event.target.innerHTML;
+      if (levelToPlay == "GREEN") {
+         alert("You picked green");
+         selectPlayingImage();
+          } if (levelToPlay == "RED") {
+         alert("You picked red");
+          }
+};
+
+function selectPlayingImage () {
+
+    let levelOfPlay = document.querySelectorAll(".game_level_icon").css('background-image');
+    console.log(levelOfPlay); 
+}
+
+
 // Ensure answer image is randomly selected from the three options so the answer is always available
 function displayAnswer() {
 
@@ -121,32 +145,14 @@ function incorrectAnswerAlert (event) {
         button: "Try again",
 });};
 
-// Countdown clock
-/*var i = 0;
-var timer = setInterval(setClock, 1000)
-
-const secondHand = document.querySelector('[data-second-hand]')
-
-function setClock() {
-    const currentDate = new Date();
-    const secondsRatio = currentDate.getSeconds() / 10;
-    console.log(i++);
-    if (i == 11) clearInterval(timer);
-    setRotation(secondHand, secondsRatio)
-}
-
-function setRotation(element, rotationRatio) {
-    element.style.setProperty('--rotation', rotationRatio * 360)
-};
-
 /**Temp not in use ***/
 
 // Onclick of new level clear correct score counter
 /*let level = document.querySelectorAll('.level_btn');
 for (let i = 0; i < level.length; i++){
     level[i].addEventListener('click', resetScore);
-}
+}*/
 
-function resetScore() {
+/*function resetScore() {
     document.getElementById("correct_score").innerHTML = "0";
 }*/
