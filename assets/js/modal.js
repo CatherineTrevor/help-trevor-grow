@@ -57,11 +57,9 @@ playBtn.onclick = function() {
 function selectPlayingLevel(){
     let levelSelected = document.querySelector('.gameSelected').textContent;
     if (levelSelected == "EGG") {
-        console.log("Game selected is " + levelSelected)
-        shuffleImagesEgg(); // shuffle and display three option images           
+        shuffleImagesEgg(); // shuffle and display three option images        
     }     if (levelSelected == "CATERPILLAR") {
-        console.log("Game selected is " + levelSelected)
-        shuffleImagesCaterpillar(); // shuffle and display three option images       
+        shuffleImagesCaterpillar(); // shuffle and display three option images    
 }};
 
 // On modal close or Ready to Play button clicked, start game
@@ -72,3 +70,23 @@ function startGame(){
         imageFadeOut(); // start answer image fade out          
         $('.hand').addClass('rotate'); // to start clock from beginning       
 };
+
+let gameLevelEgg = document.getElementById("levelEgg");
+gameLevelEgg.addEventListener('click', changePlayingLevel);
+
+let gameLevelCaterpillar = document.getElementById("levelCaterpillar");
+gameLevelCaterpillar.addEventListener('click', changePlayingLevel);
+
+let gameLevelButterfly = document.getElementById("levelButterfly");
+gameLevelButterfly.addEventListener('click', changePlayingLevel);
+
+function changePlayingLevel(){
+    levelPlay = this.id;
+    if (levelPlay == "levelEgg") {
+        document.getElementById("changeMe").innerHTML ="EGG"
+    }     if (levelPlay == "levelCaterpillar") {
+        document.getElementById("changeMe").innerHTML ="CATERPILLAR"        
+    }    if (levelPlay == "levelButterfly") {
+        document.getElementById("changeMe").innerHTML ="BUTTERFLY"        
+    }
+}

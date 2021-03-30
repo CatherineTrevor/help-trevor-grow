@@ -311,6 +311,11 @@ footer a:hover {
     display: inline-block; 
 }
 
+.modal_image:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 #egg {
     height: 100px;
 }
