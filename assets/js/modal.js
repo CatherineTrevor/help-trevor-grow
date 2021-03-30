@@ -9,7 +9,13 @@ window.onload = (function() {
   welcomeModal.style.display = "block";
 });
 
-// When the user clicks anywhere outside of the modal, close it
+// Close the modal
+function hideModal() {
+  welcomeModal.style.display = "none";
+  changeLevelModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the welcome modal, close it and start game
 window.onclick = function(event) {
   if (event.target == welcomeModal) {
    this.hideModal();
@@ -17,7 +23,7 @@ window.onclick = function(event) {
   }
 };
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the change playing level modal, close it
 window.onclick = function(event) {
   if (event.target == changeLevelModal) {
    this.hideModal();
@@ -25,22 +31,22 @@ window.onclick = function(event) {
   }
 };
 
-// Close the modal
-function hideModal() {
-  welcomeModal.style.display = "none";
-  changeLevelModal.style.display = "none";
-}
-
 // When Change level is clicked display welcome modal
 var changeLevelBtn = document.getElementById('change_level_button');
 changeLevelBtn.onclick = function() {
   changeLevelModal.style.display = "block";
+  $('.hand').removeClass('rotate'); // stop clock from rotating
 };
 
-// Close the modal and start game
+// Close the welcome modal and start game
 var modalCloseBtn = document.querySelectorAll(".close");
 for (let i = 0 ; i < modalCloseBtn.length ; i++){
-    modalCloseBtn[i].addEventListener('click', startGame); // close the modal
+    modalCloseBtn[0].addEventListener('click', startGame); // close the modal
+}
+
+var modalCloseBtn2 = document.querySelectorAll(".close");
+for (let i = 0 ; i < modalCloseBtn.length ; i++){
+    modalCloseBtn[1].addEventListener('click', hideModal); // close the modal
 }
 
 // Get the Ready to play text in the welcome modal and start game
@@ -53,24 +59,7 @@ playBtn.onclick = function() {
   welcomeModal.style.display = "block";
 };
 
-// Select level of game depending on icon and text at top of playing page
-function selectPlayingLevel(){
-    let levelSelected = document.querySelector('.gameSelected').textContent;
-    if (levelSelected == "EGG") {
-        shuffleImagesEgg(); // shuffle and display three option images        
-    }     if (levelSelected == "CATERPILLAR") {
-        shuffleImagesCaterpillar(); // shuffle and display three option images    
-}};
-
-// On modal close or Ready to Play button clicked, start game
-function startGame(){
-        hideModal(); // hide modal
-        selectPlayingLevel(); // select level of game 
-        displayAnswer(); // display answer image
-        imageFadeOut(); // start answer image fade out          
-        $('.hand').addClass('rotate'); // to start clock from beginning       
-};
-
+// Change level of play from pop-up modal
 let gameLevelEgg = document.getElementById("levelEgg");
 gameLevelEgg.addEventListener('click', changePlayingLevel);
 
@@ -83,10 +72,34 @@ gameLevelButterfly.addEventListener('click', changePlayingLevel);
 function changePlayingLevel(){
     levelPlay = this.id;
     if (levelPlay == "levelEgg") {
-        document.getElementById("changeMe").innerHTML ="EGG"
+        document.getElementById("changeMe").innerHTML ="EGG";
+        hideModal();
     }     if (levelPlay == "levelCaterpillar") {
-        document.getElementById("changeMe").innerHTML ="CATERPILLAR"        
+        document.getElementById("changeMe").innerHTML ="CATERPILLAR";
+        hideModal();                
     }    if (levelPlay == "levelButterfly") {
-        document.getElementById("changeMe").innerHTML ="BUTTERFLY"        
+        document.getElementById("changeMe").innerHTML ="BUTTERFLY";
+        hideModal();                
     }
 }
+
+// Select level of game depending on icon and text at top of playing page
+function selectPlayingLevel(){
+    let levelSelected = document.querySelector('.gameSelected').textContent;
+    if (levelSelected == "EGG") {
+        $('.option_image').addClass('hide'); // hide three images
+        shuffleImagesEgg(); // shuffle and display three option images
+        displayAnswer(); // display answer image
+    }     if (levelSelected == "CATERPILLAR") {
+        $('.option_image').addClass('hide'); // hide three images
+        shuffleImagesCaterpillar(); // shuffle and display three option images
+        displayAnswer(); // display answer image    
+}};
+
+// On modal close or Ready to Play button clicked, start game
+function startGame(){
+        hideModal(); // hide modal
+        selectPlayingLevel(); // select level of game 
+        imageFadeOut(); // start answer image fade out          
+        $('.hand').addClass('rotate'); // to start clock from beginning       
+};

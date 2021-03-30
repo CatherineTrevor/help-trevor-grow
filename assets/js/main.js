@@ -38,7 +38,7 @@ function changeBgColor() {
 // Fade out the answer image over 5 seconds
 function imageFadeOut() {
     $("#answer").fadeTo(5000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
-        $('.option_image').addClass('show'); // show three image options below
+        $('.option_image').removeClass('hide'); // show three image options below
             next(); 
       });
     };
@@ -85,7 +85,7 @@ function checkAnswer (event) {
         selectPlayingLevel();  
         displayAnswer();
         checkScore();
-        $('.option_image').removeClass('show'); // hide three images
+        $('.option_image').addClass('hide'); // hide three images
         $('.hand').removeClass('rotate'); // to start clock from beginning       
       } else if (btnClick !== answerImage) {
         incorrectAnswerAlert();
@@ -116,17 +116,31 @@ function incorrectAnswerAlert () {
         });
 };
 
+function resetScore() {
+    document.getElementById("correct_score").innerHTML = "0";
+}
+
 // When score gets to 10 ask the player to move up a level
 function checkScore () {
+    let currentLevel = document.getElementById('changeMe').innerHTML;
     let score = document.getElementById('correct_score').innerHTML;
-    if (score == 5) {
+    if (score == 3) {
         swal({
             title: "You reached 10 - Great job!",
             text: "Well done for completing this level!",
-            text: "Would you like to move onto the next level?",
-            button: "No, I'd like to play this level again",
-            button: "Yes! Let's go!",
+            button: "Let's try the next level!",
             })
+        .then(() => {
+          if (currentLevel == "EGG") {
+          document.getElementById("changeMe").innerHTML ="CATERPILLAR";
+        } if (currentLevel == "CATERPILLAR") {
+          document.getElementById("changeMe").innerHTML ="BUTTERFLY";}
+          selectPlayingLevel();
+          $("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
+          $('.hand').addClass('rotate'); // rotate clock hands 
+          startGame();
+          resetScore();           
+        })
         ;}
 }
 
