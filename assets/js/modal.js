@@ -8,36 +8,27 @@ window.onload = (function() {
   welcomeModal.style.display = "block";
 });
 
-// Get the <span> element that closes the modal
-var modalCloseBtn = document.getElementsByClassName("close")[0];
-modalCloseBtn.addEventListener('click', startGameSwal); // close the modal
-
-// Get the Ready to play text in the welcome modal
-var readyToPlay = document.getElementById("startPlayBtn");
-readyToPlay.addEventListener('click', startGameSwal)
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == welcomeModal) {
+   /* welcomeModal.style.display = "none";*/
+   this.hideModal();
+   this.startGame();
+  }
+};
 
 // When the user clicks on Ready to play, close the modal
 function hideModal() {
   welcomeModal.style.display = "none";
 }
 
-function startGameSwal(){
-    swal({
-        icon: "success",
-        button: "Let's play!",
-        })
-    .then(() => {imageFadeOut(); // answer starts to fade again and then three images appear
-          $('.hand').addClass('rotate');
-          hideModal(); // rotate clock hands
-    });
-};
+// Get the <span> element that closes the modal and start game
+var modalCloseBtn = document.getElementsByClassName("close")[0];
+modalCloseBtn.addEventListener('click', startGame); // close the modal
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    welcomeModal.style.display = "none";
-  }
-};
+// Get the Ready to play text in the welcome modal and start game
+var readyToPlay = document.getElementById("startPlayBtn");
+readyToPlay.addEventListener('click', startGame)
 
 // When How to play is clicked display welcome modal
 var playBtn = document.getElementById('modal_open_link');
@@ -45,3 +36,12 @@ var playBtn = document.getElementById('modal_open_link');
 playBtn.onclick = function() {
   welcomeModal.style.display = "block";
 };
+
+// On modal close or Ready to Play button clicked, start game
+function startGame(){
+        hideModal(); // hide modal
+        shuffleImages(); // shuffle and display three option images   
+        displayAnswer(); // display answer image
+        imageFadeOut(); // start answer image fade out          
+        $('.hand').addClass('rotate'); // to start clock from beginning  
+}

@@ -34,12 +34,15 @@ function changeBgColor() {
         document.getElementById("clock_color_change").style.backgroundColor = "orangered";                
     }
 }
+
+// Fade out the answer image over 5 seconds
 function imageFadeOut() {
-    $("#answer").fadeTo(10000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+    $("#answer").fadeTo(5000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
         $('.option_image').addClass('show'); // show three image options below
             next(); 
       });
     };
+
 // Ensure answer image is randomly selected from the three options so the answer is always available
 function displayAnswer() {
 
@@ -79,17 +82,34 @@ function checkAnswer (event) {
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
         incrementScore(); // increment correct score
         correctAnswerAlert(); // well done message
-        shuffleImagesEgg();      
+        shuffleImages();    
         displayAnswer();
         checkScore();
+        $('.option_image').removeClass('show'); // hide three images
         $('.hand').removeClass('rotate'); // to start clock from beginning       
       } else if (btnClick !== answerImage) {
         incorrectAnswerAlert();
       }
 }
 
+// Change level
+let levelSelect = document.querySelectorAll('.color_btn'); 
+for (let i = 0 ; i < levelSelect.length ; i++){
+  levelSelect[i].addEventListener('click', changeArray); // check which image was selected
+}
+
+function changeArray () {
+
+    levelToPlay = event.target.innerHTML;
+      if (levelToPlay == "GREEN") {
+         shuffleImagesEgg();
+          } if (levelToPlay == "RED") {
+            shuffleImagesCaterpillar();        
+          }
+};
+
 // Alert when correct answer selected
-function correctAnswerAlert (event) {
+function correctAnswerAlert () {
     swal({
         title: "You did it!",
         text: "You got the right answer, well done!",
@@ -103,7 +123,7 @@ function correctAnswerAlert (event) {
 };
 
 // Alert when incorrect answer selected
-function incorrectAnswerAlert (event) {
+function incorrectAnswerAlert () {
     swal({
         title: "That's not right",
         text: "Try again - Trevor knows you will get it right!",
@@ -115,7 +135,7 @@ function incorrectAnswerAlert (event) {
 // When score gets to 10 ask the player to move up a level
 function checkScore () {
     let score = document.getElementById('correct_score').innerHTML;
-    if (score == 10) {
+    if (score == 5) {
         swal({
             title: "You reached 10 - Great job!",
             text: "Well done for completing this level!",

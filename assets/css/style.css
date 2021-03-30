@@ -90,6 +90,24 @@ footer a:hover {
     column-gap: 6px;
 }
 
+.play_btn {
+    border-radius: 8px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 250px;   
+}
+
+.play_btn:hover {
+    border: 2px solid darkslategray;
+    background-color: white;
+    color: darkslategray;
+    cursor: pointer;
+} 
+
 /***Game level icon***/
 
 .game_level_icon {
@@ -114,6 +132,14 @@ footer a:hover {
 
 .game_level_icon.egg {
     background-image: url(../images/egg.jpg);
+}
+
+.game_level_icon.caterpillar {
+    background-image: url(../images/caterpillar.jpg);
+}
+
+.game_level_icon.butterfly {
+    background-image: url(../images/butterfly.jpg);
 }
 
 /***Correct answer star***/
@@ -178,7 +204,7 @@ footer a:hover {
 
 /* help with rotating the clock hand https://flaviocopes.com/rotate-image/ and https://flaviocopes.com/css-transitions/ */
 .rotate {
-  animation: rotation 10s 0s linear;
+  animation: rotation 5s 0s linear;
 }
 
 @keyframes rotation {
@@ -285,7 +311,7 @@ footer a:hover {
     display: inline-block; 
 }
 
-.egg {
+#egg {
     height: 100px;
 }
 
