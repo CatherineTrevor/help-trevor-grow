@@ -82,7 +82,7 @@ function checkAnswer (event) {
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
         incrementScore(); // increment correct score
         correctAnswerAlert(); // well done message
-        shuffleImages();    
+        selectPlayingLevel();  
         displayAnswer();
         checkScore();
         $('.option_image').removeClass('show'); // hide three images
@@ -91,22 +91,6 @@ function checkAnswer (event) {
         incorrectAnswerAlert();
       }
 }
-
-// Change level
-let levelSelect = document.querySelectorAll('.color_btn'); 
-for (let i = 0 ; i < levelSelect.length ; i++){
-  levelSelect[i].addEventListener('click', changeArray); // check which image was selected
-}
-
-function changeArray () {
-
-    levelToPlay = event.target.innerHTML;
-      if (levelToPlay == "GREEN") {
-         shuffleImagesEgg();
-          } if (levelToPlay == "RED") {
-            shuffleImagesCaterpillar();        
-          }
-};
 
 // Alert when correct answer selected
 function correctAnswerAlert () {

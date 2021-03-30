@@ -37,11 +37,22 @@ playBtn.onclick = function() {
   welcomeModal.style.display = "block";
 };
 
+function selectPlayingLevel(){
+    let levelSelected = document.querySelector('.gameSelected').textContent;
+    if (levelSelected == "EGG") {
+        console.log("Game selected is " + levelSelected)
+        shuffleImagesEgg(); // shuffle and display three option images           
+    }     if (levelSelected == "CATERPILLAR") {
+        console.log("Game selected is " + levelSelected)
+        shuffleImagesCaterpillar(); // shuffle and display three option images       
+}};
+
+
 // On modal close or Ready to Play button clicked, start game
 function startGame(){
         hideModal(); // hide modal
-        shuffleImages(); // shuffle and display three option images   
+        selectPlayingLevel();  
         displayAnswer(); // display answer image
         imageFadeOut(); // start answer image fade out          
-        $('.hand').addClass('rotate'); // to start clock from beginning  
-}
+        $('.hand').addClass('rotate'); // to start clock from beginning       
+};
