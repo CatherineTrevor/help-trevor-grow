@@ -130,15 +130,15 @@ footer a:hover {
     border-radius: 8px; 
 }
 
-.game_level_icon.egg {
+.egg {
     background-image: url(../images/egg.jpg);
 }
 
-.game_level_icon.caterpillar {
+.caterpillar {
     background-image: url(../images/caterpillar.jpg);
 }
 
-.game_level_icon.butterfly {
+.butterfly {
     background-image: url(../images/butterfly.jpg);
 }
 
