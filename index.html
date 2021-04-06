@@ -17,10 +17,7 @@
         <nav class="nav justify-content-end">
             <a class="nav-link" id="modal_open_link">
                     How to play
-            </a>
-            <a class="nav-link" id="change_level_button">
-                    Change playing level
-            </a>            
+            </a>           
         </nav>    
     </div>
     <div class="play_area">
@@ -49,9 +46,8 @@
                 <p>
                     Current playing level:
                 </p>
-                    <div class="game_level_icon">
-                        <p class="gameSelected" id="changeMe">EGG</p>
-                        <img src=" " class="egg">
+                    <div class="game_level_icon game_select">
+                        <p class="gameSelected hide" id="changeMe">EGG</p>
                     </div>                                         
                 </div>                   
 <!--correct answer counter increments 1 after every correct answer selected-->
@@ -109,10 +105,28 @@
                 </p>
             </div>
             <div class="modal_image_div">
-                <img src="assets/images/egg.jpg" class="modal_image egg">
-                <img src="assets/images/caterpillar.jpg" class="modal_image">
-                <img src="assets/images/butterfly.jpg" class="modal_image">      
-            </div>  
+                <div>
+                    <button class="levelOfPlay game_level_icon egg" id="levelEgg">
+                    <p class="hide">
+                        EGG
+                    </p>              
+                     </button>
+                </div>
+                <div>
+                    <button class="levelOfPlay game_level_icon caterpillar" id="levelCaterpillar">
+                    <p class="hide">
+                        CATERPILLAR
+                    </p>              
+                     </button>
+                </div>
+                <div>
+                    <button class="levelOfPlay game_level_icon butterfly" id="levelButterfly">
+                    <p class="hide">
+                        BUTTERFLY
+                    </p>              
+                     </button>
+                </div>                                
+            </div>     
             <p>
                 Pick the correct fruit to feed Trevor and help him grow, but you need to be quick as the fruit will disappear!
             </p> 
@@ -157,51 +171,7 @@
                 </div>                          
             </div>                                
         </div>    
-    </div>
-<!--Change game level modal-->
-    <div id="select_level_modal" class="modal">
-        <div class="modal_content">
-            <div class="close">
-                <h1>
-                    X
-                </h1>
-            </div>
-            <div class="text_center">
-                <h1>
-                    Change the level
-                </h1>
-                <p>
-                Select a new level
-                </p>
-            </div>
-            <div class="modal_image_div">
-                <div>
-                    <button class="levelOfPlay" id="levelEgg">
-                    <img src="assets/images/egg.jpg" class="modal_image">
-                    <p>
-                        EGG
-                    </p>              
-                     </button>
-                </div>
-                <div>
-                    <button class="levelOfPlay" id="levelCaterpillar">
-                    <img src="assets/images/caterpillar.jpg" class="modal_image">
-                    <p>
-                        CATERPILLAR
-                    </p>              
-                     </button>
-                </div>
-                <div>
-                    <button class="levelOfPlay" id="levelButterfly">
-                    <img src="assets/images/butterfly.jpg" class="modal_image">
-                    <p>
-                        BUTTERFLY
-                    </p>              
-                     </button>
-                </div>                                
-            </div>                               
-        </div> 
-    </div>    
+    </div>  
 <!--footer with game name and email address-->
 <footer class="fixed-bottom">
     <div>
