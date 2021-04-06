@@ -11,126 +11,106 @@
 <title>Help Trevor Grow!</title>
 </head>
 <!--main body background color to change when player selects relevant button-->
-<body id="bg_color"> 
+<body class="body" id="bgColor"> 
     <!--link to open welcome pop-up modal-->
     <div>
-        <nav class="nav justify-content-end">
-            <a class="nav-link" id="modal_open_link">
+        <nav class="nav">
+            <a class="nav__link nav__link__top" id="modalOpenLink">
                     How to play
             </a>           
         </nav>    
     </div>
-    <div class="play_area">
+    <div class="game__section">
 <!--background color options-->
-        <div>
-            <h2 class="text_center page_title">
+        <div class="game__section__title">
+            <h2>
                 Help Trevor Grow!
             </h2>
         </div>
             <div class="row">
-                <div class="col-4 text_center">
+                <div class="col-4 game__section__text">
                     <span>
                         Pick your background color:
                     </span>
                     <div>
-                        <button id="green_btn" class="color_btn">GREEN</button>
-                        <button id="purple_btn" class="color_btn">PURPLE</button>
-                        <button id="pink_btn" class="color_btn">PINK</button>
-                        <button id="red_btn" class="color_btn">RED</button>
-                        <button id="blue_btn" class="color_btn">BLUE</button>
-                        <button id="orange_btn" class="color_btn">ORANGE</button>   
+                        <button id="green_btn" class="btn btn__color__select btn--color--select--green">GREEN</button>
+                        <button id="purple_btn" class="btn btn__color__select btn--color--select--purple">PURPLE</button>
+                        <button id="pink_btn" class="btn btn__color__select btn--color--select--pink">PINK</button>
+                        <button id="red_btn" class="btn btn__color__select btn--color--select--red">RED</button>
+                        <button id="blue_btn" class="btn btn__color__select btn--color--select--blue">BLUE</button>
+                        <button id="orange_btn" class="btn btn__color__select btn--color--select--orange">ORANGE</button>   
                     </div>
                 </div>    
 <!--current game level icon-->
-                <div class="col-4 text_center">
+                <div class="col-4 game__section__text">
                 <p>
                     Current playing level:
                 </p>
-                    <div class="game_level_icon game_select egg">
+                    <div class="game__level__icon game--level--icon--egg">
                         <p class="gameSelected hide" id="changeMe">EGG</p>
                     </div>                                         
                 </div>                   
 <!--correct answer counter increments 1 after every correct answer selected-->
-                <div class="col-4 correct_answer_counter">
-                    <i class="far fa-star" id="star"></i>
-                    <p id="correct_score">0</p>
+                <div class="col-4">
+                    <i class="far fa-star  correct__score__star" id="star"></i>
+                    <p class="correct__score__counter" id="correct_score">0</p>
                 </div>                           
             </div>
 <!--Countdown timer and Image A-->
-            <div class="image_container">
-                <div class="clock" id="clock_color_change">
-                    <div class="hand" data-second-hand></div>
-                    <div class="number number1">1</div>
-                    <div class="number number2">2</div>
-                    <div class="number number3">3</div>
-                    <div class="number number4">4</div>
-                    <div class="number number5">5</div>   
-                    <div class="number number6">6</div>
-                    <div class="number number7">7</div>
-                    <div class="number number8">8</div>
-                    <div class="number number9">9</div>
-                    <div class="number number10">10</div>                                                                                                                       
+            <div class="middle__container">
+                <div class="clock__face" id="clock_color_change">
+                    <div class="clock__hand" data-second-hand></div>
+                    <div class="clock__numbers clock--number--one">1</div>
+                    <div class="clock__numbers clock--number--two">2</div>
+                    <div class="clock__numbers clock--number--three">3</div>
+                    <div class="clock__numbers clock--number--four">4</div>
+                    <div class="clock__numbers clock--number--five">5</div>   
+                    <div class="clock__numbers clock--number--six">6</div>
+                    <div class="clock__numbers clock--number--seven">7</div>
+                    <div class="clock__numbers clock--number--eight">8</div>
+                    <div class="clock__numbers clock--number--nine">9</div>
+                    <div class="clock__numbers clock--number--ten">10</div>                                                                                                                       
                 </div>
-                <div class="answer_image">
-                   <img src=" " id="answer">
+                <div class="answer__image__container">
+                   <img class="answer__image__picture" src=" " id="answer">
                 </div>
             </div>
 <!---Three option images-->            
-            <div class="row option_image_section">
-                <div class="col-4 option_image hide">
+            <div class="row option__image__container">
+                <div class="col-4 option__image__picture hide">
                     <img src=" " id="imageA">
                 </div>
-                <div  class="col-4 option_image hide">
+                <div  class="col-4 option__image__picture hide">
                     <img src=" " id="imageB">
                 </div>
-                <div class="col-4 option_image hide">
+                <div class="col-4 option__image__picture hide">
                     <img src=" " id="imageC">   
                 </div>
             </div>
     </div>
 <!--Welcome pop-up modal. Displays on page open and when link is clicked-->
     <div id="welcome_modal" class="modal">
-        <div class="modal_content">
-            <div class="close">
+        <div class="modal__content">
+            <div class="modal__close">
                 <h1>
                     X
                 </h1>
             </div>
-            <div class="text_center">
-                <h1>
+            <div class="modal__content__text">
+                <h1 class="modal__content__title">
                     Welcome to Help Trevor Grow!
                 </h1>
+                <div class="row">
+                    <img src="assets/images/caterpillar.jpg" class="modal__image__caterpillar">
+                </div>
                 <p>
                 This is Trevor! He needs your help to grow from an Egg, into a Caterpillar and then a Butterfly!
                 </p>
-            </div>
-            <div class="modal_image_div">
-                <div>
-                    <button class="levelOfPlay game_level_icon egg" id="levelEgg">
-                    <p class="hide">
-                        EGG
-                    </p>              
-                     </button>
-                </div>
-                <div>
-                    <button class="levelOfPlay game_level_icon caterpillar" id="levelCaterpillar">
-                    <p class="hide">
-                        CATERPILLAR
-                    </p>              
-                     </button>
-                </div>
-                <div>
-                    <button class="levelOfPlay game_level_icon butterfly" id="levelButterfly">
-                    <p class="hide">
-                        BUTTERFLY
-                    </p>              
-                     </button>
-                </div>                                
-            </div>     
+            </div>   
             <p>
                 Pick the correct fruit to feed Trevor and help him grow, but you need to be quick as the fruit will disappear!
             </p> 
-            <div class="intro_text">
+            <div class="modal__content__text">
                 <h2>
                     About the game
                 </h2>
@@ -141,15 +121,20 @@
                 <p>
                     The game has three levels: 
                 </p>
+                <div class="modal__image__container">
                 <p>
                     <strong>Egg</strong> - the simplest level, designed for approx. 3 years old.
-                </p>
+                </p>                        
+                    <div class="levelOfPlay game__level__icon game--level--icon--egg" id="levelEgg"></div>
                 <p>
                     <strong>Caterpillar</strong> - a bit harder, designed for approx 4 years old.
-                </p>
+                </p>                    
+                    <div class="levelOfPlay game__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>
                  <p>
                     <strong>Butterfly</strong> - the hardest level, designed for approx. 5 years old. 
-                </p>
+                </p>  
+                    <div class="levelOfPlay game__level__icon game--level--icon--butterfly" id="levelButterfly"></div>                               
+                </div>                
                 <p>
                     These ages are just a guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
                 </p> 
@@ -157,29 +142,29 @@
                     The fruit that Trevor wants to eat is shown, with three options below. Select the correct option to gain a point and start a new turn. Be careful though, as the fruit will disappear...
                 </p> 
                 <p>
-                    From the playing page, select the level to play, as well as a color theme for the page!
+                    Select a level from the options above, or go straight into the game, starting at Egg level. Don't forget to select a color theme!
                 </p>                  
-                <div id="startPlayBtn" class="text_center">
-                    <button class="play_btn">
+                <div class="row">
+                    <div class="row btn btn__start__play">
                         <h2>
                             Ready?
                         </h2>
                         <h2>
                             Let's play!
-                        </h2> 
-                    </button>                  
-                </div>                          
+                        </h2>                  
+                    </div> 
+                </div>         
             </div>                                
         </div>    
     </div>  
 <!--footer with game name and email address-->
-<footer class="fixed-bottom">
+<footer class="footer fixed-bottom">
     <div>
-        <span class="bottom left">
+        <span class="nav__link__bottom nav__link__left">
             This game has been developed for educational purposes.
         </span>
-        <span class="bottom right">
-            For questions or suggestions, send an email to: <a href="mailto:catfinlayson@icloud.com">catfinlayson@icloud.com</a>
+        <span class="nav__link__bottom nav__link__right">
+            For questions or suggestions, send an email to: <span class="nav__link" href="mailto:catfinlayson@icloud.com">catfinlayson@icloud.com</span>
         </span>
     </div>
 </footer>
