@@ -36,6 +36,9 @@ readyToPlay.addEventListener('click', startGame)
 var playBtn = document.getElementById('modal_open_link');
 playBtn.onclick = function() {
   welcomeModal.style.display = "block";
+  $('.option_image').addClass('hide'); // hide three images 
+  $('.hand').removeClass('rotate'); // to start clock from beginning 
+  document.getElementById("answer").style.opacity = 1;     
 };
 
 // Change level of play from pop-up modal
@@ -57,7 +60,8 @@ function changePlayingLevel(){
         shuffleImagesEgg(); // shuffle and display three option images
         $('.hand').removeClass('rotate'); // to start clock from beginning 
         document.getElementById("answer").style.opacity = 1;                       
-        startGame();        
+        startGame();   
+        resetScore();             
     }     if (levelPlay == "levelCaterpillar") {
         document.getElementById("changeMe").innerHTML ="CATERPILLAR";
         $('.game_select').removeClass('egg butterfly').addClass('caterpillar'); // add caterpillar background image           
@@ -65,7 +69,8 @@ function changePlayingLevel(){
         shuffleImagesCaterpillar(); // shuffle and display three option images for Caterpillar level
         $('.hand').removeClass('rotate'); // to start clock from beginning    
         document.getElementById("answer").style.opacity = 1;                  
-        startGame();                     
+        startGame();      
+        resetScore();                              
     }    if (levelPlay == "levelButterfly") {
         document.getElementById("changeMe").innerHTML ="BUTTERFLY"; 
         $('.game_select').removeClass('egg caterpillar').addClass('butterfly'); // add butterfly background image             
@@ -73,7 +78,8 @@ function changePlayingLevel(){
         shuffleImagesEgg(); // shuffle and display three option images
         $('.hand').removeClass('rotate'); // to start clock from beginning   
         document.getElementById("answer").style.opacity = 1;                    
-        startGame();                 
+        startGame();   
+        resetScore();                             
     }
 }
 
