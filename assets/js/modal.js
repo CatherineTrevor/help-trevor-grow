@@ -56,13 +56,15 @@ function changePlayingLevel(){
         $('.option_image').addClass('hide'); // hide three images
         shuffleImagesEgg(); // shuffle and display three option images
         displayAnswer(); // display answer image
+        $('.hand').removeClass('rotate'); // to start clock from beginning               
         startGame();        
     }     if (levelPlay == "levelCaterpillar") {
         document.getElementById("changeMe").innerHTML ="CATERPILLAR";
         $('.game_select').removeClass('egg butterfly').addClass('caterpillar'); // add caterpillar background image           
         $('.option_image').addClass('hide'); // hide three images
-        shuffleImagesCaterpillar(); // shuffle and display three option images
+        shuffleImagesCaterpillar(); // shuffle and display three option images for Caterpillar level
         displayAnswer(); // display answer image
+        $('.hand').removeClass('rotate'); // to start clock from beginning              
         startGame();                     
     }    if (levelPlay == "levelButterfly") {
         document.getElementById("changeMe").innerHTML ="BUTTERFLY"; 
@@ -70,6 +72,7 @@ function changePlayingLevel(){
         $('.option_image').addClass('hide'); // hide three images
         shuffleImagesEgg(); // shuffle and display three option images
         displayAnswer(); // display answer image
+        $('.hand').removeClass('rotate'); // to start clock from beginning              
         startGame();                 
     }
 }

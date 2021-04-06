@@ -133,14 +133,14 @@ function checkScore () {
         .then(() => {
           if (currentLevel == "EGG") {
           document.getElementById("changeMe").innerHTML ="CATERPILLAR";
-          $('.game_level_icon').addClass('caterpillar'); // add egg background image
+          $('.game_select').addClass('caterpillar'); // add egg background image
           $("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
           $('.hand').addClass('rotate'); // rotate clock hands 
           startGame();
           resetScore();                      
         } if (currentLevel == "CATERPILLAR") {
           document.getElementById("changeMe").innerHTML ="BUTTERFLY";}
-          $('.game_level_icon').addClass('butterfly'); // add egg background image               
+          $('.game_select').addClass('butterfly'); // add egg background image               
           selectPlayingLevel();
           $("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
           $('.hand').addClass('rotate'); // rotate clock hands 
