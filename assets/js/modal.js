@@ -55,24 +55,24 @@ function changePlayingLevel(){
         $('.game_select').removeClass('caterpillar butterfly').addClass('egg'); // add egg background image
         $('.option_image').addClass('hide'); // hide three images
         shuffleImagesEgg(); // shuffle and display three option images
-        displayAnswer(); // display answer image
-        $('.hand').removeClass('rotate'); // to start clock from beginning               
+        $('.hand').removeClass('rotate'); // to start clock from beginning 
+        document.getElementById("answer").style.opacity = 1;                       
         startGame();        
     }     if (levelPlay == "levelCaterpillar") {
         document.getElementById("changeMe").innerHTML ="CATERPILLAR";
         $('.game_select').removeClass('egg butterfly').addClass('caterpillar'); // add caterpillar background image           
         $('.option_image').addClass('hide'); // hide three images
         shuffleImagesCaterpillar(); // shuffle and display three option images for Caterpillar level
-        displayAnswer(); // display answer image
-        $('.hand').removeClass('rotate'); // to start clock from beginning              
+        $('.hand').removeClass('rotate'); // to start clock from beginning    
+        document.getElementById("answer").style.opacity = 1;                  
         startGame();                     
     }    if (levelPlay == "levelButterfly") {
         document.getElementById("changeMe").innerHTML ="BUTTERFLY"; 
         $('.game_select').removeClass('egg caterpillar').addClass('butterfly'); // add butterfly background image             
         $('.option_image').addClass('hide'); // hide three images
         shuffleImagesEgg(); // shuffle and display three option images
-        displayAnswer(); // display answer image
-        $('.hand').removeClass('rotate'); // to start clock from beginning              
+        $('.hand').removeClass('rotate'); // to start clock from beginning   
+        document.getElementById("answer").style.opacity = 1;                    
         startGame();                 
     }
 }
