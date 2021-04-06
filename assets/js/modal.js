@@ -75,7 +75,7 @@ function changePlayingLevel(){
         document.getElementById("changeMe").innerHTML ="BUTTERFLY"; 
         $('.game_select').removeClass('egg caterpillar').addClass('butterfly'); // add butterfly background image             
         $('.option_image').addClass('hide'); // hide three images
-        shuffleImagesEgg(); // shuffle and display three option images
+        shuffleImagesButterfly(); // shuffle and display three option images
         $('.hand').removeClass('rotate'); // to start clock from beginning   
         document.getElementById("answer").style.opacity = 1;                    
         startGame();   
@@ -92,6 +92,9 @@ function selectPlayingLevel(){
     }     if (levelSelected == "CATERPILLAR") {
         $('.option_image').addClass('hide'); // hide three images
         shuffleImagesCaterpillar(); // shuffle and display three option images
+            }     if (levelSelected == "BUTTERFLY") {
+        $('.option_image').addClass('hide'); // hide three images
+        shuffleImagesButterfly(); // shuffle and display three option images
 }};
 
 // On modal close or Ready to Play button clicked, start game
