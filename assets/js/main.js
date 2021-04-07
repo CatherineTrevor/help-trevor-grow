@@ -1,6 +1,6 @@
 // Background color selection
 // Check which button has been selected to change background color
-let btn = document.querySelectorAll('.color_btn'); 
+let btn = document.querySelectorAll('.btn__color__select'); 
 for (let i = 0 ; i < btn.length ; i++){
   btn[i].addEventListener('click', changeBgColor);
 }
@@ -9,36 +9,36 @@ for (let i = 0 ; i < btn.length ; i++){
 function changeBgColor() {
     btnSelect = event.target.innerHTML;
       if (btnSelect == "GREEN") {
-        document.getElementById("bg_color").style.backgroundColor = "green";
-        document.getElementById("star").style.color = "green";
-        document.getElementById("clock_color_change").style.backgroundColor = "green";        
+        document.querySelector('.body').style.backgroundColor = "green";
+        document.querySelector('.correct__score__star').style.color = "green";
+        document.querySelector('.clock__face').style.backgroundColor = "green";        
     } if (btnSelect == "PURPLE") {
-          document.getElementById("bg_color").style.backgroundColor = "purple";
-        document.getElementById("star").style.color = "purple";    
-        document.getElementById("clock_color_change").style.backgroundColor = "purple";                      
+        document.querySelector('.body').style.backgroundColor = "purple";
+        document.querySelector('.correct__score__star').style.color = "purple";
+        document.querySelector('.clock__face').style.backgroundColor = "purple";               
     } if (btnSelect == "PINK") {
-          document.getElementById("bg_color").style.backgroundColor = "pink";
-        document.getElementById("star").style.color = "pink";     
-        document.getElementById("clock_color_change").style.backgroundColor = "pink";                     
+        document.querySelector('.body').style.backgroundColor = "pink";
+        document.querySelector('.correct__score__star').style.color = "pink";
+        document.querySelector('.clock__face').style.backgroundColor = "pink";             
     } if (btnSelect == "RED") {
-           document.getElementById('bg_color').style.backgroundColor = "red";  
-        document.getElementById("star").style.color = "red";    
-        document.getElementById("clock_color_change").style.backgroundColor = "red";                       
+        document.querySelector('.body').style.backgroundColor = "red";
+        document.querySelector('.correct__score__star').style.color = "red";
+        document.querySelector('.clock__face').style.backgroundColor = "red";                      
     } if (btnSelect == "BLUE") {
-            document.getElementById('bg_color').style.backgroundColor = "blue";
-        document.getElementById("star").style.color = "blue";  
-        document.getElementById("clock_color_change").style.backgroundColor = "blue";                          
+        document.querySelector('.body').style.backgroundColor = "blue";
+        document.querySelector('.correct__score__star').style.color = "blue";
+        document.querySelector('.clock__face').style.backgroundColor = "blue";                      
     } if (btnSelect == "ORANGE") {
-           document.getElementById('bg_color').style.backgroundColor = "orangered"; 
-        document.getElementById("star").style.color = "orangered"; 
-        document.getElementById("clock_color_change").style.backgroundColor = "orangered";                
+        document.querySelector('.body').style.backgroundColor = "orangered";
+        document.querySelector('.correct__score__star').style.color = "orangered";
+        document.querySelector('.clock__face').style.backgroundColor = "orangred";           
     }
 }
 
 // Fade out the answer image over 5 seconds
 function imageFadeOut() {
-    $("#answer").fadeTo(5000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
-        $('.option_image').removeClass('hide'); // show three image options below
+    $('.answer__image__picture').fadeTo(5000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+          $('.option__image__picture').removeClass('hide'); // hide three images  // show three image options below
             next(); 
       });
     };
@@ -55,20 +55,20 @@ let answers = [
  
 // generate random number and assign to answer image      
 let answerImage = Math.floor(Math.random()*answers.length); 
-  document.getElementById("answer").src = answers[answerImage];
+  document.querySelector('.answer__image__picture').src = answers[answerImage];
 };
 
 // If correct answer selected increment score in correct answer counter. Taken from CI challenge and modified
 function incrementScore() {
-    let oldScore = parseInt(document.getElementById("correct_score").innerText);
-    document.getElementById("correct_score").innerText = ++oldScore;
+    let oldScore = parseInt(document.querySelector('.correct__score__counter').innerText);
+    document.querySelector('.correct__score__counter').innerText = ++oldScore;
 }
 
 // Check answer. When player clicks on an answer image, compare if it is the same as the image in result box. Base code on CI challenge and modified
 //https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class - understand how to target all elements will class 'option_image'
 
 // target all three potential option boxes with class option_image
-let imageSelect = document.querySelectorAll('.option_image'); 
+let imageSelect = document.querySelectorAll('.option__image__picture'); 
 for (let i = 0 ; i < imageSelect.length ; i++){
   imageSelect[i].addEventListener('click', checkAnswer); // check which image was selected
 }
@@ -76,7 +76,7 @@ for (let i = 0 ; i < imageSelect.length ; i++){
 // https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div - how to find the source of the clicked button
 function checkAnswer (event) {
 
-    let answerImage = document.getElementById('answer').src;
+    let answerImage = document.querySelector('.answer__image__picture').src;
     btnClick = event.target.src;
 
     if (btnClick == answerImage) { // is the image clicked on is the same as the results image
@@ -85,8 +85,8 @@ function checkAnswer (event) {
         selectPlayingLevel();  
         displayAnswer();
         checkScore();
-        $('.option_image').addClass('hide'); // hide three images
-        $('.hand').removeClass('rotate'); // to start clock from beginning       
+        $('.option__image__picture').addClass('hide'); // hide three images
+        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning       
       } else if (btnClick !== answerImage) {
         incorrectAnswerAlert();
       }
@@ -100,9 +100,9 @@ function correctAnswerAlert () {
         icon: "success",
         button: "Keep playing",
 })
-    .then(() => {$("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown
+    .then(() => {$('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown
         imageFadeOut(); // answer starts to fade again and then three images appear
-          $('.hand').addClass('rotate'); // rotate clock hands
+        $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
     });
 };
 
@@ -117,14 +117,14 @@ function incorrectAnswerAlert () {
 };
 
 function resetScore() {
-    document.getElementById("correct_score").innerHTML = "0";
+    document.querySelector('.correct__score__counter').innerHTML = "0";
 }
 
 // When score gets to 10 ask the player to move up a level
 function checkScore () {
-    let currentLevel = document.getElementById('changeMe').innerHTML;
-    let score = document.getElementById('correct_score').innerHTML;
-    if (score == 3) {
+    let currentLevel = document.querySelector('.level__selected').innerHTML;
+    let score = document.querySelector('.correct__score__counter').innerHTML;
+    if (score == 1) {
         swal({
             title: "You reached 10 - Great job!",
             text: "Well done for completing this level!",
@@ -132,21 +132,20 @@ function checkScore () {
             })
         .then(() => {
           if (currentLevel == "EGG") {
-          document.getElementById("changeMe").innerHTML ="CATERPILLAR";
-          $('.game_select').addClass('caterpillar'); // add egg background image
-          $("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
-          $('.hand').addClass('rotate'); // rotate clock hands 
+          document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
+            $('.game__level__icon').removeClass('game--level--icon--egg').addClass('game--level--icon--caterpillar'); // add egg background image
+             $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
+                $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
           startGame();
           resetScore();                      
         } if (currentLevel == "CATERPILLAR") {
-          document.getElementById("changeMe").innerHTML ="BUTTERFLY";}
-          $('.game_select').addClass('butterfly'); // add egg background image               
-          selectPlayingLevel();
-          $("#answer").fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
-          $('.hand').addClass('rotate'); // rotate clock hands 
+          document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
+            $('.game__level__icon').removeClass('game--level--icon--caterpillar').addClass('game--level--icon--butterfly'); // add egg background image
+             $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
+                $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
           startGame();
           resetScore();           
-        })
+        }})
         ;}
 }
 

@@ -1,8 +1,7 @@
 // Pop-up modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal 
 // Code for modal taken from w3schools.com and CI Handling DOM Events > Loading Events lesson and modified for the site
 
-const welcomeModal = document.getElementById("welcome_modal"); // the welcome modal 
-const changeLevelModal = document.getElementById("select_level_modal"); // the change playing level modal
+const welcomeModal = document.querySelector('.welcome__modal'); // the welcome modal 
 
 // Welcome Modal open upon page load
 window.onload = (function() {
@@ -17,28 +16,25 @@ function hideModal() {
 // When the user clicks anywhere outside of the welcome modal, close it and start game
 window.onclick = function(event) {
   if (event.target == welcomeModal) {
-   this.hideModal();
-   this.startGame();
+   startGame();
   }
 };
 
 // Close the welcome modal and start game
-var modalCloseBtn = document.querySelectorAll(".close");
-for (let i = 0 ; i < modalCloseBtn.length ; i++){
-    modalCloseBtn[0].addEventListener('click', startGame); // close the modal
-}
+var modalCloseBtn = document.querySelector('.modal__close');
+    modalCloseBtn.addEventListener('click', startGame); // close the modal
 
 // Get the Ready to play text in the welcome modal and start game
-var readyToPlay = document.getElementById("startPlayBtn");
+var readyToPlay = document.querySelector('.btn__start__play');
 readyToPlay.addEventListener('click', startGame)
 
 // When How to play is clicked display welcome modal
-var playBtn = document.getElementById('modal_open_link');
+var playBtn = document.querySelector('.modal__open__link');
 playBtn.onclick = function() {
   welcomeModal.style.display = "block";
-  $('.option_image').addClass('hide'); // hide three images 
-  $('.hand').removeClass('rotate'); // to start clock from beginning 
-  document.getElementById("answer").style.opacity = 1;     
+  $('.option__image__picture').addClass('hide'); // hide three images 
+  $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
+  document.getElementById('answer').style.opacity = 1;     
 };
 
 // Change level of play from pop-up modal
@@ -54,46 +50,46 @@ gameLevelButterfly.addEventListener('click', changePlayingLevel);
 function changePlayingLevel(){
     levelPlay = this.id;
     if (levelPlay == "levelEgg") {
-        document.getElementById("changeMe").innerHTML ="EGG";
-        $('.game_select').removeClass('caterpillar butterfly').addClass('egg'); // add egg background image
-        $('.option_image').addClass('hide'); // hide three images
+        document.querySelector('.level__selected').innerHTML ="EGG";
+        $('.game__selected').removeClass('game--level--icon--caterpillar game--level--icon--butterfly').addClass('game--level--icon--egg'); // add egg image to top of playing area
+        $('.option__image__picture').addClass('hide'); // hide three images 
         shuffleImagesEgg(); // shuffle and display three option images
-        $('.hand').removeClass('rotate'); // to start clock from beginning 
-        document.getElementById("answer").style.opacity = 1;                       
+        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
+        document.getElementById('answer').style.opacity = 1;                       
         startGame();   
         resetScore();             
     }     if (levelPlay == "levelCaterpillar") {
-        document.getElementById("changeMe").innerHTML ="CATERPILLAR";
-        $('.game_select').removeClass('egg butterfly').addClass('caterpillar'); // add caterpillar background image           
-        $('.option_image').addClass('hide'); // hide three images
-        shuffleImagesCaterpillar(); // shuffle and display three option images for Caterpillar level
-        $('.hand').removeClass('rotate'); // to start clock from beginning    
-        document.getElementById("answer").style.opacity = 1;                  
+        document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
+        $('.game__selected').removeClass('game--level--icon--egg game--level--icon--butterfly').addClass('game--level--icon--caterpillar'); // add caterpillar image to top of playing area
+        $('.option__image__picture').addClass('hide'); // hide three images 
+        shuffleImagesCaterpillar(); // shuffle and display three option images
+        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
+        document.getElementById('answer').style.opacity = 1;                 
         startGame();      
         resetScore();                              
     }    if (levelPlay == "levelButterfly") {
-        document.getElementById("changeMe").innerHTML ="BUTTERFLY"; 
-        $('.game_select').removeClass('egg caterpillar').addClass('butterfly'); // add butterfly background image             
-        $('.option_image').addClass('hide'); // hide three images
+        document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
+        $('.game__selected').removeClass('game--level--icon--egg game--level--icon--caterpillar').addClass('game--level--icon--butterfly'); // add caterpillar image to top of playing area
+        $('.option__image__picture').addClass('hide'); // hide three images 
         shuffleImagesButterfly(); // shuffle and display three option images
-        $('.hand').removeClass('rotate'); // to start clock from beginning   
-        document.getElementById("answer").style.opacity = 1;                    
-        startGame();   
-        resetScore();                             
+        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
+        document.getElementById('answer').style.opacity = 1;                   
+        startGame();      
+        resetScore();                                  
     }
 }
 
 // Select level of game depending on icon and text at top of playing page
 function selectPlayingLevel(){
-    let levelSelected = document.querySelector('.gameSelected').textContent;
+    let levelSelected = document.querySelector('.level__selected').innerHTML;
     if (levelSelected == "EGG") {
-        $('.option_image').addClass('hide'); // hide three images
+        $('.option__image__picture').addClass('hide'); // hide three images 
         shuffleImagesEgg(); // shuffle and display three option images
     }     if (levelSelected == "CATERPILLAR") {
-        $('.option_image').addClass('hide'); // hide three images
+        $('.option__image__picture').addClass('hide'); // hide three images 
         shuffleImagesCaterpillar(); // shuffle and display three option images
             }     if (levelSelected == "BUTTERFLY") {
-        $('.option_image').addClass('hide'); // hide three images
+        $('.option__image__picture').addClass('hide'); // hide three images 
         shuffleImagesButterfly(); // shuffle and display three option images
 }};
 
@@ -103,5 +99,5 @@ function startGame(){
         selectPlayingLevel(); // select level of game 
         displayAnswer();
         imageFadeOut(); // start answer image fade out          
-        $('.hand').addClass('rotate'); // to start clock from beginning       
+        $('.clock__hand').addClass('clock--hands--rotate'); // start clock rotation  
 };

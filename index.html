@@ -11,11 +11,11 @@
 <title>Help Trevor Grow!</title>
 </head>
 <!--main body background color to change when player selects relevant button-->
-<body class="body" id="bgColor"> 
+<body class="body"> 
     <!--link to open welcome pop-up modal-->
     <div>
         <nav class="nav">
-            <a class="nav__link nav__link__top" id="modalOpenLink">
+            <a class="nav__link nav__link__top modal__open__link" id="modalOpenLink">
                     How to play
             </a>           
         </nav>    
@@ -33,12 +33,12 @@
                         Pick your background color:
                     </span>
                     <div>
-                        <button id="green_btn" class="btn btn__color__select btn--color--select--green">GREEN</button>
-                        <button id="purple_btn" class="btn btn__color__select btn--color--select--purple">PURPLE</button>
-                        <button id="pink_btn" class="btn btn__color__select btn--color--select--pink">PINK</button>
-                        <button id="red_btn" class="btn btn__color__select btn--color--select--red">RED</button>
-                        <button id="blue_btn" class="btn btn__color__select btn--color--select--blue">BLUE</button>
-                        <button id="orange_btn" class="btn btn__color__select btn--color--select--orange">ORANGE</button>   
+                        <button class="btn btn__color__select btn--color--select--green">GREEN</button>
+                        <button class="btn btn__color__select btn--color--select--purple">PURPLE</button>
+                        <button class="btn btn__color__select btn--color--select--pink">PINK</button>
+                        <button class="btn btn__color__select btn--color--select--red">RED</button>
+                        <button class="btn btn__color__select btn--color--select--blue">BLUE</button>
+                        <button class="btn btn__color__select btn--color--select--orange">ORANGE</button>   
                     </div>
                 </div>    
 <!--current game level icon-->
@@ -46,14 +46,15 @@
                 <p>
                     Current playing level:
                 </p>
-                    <div class="game__level__icon game--level--icon--egg">
-                        <p class="gameSelected hide" id="changeMe">EGG</p>
-                    </div>                                         
+                    <div>
+                        <p class="level__selected">EGG</p>
+                        <div class="game__level__icon game__selected game--level--icon--egg"></div> 
+                    </div>
                 </div>                   
 <!--correct answer counter increments 1 after every correct answer selected-->
                 <div class="col-4">
-                    <i class="far fa-star  correct__score__star" id="star"></i>
-                    <p class="correct__score__counter" id="correct_score">0</p>
+                    <i class="far fa-star correct__score__star"></i>
+                    <p class="correct__score__counter">0</p>
                 </div>                           
             </div>
 <!--Countdown timer and Image A-->
@@ -77,19 +78,19 @@
             </div>
 <!---Three option images-->            
             <div class="row option__image__container">
-                <div class="col-4 option__image__picture hide">
-                    <img src=" " id="imageA">
+                <div class="col-4">
+                    <img src=" " class="option__image__picture hide" id="imageA">
                 </div>
-                <div  class="col-4 option__image__picture hide">
-                    <img src=" " id="imageB">
+                <div class="col-4">
+                    <img src=" " class="option__image__picture hide" id="imageB">
                 </div>
-                <div class="col-4 option__image__picture hide">
-                    <img src=" " id="imageC">   
+                <div class="col-4">
+                    <img src=" " id="imageC" class="option__image__picture hide">   
                 </div>
             </div>
     </div>
 <!--Welcome pop-up modal. Displays on page open and when link is clicked-->
-    <div id="welcome_modal" class="modal">
+    <div class="welcome__modal">
         <div class="modal__content">
             <div class="modal__close">
                 <h1>
@@ -125,15 +126,15 @@
                 <p>
                     <strong>Egg</strong> - the simplest level, designed for approx. 3 years old.
                 </p>                        
-                    <div class="levelOfPlay game__level__icon game--level--icon--egg" id="levelEgg"></div>
+                    <div class="levelOfPlay modal__level__icon game--level--icon--egg" id="levelEgg"></div>
                 <p>
                     <strong>Caterpillar</strong> - a bit harder, designed for approx 4 years old.
                 </p>                    
-                    <div class="levelOfPlay game__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>
+                    <div class="levelOfPlay modal__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>
                  <p>
                     <strong>Butterfly</strong> - the hardest level, designed for approx. 5 years old. 
                 </p>  
-                    <div class="levelOfPlay game__level__icon game--level--icon--butterfly" id="levelButterfly"></div>                               
+                    <div class="levelOfPlay modal__level__icon game--level--icon--butterfly" id="levelButterfly"></div>                               
                 </div>                
                 <p>
                     These ages are just a guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
