@@ -22,6 +22,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
 /*** Welcome pop-up modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal - code for modal taken from w3schools.com and modified for the site***/
 .welcome__modal {
   position: fixed; /* Stay in place */
