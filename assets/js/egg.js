@@ -5,13 +5,13 @@ function shuffleImagesEgg() {
 
 //declare an array to store the images  
 let imagesArray = [
- "../assets/images/egg_level/banana_single.jpg",
- "../assets/images/egg_level/apple_single.jpg",
- "../assets/images/egg_level/orange_single.jpg",
- "../assets/images/egg_level/lemon_single.jpg",
- "../assets/images/egg_level/pear_single.jpg",
- "../assets/images/egg_level/pineapplesingle.jpg",
- "../assets/images/egg_level/strawberrysingle.jpg",
+ "./assets/images/egg_level/banana_single.jpg",
+ "./assets/images/egg_level/apple_single.jpg",
+ "./assets/images/egg_level/orange_single.jpg",
+ "./assets/images/egg_level/lemon_single.jpg",
+ "./assets/images/egg_level/pear_single.jpg",
+ "./assets/images/egg_level/pineapplesingle.jpg",
+ "./assets/images/egg_level/strawberrysingle.jpg",
 ]  
 
 //generate a number and provide to the images to generate randomly  
