@@ -1,22 +1,26 @@
 # Help Trevor Grow!
 
-## Project Overview
-## User Experience Design
-  ### Strategy
-    Target Audience
-    User Stories
-  ### Scope
-  ### Structure
-  ### Skeleton
-  ### Surface
-    Typography
-    Imagery
-    Color Scheme
-    Favicon
-## Technologies Used
-## Testing
-## Deployment
-## Credits
+<div align="center">
+    <img src="supporting_docs/am_i_resposive.jpg" width="500">
+</div>
+
+[View the live site here](https://catherinetrevor.github.io/help-trevor-grow/)
+
+# [Project Overview](#project-overview)
+# [User Experience Design](#user-experience-design)
+   * [Strategy](#strategy)
+   * [Scope](#scope)
+   * [Structure](#structure)
+   * [Skeleton](#skeleton)
+   * [Surface](#surface)
+# [Technologies Used](#technologies-used)
+# [Testing](#testing)
+# [Deployment](#deployment)
+# [Credits](#credits)
+
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Project Overview
 
