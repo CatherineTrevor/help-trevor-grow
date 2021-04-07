@@ -190,7 +190,7 @@
     height: 35%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    z-index: 10;
+    z-index: 1;
     background-color: white;
     transform-origin: bottom;
 }
@@ -338,4 +338,84 @@
   to {
     transform: rotate(359deg);
   }
+}
+
+/***for mobile devices***/
+
+@media only screen and (max-width: 768px) {
+    .btn {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        text-align: left;
+    }
+    .welcome__modal {
+        padding-top: 20px; /* Location of the box */
+    }
+    .modal__content {
+        width: 80%;
+        height: 80%;
+    }
+    .modal__close {
+        display: none; /*no value on a mobile device*/
+    }
+    .modal__content__text {
+        font-size: 80%;
+    }
+    .btn__color__select {
+        height: 25px;
+        width: 60px;
+        font-size: 10px;
+    }
+    .game__level__icon {
+        height: 50px;
+        width: 75px;
+    }
+    .correct__score__star {
+        height: 50px;
+        font-size: 65px;
+        top: 0%;
+    }
+    .correct__score__counter {
+        font-size: 20px;
+        top: 3%;
+    }
+    .clock__face {
+        float: none;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+    .clock__numbers {
+        font-size: 10px;
+    }
+    .clock__hand {
+        width: 3px;
+    }
+    .answer__image__container {
+        height: 150px;
+        width: 150px;
+    }
+    .answer__image__picture {
+        height: 75%;
+        width: 65%;
+        margin-left: 25%;
+    }
+    .option__image__container {
+        height: 100px;
+    }
+    .option__image__picture {
+        height: 60%;
+        width: 75%;
+    }
+    .nav__link__bottom {
+        font-size: 10px;
+    }
+    .nav__link__left {
+        float: none;
+    }
+    .nav__link__right {
+        float: none;
+    }
 }

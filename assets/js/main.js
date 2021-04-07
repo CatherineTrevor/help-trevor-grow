@@ -35,6 +35,13 @@ function changeBgColor() {
     }
 }
 
+// remove fixed-bottom from footer for mobile device only
+// help from - https://css-tricks.com/working-with-javascript-media-queries/
+const mediaQuery = window.matchMedia('(max-width: 768px)')
+if (mediaQuery.matches) {
+  $('.footer').removeClass('fixed-bottom');
+}
+
 // Fade out the answer image over 10 seconds
 function imageFadeOut() {
     $('.answer__image__picture').fadeTo(10000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
