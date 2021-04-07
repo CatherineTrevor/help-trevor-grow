@@ -10,8 +10,8 @@ let imagesArray = [
  "./assets/images/egg_level/orange_single.jpg",
  "./assets/images/egg_level/lemon_single.jpg",
  "./assets/images/egg_level/pear_single.jpg",
- "./assets/images/egg_level/pineapplesingle.jpg",
- "./assets/images/egg_level/strawberrysingle.jpg",
+ "./assets/images/egg_level/pineapple_single.jpg",
+ "./assets/images/egg_level/strawberry_single.jpg",
 ]  
 
 //generate a number and provide to the images to generate randomly  
