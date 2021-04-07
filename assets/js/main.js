@@ -35,9 +35,9 @@ function changeBgColor() {
     }
 }
 
-// Fade out the answer image over 5 seconds
+// Fade out the answer image over 10 seconds
 function imageFadeOut() {
-    $('.answer__image__picture').fadeTo(5000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
+    $('.answer__image__picture').fadeTo(10000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
           $('.option__image__picture').removeClass('hide'); // hide three images  // show three image options below
             next(); 
       });
@@ -124,28 +124,48 @@ function resetScore() {
 function checkScore () {
     let currentLevel = document.querySelector('.level__selected').innerHTML;
     let score = document.querySelector('.correct__score__counter').innerHTML;
-    if (score == 1) {
-        swal({
-            title: "You reached 10 - Great job!",
-            text: "Well done for completing this level!",
-            button: "Let's try the next level!",
-            })
-        .then(() => {
-          if (currentLevel == "EGG") {
-          document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
-            $('.game__level__icon').removeClass('game--level--icon--egg').addClass('game--level--icon--caterpillar'); // add egg background image
-             $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
+    if (score == 10) {
+        if (currentLevel == "EGG") {
+            swal({
+                title: "You reached 10 - Trevor has now grown into a caterpillar!",
+                text: "Well done for completing this level!",
+                button: "Let's try the next level!",
+                })
+            .then(() => {
+              document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
+              $('.game__level__icon').removeClass('game--level--icon--egg').addClass('game--level--icon--caterpillar'); // add egg background image
+              $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
+              $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
+              startGame();
+              resetScore();                      
+            });
+            } if (currentLevel == "CATERPILLAR") {
+            swal({
+                title: "You reached 10 - Trevor has now grown into a butterfly!",
+                text: "Great job!",
+                button: "Let's try the next level!",
+                })
+            .then(() => {            
+              document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
+              $('.game__level__icon').removeClass('game--level--icon--caterpillar').addClass('game--level--icon--butterfly'); // add egg background image
+              $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
+              $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
+              startGame();
+              resetScore();  
+            });
+            } if (currentLevel == "BUTTERFLY") {
+            swal({
+                title: "You did it!",
+                text: "Well done for completing all of the levels - Trevor has flown away to play with his friends!",
+                button: "Start again",
+                })
+            .then(() => {
+                document.querySelector('.level__selected').innerHTML ="EGG";                
+                $('.game__level__icon').removeClass('game--level--icon--butterfly').addClass('game--level--icon--egg'); // add egg background image
+                $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
                 $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
-          startGame();
-          resetScore();                      
-        } if (currentLevel == "CATERPILLAR") {
-          document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
-            $('.game__level__icon').removeClass('game--level--icon--caterpillar').addClass('game--level--icon--butterfly'); // add egg background image
-             $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
-                $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
-          startGame();
-          resetScore();           
-        }})
-        ;}
+                startGame();
+                resetScore();                  
+            })}
+    }
 }
-

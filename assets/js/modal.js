@@ -52,21 +52,21 @@ function changePlayingLevel(){
     if (levelPlay == "levelEgg") {
         document.querySelector('.level__selected').innerHTML ="EGG";
         $('.game__selected').removeClass('game--level--icon--caterpillar game--level--icon--butterfly').addClass('game--level--icon--egg'); // add egg image to top of playing area
-        $('.option__image__picture').addClass('hide'); // hide three images 
-        shuffleImagesEgg(); // shuffle and display three option images
-        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
-        document.getElementById('answer').style.opacity = 1;                       
-        startGame();   
-        resetScore();             
+          $('.option__image__picture').addClass('hide'); // hide three images 
+           shuffleImagesEgg(); // shuffle and display three option images
+            $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
+            document.getElementById('answer').style.opacity = 1;                       
+             startGame();   
+              resetScore();             
     }     if (levelPlay == "levelCaterpillar") {
         document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
-        $('.game__selected').removeClass('game--level--icon--egg game--level--icon--butterfly').addClass('game--level--icon--caterpillar'); // add caterpillar image to top of playing area
-        $('.option__image__picture').addClass('hide'); // hide three images 
-        shuffleImagesCaterpillar(); // shuffle and display three option images
-        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
-        document.getElementById('answer').style.opacity = 1;                 
-        startGame();      
-        resetScore();                              
+          $('.game__selected').removeClass('game--level--icon--egg game--level--icon--butterfly').addClass('game--level--icon--caterpillar'); // add caterpillar image to top of playing area
+            $('.option__image__picture').addClass('hide'); // hide three images 
+             shuffleImagesCaterpillar(); // shuffle and display three option images
+              $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
+               document.getElementById('answer').style.opacity = 1;                 
+                startGame();      
+                 resetScore();                              
     }    if (levelPlay == "levelButterfly") {
         document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
         $('.game__selected').removeClass('game--level--icon--egg game--level--icon--caterpillar').addClass('game--level--icon--butterfly'); // add caterpillar image to top of playing area

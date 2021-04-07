@@ -329,7 +329,7 @@
 .clock--number--nine { --rotation: 324deg; }
 /* help with rotating the clock hand https://flaviocopes.com/rotate-image/ and https://flaviocopes.com/css-transitions/ */
 .clock--hands--rotate {
-  animation: rotation 5s 0s linear;
+  animation: rotation 10s 0s linear;
 }
 @keyframes rotation {
   from {
