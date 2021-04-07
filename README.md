@@ -132,43 +132,37 @@ JavaScript is used to change the playing levels, so there is only one html file.
 
 **Welcome pop-up modal | Desktop**
 
-![wireframe_desktop_welcome](https://user-images.githubusercontent.com/76033080/112113000-88c73f00-8bb6-11eb-91fc-91856edfac3c.jpg)
+![wireframe_desktop_welcome](supporting_docs/wireframe_modal_desktop.jpg)
 
 **Welcome pop-up modal | Tablet**
 
-![wireframe_tablet_welcome](https://user-images.githubusercontent.com/76033080/112112973-81079a80-8bb6-11eb-9f97-c59939025fc0.jpg)
+![wireframe_tablet_welcome](supporting_docs/wireframe_modal_tablet.jpg)
 
 **Welcome pop-up modal | Mobile**
 
-![wireframe_mobile_welcome](https://user-images.githubusercontent.com/76033080/112112982-8533b800-8bb6-11eb-9a67-53fdb32f1190.jpg)
+![wireframe_mobile_welcome](supporting_docs/wireframe_modal_mobile.jpg)
 
 **Play | Desktop**
 
-![wireframe_desktop_play](https://user-images.githubusercontent.com/76033080/112112761-3ab23b80-8bb6-11eb-8df1-3f96564a18ab.jpg)
+![wireframe_desktop_play](supporting_docs/wireframe_play_desktop.jpg)
 
 **Play | Tablet**
 
-![wireframe_tablet_play](https://user-images.githubusercontent.com/76033080/112113499-291d6380-8bb7-11eb-9143-451333fba4a7.jpg)
+![wireframe_tablet_play](supporting_docs/wireframe_play_tablet.jpg)
 
 **Play | Mobile**
 
-![wireframe_mobile_play](https://user-images.githubusercontent.com/76033080/112112752-38e87800-8bb6-11eb-87ea-600ec6e16abe.jpg)
+![wireframe_mobile_play](supporting_docs/wireframe_play_mobile.jpg)
 
 **Play area detail** <a name="play_detail"></a>
 
-![wireframe_images](https://user-images.githubusercontent.com/76033080/112113941-c11b4d00-8bb7-11eb-846c-654270c13d12.jpg)
+![wireframe_images](supporting_docs/wireframe_images_detail.jpg)
 
 The game will have one file only, with the pop-up modal displaying over it. The images will be changed depending on the level selected using JavaScript.
 
 **Workflow**
 
-**Main game workflow**
-
-![workflow](https://user-images.githubusercontent.com/76033080/112114572-81089a00-8bb8-11eb-9ea9-6cdb3f84dba7.jpg)
-
-**Level selection workflow**
-
-![level_workflow](https://user-images.githubusercontent.com/76033080/112114766-b8774680-8bb8-11eb-81f9-951cec1f8830.jpg)
+![workflow](/supporting_docs/workflow.jpg)
 
 ## Surface
 
