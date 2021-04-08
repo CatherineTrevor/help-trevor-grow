@@ -26,10 +26,9 @@
     outline: none;
     box-shadow: none;
 }
-/*** Welcome pop-up modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal - code for modal taken from w3schools.com and modified for the site***/
 .welcome__modal {
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 1;
   padding-top: 80px; /* Location of the box */
   left: 0;
   top: 0;
@@ -48,6 +47,9 @@
     margin: 0 auto;
     padding-left: 10px;
 }
+.game__section__middle__area {
+    height: 220px;
+}
 .hide {
     visibility: hidden;
 }
@@ -64,18 +66,14 @@
     text-decoration: none;    
 }
 .clock__face {
-    width: 250px;
-    height: 250px;
+    width: 175px;
+    height: 175px;
     background-color: red;
     border-radius: 50%;
     display: block;
     position: relative;
-    float: left;
-    bottom: -10%;
-    left: 5%;
-}
-.middle__container { /*contains clock and answer image*/
-    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 .nav__link__top {
     margin: 0 auto;
@@ -95,6 +93,9 @@
     text-align: center;
 }
 .game__section__text {
+    text-align: center;
+}
+.btn__container {
     text-align: center;
 }
 .btn__color__select {
@@ -184,7 +185,6 @@
     transform: rotate(var(--rotation));
     font-family: 'RocknRoll One', sans-serif;
     color: white;
-    font-weight: bold;
 }
 .clock__hand {
     position: absolute;
@@ -199,8 +199,8 @@
     transform-origin: bottom;
 }
 .answer__image__container {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     display: block;
     position: relative;
     margin: 0 auto;
@@ -212,13 +212,12 @@
 }
 .option__image__container {
     position: relative;
-    height: 225px;
+    height: 175px;
     text-align: center;
 }
 .option__image__picture {
-    height: 200px;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 80%;
+    max-width: 80%;
 }
 .option__image__picture:hover {
     cursor: pointer;

@@ -29,76 +29,103 @@
             </a>           
         </nav>    
     </div>
-    <div class="game__section">
-<!--background color options-->
         <div class="game__section__title">
             <h2>
                 Help Trevor Grow!
             </h2>
         </div>
-            <div class="row">
-                <div class="col-4 game__section__text">
-                    <span>
-                        Pick your background color:
-                    </span>
-                    <div>
-                        <button class="btn btn__color__select btn--color--select--green">GREEN</button>
-                        <button class="btn btn__color__select btn--color--select--purple">PURPLE</button>
-                        <button class="btn btn__color__select btn--color--select--pink">PINK</button>
-                        <button class="btn btn__color__select btn--color--select--red">RED</button>
-                        <button class="btn btn__color__select btn--color--select--blue">BLUE</button>
-                        <button class="btn btn__color__select btn--color--select--orange">ORANGE</button>   
-                    </div>
-                </div>    
-<!--current game level icon-->
-                <div class="col-4 game__section__text">
-                <p>
-                    Current playing level:
-                </p>
-                    <div>
-                        <p class="level__selected">EGG</p>
-                        <div class="game__level__icon game__selected game--level--icon--egg"></div> 
-                    </div>
-                </div>                   
-<!--correct answer counter increments 1 after every correct answer selected-->
-                <div class="col-4">
-                    <i class="far fa-star correct__score__star"></i>
-                    <p class="correct__score__counter">0</p>
-                </div>                           
+    <div class="game__section">
+<!--background color options-->
+        <div class="row justify-content-center">
+                <h3 class="game__section__title">
+                    Pick your colour scheme!
+                </h3>
+        </div>        
+        <div class="row">
+            <div class="btn__container">
+                <button class="btn btn__color__select btn--color--select--green">
+                    GREEN
+                </button>
             </div>
+            <div class="btn__container">
+                <button class="btn btn__color__select btn--color--select--purple">
+                    PURPLE
+                </button>
+            </div>
+            <div class="btn__container">
+                <button class="btn btn__color__select btn--color--select--pink">
+                    PINK
+                </button>
+            </div>
+            <div class="btn__container">
+                <button class="btn btn__color__select btn--color--select--red">
+                    RED
+                </button>
+            </div>
+            <div class="btn__container">
+                <button class="btn btn__color__select btn--color--select--blue">
+                    BLUE
+                </button>
+            </div>
+            <div class="btn__container">
+                <button class="btn btn__color__select btn--color--select--orange">
+                    ORANGE
+                </button>   
+            </div>                                                                        
+        </div>
+    <!--current game level icon-->
+    <div class="row game__section__middle__area">
+        <div class="col-4 game__section__text">
+            <p>
+                Current playing level
+            </p>
+            <div>
+                <p class="level__selected">EGG</p>
+                <div class="game__level__icon game__selected game--level--icon--egg"></div> 
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="clock__face" id="clock_color_change">
+                <div class="clock__hand" data-second-hand></div>
+                <div class="clock__numbers clock--number--one">1</div>
+                <div class="clock__numbers clock--number--two">2</div>
+                <div class="clock__numbers clock--number--three">3</div>
+                <div class="clock__numbers clock--number--four">4</div>
+                <div class="clock__numbers clock--number--five">5</div>   
+                <div class="clock__numbers clock--number--six">6</div>
+                <div class="clock__numbers clock--number--seven">7</div>
+                <div class="clock__numbers clock--number--eight">8</div>
+                <div class="clock__numbers clock--number--nine">9</div>
+                <div class="clock__numbers clock--number--ten">10</div>                                                                                                                       
+            </div>                    
+        </div>
+    <!--correct answer counter increments 1 after every correct answer selected-->
+        <div class="col-4 game__section__text">
+            <p>
+                Your score
+            </p>
+            <i class="far fa-star correct__score__star"></i>
+            <p class="correct__score__counter">0</p>
+        </div>                           
+    </div>          
 <!--Countdown timer and Image A-->
-            <div class="middle__container">
-                <div class="clock__face" id="clock_color_change">
-                    <div class="clock__hand" data-second-hand></div>
-                    <div class="clock__numbers clock--number--one">1</div>
-                    <div class="clock__numbers clock--number--two">2</div>
-                    <div class="clock__numbers clock--number--three">3</div>
-                    <div class="clock__numbers clock--number--four">4</div>
-                    <div class="clock__numbers clock--number--five">5</div>   
-                    <div class="clock__numbers clock--number--six">6</div>
-                    <div class="clock__numbers clock--number--seven">7</div>
-                    <div class="clock__numbers clock--number--eight">8</div>
-                    <div class="clock__numbers clock--number--nine">9</div>
-                    <div class="clock__numbers clock--number--ten">10</div>                                                                                                                       
-                </div>
+            <div>
                 <div class="answer__image__container">
                    <img class="answer__image__picture" src=" " id="answer">
                 </div>
             </div>
 <!---Three option images-->            
-            <div class="container">
-                <div class="row option__image__container">
-                    <div class="col-4">
-                        <img src=" " class="option__image__picture hide" id="imageA">
-                    </div>
-                    <div class="col-4">
-                        <img src=" " class="option__image__picture hide" id="imageB">
-                    </div>
-                    <div class="col-4">
-                        <img src=" " id="imageC" class="option__image__picture hide">   
-                    </div>
+            <div class="row">
+                <div class="col-4 option__image__container">
+                    <img src=" " class="option__image__picture hide" id="imageA">
                 </div>
-            </div>    
+                <div class="col-4 option__image__container">
+                    <img src=" " class="option__image__picture hide" id="imageB">
+                </div>
+                <div class="col-4 option__image__container">
+                    <img src=" " id="imageC" class="option__image__picture hide">   
+                </div>
+            </div>
         </div>            
 <!--Welcome pop-up modal. Displays on page open and when link is clicked-->
     <div class="welcome__modal">
