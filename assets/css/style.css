@@ -349,7 +349,7 @@
     .btn {
         margin-top: 2px;
         margin-bottom: 2px;
-        text-align: left;
+        text-align: center;
     }
     .welcome__modal {
         padding-top: 20px; /* Location of the box */
@@ -358,8 +358,8 @@
         width: 80%;
         height: 80%;
     }
-    .modal__close {
-        display: none; /*no value on a mobile device*/
+    .modal__image__caterpillar {
+        height: 150px;
     }
     .modal__content__text {
         font-size: 80%;
