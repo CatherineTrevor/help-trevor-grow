@@ -136,11 +136,7 @@
 }
 .modal__level__icon {
     border: none;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 100px;
+    height: 150px;
     width: 200px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -152,6 +148,10 @@
     border: 3px solid darkslategray;
     border-radius: 8px; 
     cursor: pointer;
+}
+.modal__level__text {
+    width: 65%;
+    margin: 0 auto;
 }
 .correct__score__star { /***Correct answer star***/
     height: 150px;
@@ -212,7 +212,6 @@
 }
 .option__image__container {
     position: relative;
-    /*top: 20%; /* move three options to bottom of play area*/
     height: 250px;
     text-align: center;
 }
@@ -221,7 +220,6 @@
     max-height: 100%;
     max-width: 100%;
 }
-/** help with transform on hover https://www.w3schools.com/howto/howto_css_zoom_hover.asp***/
 .option__image__picture:hover {
     cursor: pointer;
     transform: scale(1.2);
@@ -237,34 +235,35 @@
   overflow: scroll;
 }
 .modal__image__caterpillar {
-    height: 200px;
+    height: 300px;
     margin: 0 auto;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 .modal__image__container {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .modal__content__text {
     font-size: 16px;
 }
 .modal__content__title {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .modal__close {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
 }
 .modal__close:hover,
 .modal__close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+  transform: scale(1.2);
 }
-/***Background color buttons***/
 .btn--color--select--green {
     background-color: green;
 }

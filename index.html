@@ -91,50 +91,58 @@
     </div>
 <!--Welcome pop-up modal. Displays on page open and when link is clicked-->
     <div class="welcome__modal">
-        <div class="modal__content">
-            <div class="modal__close">
-                <h1>
+        <div class="modal__content container-fluid">
+            <div>
+                <span class="modal__close">
                     X
-                </h1>
-            </div>
-            <div class="modal__content__text">
+                </span>
                 <h1 class="modal__content__title">
                     Welcome to Help Trevor Grow!
                 </h1>
-                <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-12 modal__image__container">
                     <img src="assets/images/caterpillar.jpg" class="modal__image__caterpillar">
                 </div>
-                <p>
-                This is Trevor! He needs your help to grow from an Egg, into a Caterpillar and then a Butterfly!
-                </p>
+                <div class="col-12 modal__content__text">
+                    <p>
+                    This is Trevor! He needs your help to grow from an Egg, into a Caterpillar and then a Butterfly!
+                    </p>                    
+                </div>
             </div>   
             <p>
                 Pick the correct fruit to feed Trevor and help him grow, but you need to be quick as the fruit will disappear!
             </p> 
             <div class="modal__content__text">
-                <h2>
-                    About the game
+                <h2 class="modal__content__title">
+                    How to play
                 </h2>
                 <p>
                     This free-to-play memory game is designed to help young children, between approx. 3 and 5 years old, learn and remember basic fruits
-                    and numbers up to 10.
+                    and numbers up to 10. The game has three levels: 
                 </p>
-                <p>
-                    The game has three levels: 
-                </p>
-                <div class="modal__image__container">
-                <p>
-                    <strong>Egg</strong> - the simplest level, designed for approx. 3 years old.
-                </p>                        
-                    <div class="levelOfPlay modal__level__icon game--level--icon--egg" id="levelEgg"></div>
-                <p>
-                    <strong>Caterpillar</strong> - a bit harder, designed for approx 4 years old.
-                </p>                    
-                    <div class="levelOfPlay modal__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>
-                 <p>
-                    <strong>Butterfly</strong> - the hardest level, designed for approx. 5 years old. 
-                </p>  
-                    <div class="levelOfPlay modal__level__icon game--level--icon--butterfly" id="levelButterfly"></div>                               
+                <div class="row modal__image__container">
+                    <div class="col-4">
+                            <h2>Egg</h2>
+                            <div class="levelOfPlay modal__level__icon game--level--icon--egg" id="levelEgg"></div>                                    
+                            <p class="modal__level__text">
+                                The simplest level, designed for approx. 3 years old.
+                            </p>           
+                    </div>
+                    <div class="col-4">
+                            <h2>Caterpillar</h2>
+                            <div class="levelOfPlay modal__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>                                    
+                            <p class="modal__level__text">
+                                A bit harder, designed for approx 4 years old.
+                            </p>           
+                    </div>
+                    <div class="col-4">
+                            <h2>Butterfly</h2>
+                            <div class="levelOfPlay modal__level__icon game--level--icon--butterfly" id="levelButterfly"></div>                                    
+                            <p class="modal__level__text">
+                                The hardest level, designed for approx. 5 years old. 
+                            </p>           
+                    </div>                                              
                 </div>                
                 <p>
                     These ages are just a guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
