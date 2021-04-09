@@ -4,20 +4,27 @@
     font-family: 'RocknRoll One', sans-serif;
     font-size: 15px;
     background-color: red;
-    color: darkslategray;   
+    color: darkslategray;
+}
+.nav {
+    background-color: whitesmoke;
+    width: 80%;
+    display: block;
+    height: 100px;
+    margin: auto auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
 }
 .footer {
     margin-bottom: 10px;
     margin-right: 8px;
     margin-left: 8px;
-    color: white;
-}
-.nav {
-    margin-top: 30px;
+    color: whitesmoke;
 }
 .btn {
     border-radius: 8px;
-    color: white;
+    color: whitesmoke;
     border: none;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -39,13 +46,10 @@
   background-color: rgba(155, 143, 143, 0.6); /* Gray w/ opacity */
 }
 .game__section { /*main playing area*/
-    background-color: white;
+    background-color: whitesmoke;
     width: 80%;
-    height: 60%;
-    min-height: 50%;
-    max-height: 70%;
+    height: 80vh;
     margin: 0 auto;
-    padding-left: 10px;
 }
 .game__section__middle__area {
     height: 220px;
@@ -55,15 +59,25 @@
 }
 .nav__link {
     text-decoration: none;
-    color: white;
+    color: darkslategray;
     font-weight: bold;
     font-size: 120%;   
-    color: white;  
+    text-align: right;
 }
 .nav__link:hover {
-    color: darkslategray;
+    text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;    
+}
+.bottom__section__info {
+    text-align: center;
+    display: block;
+    height: 300px;
+    margin: auto auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    width: 80%;
 }
 .clock__face {
     width: 175px;
@@ -111,7 +125,7 @@
 }
 .btn__start__play:hover {
     border: 2px solid darkslategray;
-    background-color: white;
+    background-color: whitesmoke;
     color: darkslategray;
     cursor: pointer;
     text-decoration: none;
@@ -127,7 +141,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: white;  
+    background-color: whitesmoke;  
     margin: 0 auto;
 }
 .game__level__icon:hover {
@@ -142,7 +156,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: white;  
+    background-color: whitesmoke;  
     margin: 0 auto;
 }
 .modal__level__icon:hover {
@@ -184,7 +198,7 @@
     text-align: center;
     transform: rotate(var(--rotation));
     font-family: 'RocknRoll One', sans-serif;
-    color: white;
+    color: whitesmoke;
 }
 .clock__hand {
     position: absolute;
@@ -195,7 +209,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     z-index: 1;
-    background-color: white;
+    background-color: whitesmoke;
     transform-origin: bottom;
 }
 .answer__image__container {
@@ -207,8 +221,8 @@
     bottom: -10%;
 }
 .answer__image__picture {
-    max-height: 100%;
-    max-width: 100%;   
+    height: auto;
+    width: 100%;   
 }
 .option__image__container {
     position: relative;
@@ -224,7 +238,7 @@
     transform: scale(1.2);
 }
 .modal__content {
-  background-color: white;
+  background-color: whitesmoke;
   color: darkslategray;
   margin: auto;
   padding: 20px;
@@ -234,7 +248,8 @@
   overflow: scroll;
 }
 .modal__image__caterpillar {
-    height: 300px;
+    height: auto;
+    width: 80%;
     margin: 0 auto;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -269,7 +284,7 @@
 .btn--color--select--green:hover {
     color: green;
     border: 3px solid green;    
-    background-color: white;        
+    background-color: whitesmoke;        
 }
 .btn--color--select--purple {
     background-color: purple;
@@ -277,7 +292,7 @@
 .btn--color--select--purple:hover {
     color: purple;
     border: 3px solid purple;    
-    background-color: white;        
+    background-color: whitesmoke;        
 }
 .btn--color--select--pink {
     background-color: pink;
@@ -285,7 +300,7 @@
 .btn--color--select--pink:hover {
     color: pink;
     border: 3px solid pink;    
-    background-color: white;        
+    background-color: whitesmoke;        
 }
 .btn--color--select--red {
     background-color: red;
@@ -293,7 +308,7 @@
 .btn--color--select--red:hover {
     color: red;
     border: 3px solid red;    
-    background-color: white;        
+    background-color: whitesmoke;        
 }
 .btn--color--select--blue {
     background-color: blue;
@@ -301,7 +316,7 @@
 .btn--color--select--blue:hover {
     color: blue;
     border: 3px solid blue;    
-    background-color: white;        
+    background-color: whitesmoke;        
 }
 .btn--color--select--orange {
     background-color: orangered;
@@ -309,7 +324,7 @@
 .btn--color--select--orange:hover {
     color: orangered;
     border: 3px solid orangered;    
-    background-color: white;        
+    background-color: whitesmoke;        
 }
 .game--level--icon--egg {
     background-image: url(../images/egg.jpg);
@@ -357,9 +372,9 @@
         width: 80%;
         height: 80%;
     }
-    .modal__image__caterpillar {
+    /*.modal__image__caterpillar {
         height: 150px;
-    }
+    }*/
     .modal__content__text {
         font-size: 80%;
     }
@@ -399,18 +414,18 @@
         height: 150px;
         width: 150px;
     }
-    .answer__image__picture {
+    /*.answer__image__picture {
         height: 75%;
         width: 65%;
         margin-left: 25%;
-    }
+    }*/
     .option__image__container {
         height: 100px;
     }
-    .option__image__picture {
+/*    .option__image__picture {
         height: 60%;
         width: 75%;
-    }
+    }*/
     .nav__link__bottom {
         font-size: 10px;
     }

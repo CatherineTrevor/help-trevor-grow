@@ -22,25 +22,31 @@
 <!--main body background color to change when player selects relevant button-->
 <body class="body"> 
     <!--link to open welcome pop-up modal-->
-    <div>
-        <nav class="nav">
-            <a class="nav__link nav__link__top modal__open__link" id="modalOpenLink">
-                    How to play
-            </a>           
+    <div class="row nav">
+        <nav>
+            <a href="#howToPlay" class="col-4 nav__link nav__link__top">
+                    How To Play
+            </a> 
+            <a href="#aboutTheGame" class="col-4 nav__link nav__link__top">
+                    About
+            </a>  
+            <a href="#contactMe" class="col-4 nav__link nav__link__top">
+                    Contact
+            </a>                                     
         </nav>    
-    </div>
         <div class="game__section__title">
             <h2>
                 Help Trevor Grow!
             </h2>
         </div>
+    </div>
     <div class="game__section">
-<!--background color options-->
         <div class="row justify-content-center">
-                <h3 class="game__section__title">
-                    Pick your colour scheme!
-                </h3>
-        </div>        
+            <p class="game__section__title">
+                Pick your colour scheme!
+            </p>
+        </div> 
+        <!--background color options-->               
         <div class="row">
             <div class="btn__container col-6 col-md-4 col-lg-2">
                 <button class="btn btn__color__select btn--color--select--green">
@@ -204,14 +210,38 @@
             </div>                                
         </div>    
     </div>  
+<!--information below the game-->
+    <div class="row bottom__section__info">
+        <div class="bottom__section__play col-12"><a name="howToPlay"></a>
+            <h2>
+                How to play
+            </h2>
+            <p>
+                Here is some information about how to play the game
+            </p>
+        </div>
+        <div class="bottom__section__about col-12"><a name="aboutTheGame"></a>
+            <h2>
+                About
+            </h2>
+            <p>
+                Here is some information about why the game exists
+            </p>
+        </div>
+        <div class="bottom__section__contact col-12"><a name="contactMe"></a>
+            <h2>
+                Contact
+            </h2>
+            <p>
+                Send me an email
+            </p>
+        </div>
+    </div>
 <!--footer with game name and email address-->
-    <footer class="footer fixed-bottom">
+    <footer class="footer">
         <div>
             <span class="nav__link__bottom nav__link__left">
-                This game has been developed for educational purposes.
-            </span>
-            <span class="nav__link__bottom nav__link__right">
-                For questions or suggestions, send an email to: <span class="nav__link" href="mailto:catfinlayson@icloud.com">catfinlayson@icloud.com</span>
+                Copyright 2021
             </span>
         </div>
     </footer>
