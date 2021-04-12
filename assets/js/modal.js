@@ -16,7 +16,7 @@ function hideModal() {
 // When the user clicks anywhere outside of the welcome modal, close it and start game
 window.onclick = function(event) {
   if (event.target == welcomeModal) {
-   startGame();
+   this.hideModal();
   }
 };
 

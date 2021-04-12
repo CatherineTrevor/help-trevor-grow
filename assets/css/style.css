@@ -36,16 +36,16 @@
 .welcome__modal {
   position: fixed;
   z-index: 1;
-  padding-top: 80px; /* Location of the box */
+  padding-top: 80px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
+  width: 100%;
   height: 120%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0,0.6); /* Fallback color */
-  background-color: rgba(155, 143, 143, 0.6); /* Gray w/ opacity */
+  overflow: auto; 
+  background-color: rgb(0,0,0,0.6); 
+  background-color: rgba(155, 143, 143, 0.6);
 }
-.game__section { /*main playing area*/
+.game__section {
     background-color: whitesmoke;
     width: 80%;
     height: 80vh;
@@ -72,12 +72,26 @@
 .bottom__section__info {
     text-align: center;
     display: block;
-    height: 300px;
+    height: fit-content;
     margin: auto auto;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: whitesmoke;
     width: 80%;
+}
+.bottom__section__play {
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;    
+}
+.bottom__section__about {
+    width: 90%;
+    margin: 0 auto;    
+}
+.bottom__section__contact {
+    padding-bottom: 20px;
+    width: 90%;
+    margin: 0 auto;   
 }
 .clock__face {
     width: 175px;
@@ -166,9 +180,10 @@
 }
 .modal__level__text {
     width: 65%;
+    font-size: 14px;
     margin: 0 auto;
 }
-.correct__score__star { /***Correct answer star***/
+.correct__score__star {
     height: 150px;
     display: block;
     position: relative; 
@@ -261,11 +276,6 @@
 .modal__content__text {
     font-size: 16px;
 }
-.modal__content__title {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 .modal__close {
     float: right;
     font-size: 25px;
@@ -277,6 +287,11 @@
   text-decoration: none;
   cursor: pointer;
   transform: scale(1.2);
+}
+.section__content__title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .btn--color--select--green {
     background-color: green;
@@ -344,7 +359,6 @@
 .clock--number--seven { --rotation: 252deg; }
 .clock--number--eight { --rotation: 288deg; }
 .clock--number--nine { --rotation: 324deg; }
-/* help with rotating the clock hand https://flaviocopes.com/rotate-image/ and https://flaviocopes.com/css-transitions/ */
 .clock--hands--rotate {
   animation: rotation 10s 0s linear;
 }
@@ -355,6 +369,15 @@
   to {
     transform: rotate(359deg);
   }
+}
+.bottom--section--contact--link {
+    text-decoration: none;
+    color:black;
+}
+.bottom--section--contact--link:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
 }
 
 /***for mobile devices***/
