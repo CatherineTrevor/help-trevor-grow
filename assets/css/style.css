@@ -389,15 +389,12 @@
         text-align: center;
     }
     .welcome__modal {
-        padding-top: 20px; /* Location of the box */
+        padding-top: 20px;
     }
     .modal__content {
         width: 80%;
         height: 80%;
     }
-    /*.modal__image__caterpillar {
-        height: 150px;
-    }*/
     .modal__content__text {
         font-size: 80%;
     }
@@ -437,18 +434,9 @@
         height: 150px;
         width: 150px;
     }
-    /*.answer__image__picture {
-        height: 75%;
-        width: 65%;
-        margin-left: 25%;
-    }*/
     .option__image__container {
         height: 100px;
     }
-/*    .option__image__picture {
-        height: 60%;
-        width: 75%;
-    }*/
     .nav__link__bottom {
         font-size: 10px;
     }

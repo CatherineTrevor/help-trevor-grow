@@ -5,17 +5,16 @@ function shuffleImagesButterfly() {
 
 //declare an array to store the images  
 let imagesArray = [
-"./assets/images/butterfly_level/pineapple_2.jpg",
-"./assets/images/butterfly_level/pineapple_3.jpg",
-"./assets/images/butterfly_level/pineapple_5.jpg",
-"./assets/images/butterfly_level/banana_2.jpg",
-"./assets/images/butterfly_level/banana_3.jpg",
-"./assets/images/butterfly_level/banana_4.jpg",
-"./assets/images/butterfly_level/apple_3.jpg",
-"./assets/images/butterfly_level/apple_4.jpg",
-"./assets/images/butterfly_level/apple_5.jpg",
-"./assets/images/butterfly_level/strawberry_3.jpg",
-"./assets/images/butterfly_level/strawberry_5.jpg",
+"./assets/images/butterfly_level/apples_6.jpg",
+"./assets/images/butterfly_level/apples_9.jpg",
+"./assets/images/butterfly_level/bananas_4.jpg",
+"./assets/images/butterfly_level/bananas_7.jpg",
+"./assets/images/butterfly_level/bananas_9.jpg",
+"./assets/images/butterfly_level/oranges_4.jpg",
+"./assets/images/butterfly_level/oranges_5.jpg",
+"./assets/images/butterfly_level/oranges_9.jpg",
+"./assets/images/butterfly_level/pears_4.jpg",
+"./assets/images/butterfly_level/pears_6.jpg",
 ]  
   
 //generate a number and provide to the images to generate randomly  

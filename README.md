@@ -184,6 +184,8 @@ The site uses the following standard HTML colors:
 
 **Main play area and pop-up modal text:** darkslategray
 
+**Main background color:** whitesmoke (#F5F5F5)
+
 **Background colors:** red; green; purple; pink; orangered; blue
 
 ![image](https://user-images.githubusercontent.com/76033080/113863132-94ffee80-97a9-11eb-891c-2721bc4ebd2d.png)
@@ -282,6 +284,7 @@ Alternatively, select "Open with Github Desktop".
 * [CSS Tricks](https://css-tricks.com/working-with-javascript-media-queries/) - help using JavaScript to remove a class for a media query
 * [Coding Sight](https://codingsight.com/git-branching-naming-convention-best-practices/) - help in understanding standard convention for branch naming in Github
 * [The Coding Train](https://www.youtube.com/watch?v=oPpnCh7InLY) - YouTube video to help understand branching in Github
+* [removebg](https://www.remove.bg/t/change-background) - remove the background of the images and replace with whitesmoke to match site background color
 * Narender Singh, my mentor at Code Institute for his feedback and support.
 
 The idea for the game and all content is my own.

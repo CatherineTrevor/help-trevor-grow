@@ -28,14 +28,14 @@ var modalCloseBtn = document.querySelector('.modal__close');
 var readyToPlay = document.querySelector('.btn__start__play');
 readyToPlay.addEventListener('click', startGame)
 
-// When How to play is clicked display welcome modal
+/*// When How to play is clicked display welcome modal
 var playBtn = document.querySelector('.modal__open__link');
 playBtn.onclick = function() {
   welcomeModal.style.display = "block";
   $('.option__image__picture').addClass('hide'); // hide three images 
   $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning 
   document.getElementById('answer').style.opacity = 1;     
-};
+};*/
 
 // Change level of play from pop-up modal
 let gameLevelEgg = document.getElementById("levelEgg");

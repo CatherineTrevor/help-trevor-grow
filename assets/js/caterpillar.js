@@ -5,13 +5,13 @@ function shuffleImagesCaterpillar() {
 
 //declare an array to store the images  
 let imagesArray = [
- "./assets/images/caterpillar_level/banana_multiple.jpg",
- "./assets/images/caterpillar_level/apples_multiple.jpg",
- "./assets/images/caterpillar_level/orange_multiple.jpg",
- "./assets/images/caterpillar_level/lemons_multiple.jpg",
- "./assets/images/caterpillar_level/pears_multiple.jpg",
- "./assets/images/caterpillar_level/pineapple_multiple.jpg",
- "./assets/images/caterpillar_level/strawberries_multiple.jpg",
+ "./assets/images/caterpillar_level/banana_3.jpg",
+ "./assets/images/caterpillar_level/apple_3.jpg",
+ "./assets/images/caterpillar_level/lemon_3.jpg",
+ "./assets/images/caterpillar_level/orange_3.jpg",
+ "./assets/images/caterpillar_level/pear_3.jpg",
+  "./assets/images/caterpillar_level/pineapple_3.jpg",
+ "./assets/images/caterpillar_level/strawberry_3.jpg",      
 ]  
   
 //generate a number and provide to the images to generate randomly  
