@@ -9,31 +9,41 @@ let imageSelect = document.querySelectorAll('.option__image__picture');
 
 function changeBgColor() {
     btnSelect = event.target.innerText;
-      if (btnSelect == "GREEN") {
-        document.querySelector('.body').style.backgroundColor = "green";
-        document.querySelector('.correct__score__star').style.color = "green";
-        document.querySelector('.clock__face').style.backgroundColor = "green";        
-    } if (btnSelect == "PURPLE") {
-        document.querySelector('.body').style.backgroundColor = "purple";
-        document.querySelector('.correct__score__star').style.color = "purple";
-        document.querySelector('.clock__face').style.backgroundColor = "purple";               
-    } if (btnSelect == "PINK") {
-        document.querySelector('.body').style.backgroundColor = "pink";
-        document.querySelector('.correct__score__star').style.color = "pink";
-        document.querySelector('.clock__face').style.backgroundColor = "pink";             
-    } if (btnSelect == "RED") {
-        document.querySelector('.body').style.backgroundColor = "red";
-        document.querySelector('.correct__score__star').style.color = "red";
-        document.querySelector('.clock__face').style.backgroundColor = "red";                      
-    } if (btnSelect == "BLUE") {
-        document.querySelector('.body').style.backgroundColor = "blue";
-        document.querySelector('.correct__score__star').style.color = "blue";
-        document.querySelector('.clock__face').style.backgroundColor = "blue";                      
-    } if (btnSelect == "ORANGE") {
-        document.querySelector('.body').style.backgroundColor = "orangered";
-        document.querySelector('.correct__score__star').style.color = "orangered";
-        document.querySelector('.clock__face').style.backgroundColor = "orangred";           
-    }
+    bodyColor = document.querySelector('.body');
+    starColor = document.querySelector('.correct__score__star');
+    clockColor = document.querySelector('.clock__face');        
+        switch (btnSelect) {
+            case "GREEN":
+                bodyColor.style.backgroundColor = "green";
+                starColor.style.color = "green";
+                clockColor.style.backgroundColor = "green";
+                break;
+            case "PURPLE":
+                bodyColor.style.backgroundColor = "purple";
+                starColor.style.color  = "purple";
+                clockColor.style.backgroundColor = "purple";
+                break;
+            case "PINK":
+                bodyColor.style.backgroundColor = "pink";
+                starColor.style.color  = "pink";
+                clockColor.style.backgroundColor = "pink";
+                break;   
+            case "RED":
+                bodyColor.style.backgroundColor = "red";
+                starColor.style.color  = "red";
+                clockColor.style.backgroundColor = "red";
+                break;   
+            case "BLUE":
+                bodyColor.style.backgroundColor = "blue";
+                starColor.style.color  = "blue";
+                clockColor.style.backgroundColor = "blue";
+                break;   
+            case "ORANGE":
+                bodyColor.style.backgroundColor = "orangered";
+                starColor.style.color = "orangered";
+                clockColor.style.backgroundColor = "orangered";
+                break;                                                          
+        }  
 };
 function hideModal() {
   welcomeModal.style.display = "none";
@@ -143,68 +153,80 @@ function startGame() {
     imageFadeOut();
     startCountdownClock();
 };
-function checkAnswer (event) {
+function checkAnswer () {
     let answerImage = document.querySelector('.answer__image__picture').src;
     btnClick = event.target.src;
-
-    if (btnClick == answerImage) {
-        incrementScore();
-        correctAnswerAlert();
-        shuffleImages();
-        displayAnswer();
-        checkScore();
-        resetGame();
-      } else if (btnClick !== answerImage) {
-        incorrectAnswerAlert();
-      }
+        switch (answerImage) {
+            case btnClick: 
+            incrementScore();
+            correctAnswerAlert();
+            shuffleImages();
+            displayAnswer();
+            checkScore();
+            resetGame();
+            break; 
+            default: 
+            incorrectAnswerAlert();
+        }
 };
-function checkScore () {
+function checkScore() {
     let currentLevel = document.querySelector('.level__selected').innerHTML;
     let score = document.querySelector('.correct__score__counter').innerHTML;
-    if (score == 2) {
-        if (currentLevel == "EGG") {
-            swal({
-                title: "You reached 10 - Trevor has now grown into a caterpillar!",
-                text: "Well done for completing this level!",
-                icon: "success",
-                button: "Let's try the next level!",
-                })
-            .then(() => {
-              playCaterpillarLevel();
-              imageFadeIn();
-              resetGame();                        
-              startGame();
-              resetScore();                    
-            });
-            } if (currentLevel == "CATERPILLAR") {
-            swal({
-                title: "You reached 10 - Trevor has now grown into a butterfly!",
-                text: "Great job!",
-                icon: "success",
-                button: "Let's try the next level!",
-                })
-            .then(() => {            
-              playButterflyLevel();
-              imageFadeIn();        
-              resetGame();
-              startGame();
-              resetScore();  
-            });
-            } if (currentLevel == "BUTTERFLY") {
-            swal({
-                title: "You did it!",
-                text: "Well done for completing all of the levels - Trevor has flown away to play with his friends!",
-                icon: "success",
-                button: "Start again",
-                })
-            .then(() => {
-                playEggLevel();
-                imageFadeIn();
-                resetGame();         
-                startGame();
-                resetScore();              
-            })}
-    }
+        switch (score) {
+            case "2":
+                switch (currentLevel) {
+                    case "EGG":
+                    swal({
+                        title: "You reached 10 - Trevor has now grown into a caterpillar!",
+                        text: "Well done for completing this level!",
+                        icon: "success",
+                        button: "Let's try the next level!",
+                        })
+                    .then(() => {
+                        playCaterpillarLevel();
+                        imageFadeIn();
+                        resetGame();                        
+                        startGame();
+                        resetScore();                    
+                    });
+                    break;                        
+                }
+                switch (currentLevel) {
+                    case "CATERPILLAR":
+                    swal({
+                        title: "You reached 10 - Trevor has now grown into a butterfly!",
+                        text: "Great job!",
+                        icon: "success",
+                        button: "Let's try the next level!",
+                        })
+                    .then(() => {            
+                        playButterflyLevel();
+                        imageFadeIn();
+                        resetGame();                        
+                        startGame();
+                        resetScore();                    
+                    });
+                    break;                        
+                } 
+                switch (currentLevel) {
+                    case "BUTTERFLY":
+                    swal({
+                        title: "You did it!",
+                        text: "Well done for completing all of the levels - Trevor has flown away to play with his friends!",
+                        icon: "success",
+                        button: "Start again",
+                    })
+                    .then(() => {
+                        playEggLevel();
+                        imageFadeIn();
+                        resetGame();         
+                        startGame();
+                        resetScore();                    
+                    });
+                    break;                        
+                } 
+            break;
+        }    
 };
 function scrollToTop() {
     $('html, body').animate({ scrollTop: 0 }, 'fast');
