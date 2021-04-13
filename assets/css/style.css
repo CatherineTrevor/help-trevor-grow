@@ -360,7 +360,7 @@
 .clock--number--eight { --rotation: 288deg; }
 .clock--number--nine { --rotation: 324deg; }
 .clock--hands--rotate {
-  animation: rotation 10s 0s linear;
+  animation: rotation 5s 0s linear;
 }
 @keyframes rotation {
   from {

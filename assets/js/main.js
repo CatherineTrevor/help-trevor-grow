@@ -1,13 +1,14 @@
-// Background color selection
-// Check which button has been selected to change background color
-let btn = document.querySelectorAll('.btn__color__select'); 
-for (let i = 0 ; i < btn.length ; i++){
-  btn[i].addEventListener('click', changeBgColor);
-}
+const welcomeModal = document.querySelector('.welcome__modal'); 
+let levelEgg = document.querySelectorAll(".game--level--icon--egg");
+let levelCaterpillar = document.querySelectorAll(".game--level--icon--caterpillar");
+let levelButterfly = document.querySelectorAll(".game--level--icon--butterfly");
+let readyToPlay = document.querySelector('.btn__start__play');
+let closeModal = document.querySelector('.modal__close');
+let colorBtn = document.querySelectorAll('.btn__color__select'); 
+let imageSelect = document.querySelectorAll('.option__image__picture'); 
 
-// Change background color when relevant colored button on homepage is selected
 function changeBgColor() {
-    btnSelect = event.target.innerHTML;
+    btnSelect = event.target.innerText;
       if (btnSelect == "GREEN") {
         document.querySelector('.body').style.backgroundColor = "green";
         document.querySelector('.correct__score__star').style.color = "green";
@@ -33,73 +34,63 @@ function changeBgColor() {
         document.querySelector('.correct__score__star').style.color = "orangered";
         document.querySelector('.clock__face').style.backgroundColor = "orangred";           
     }
-}
-
-// remove fixed-bottom from footer for mobile device only
-// help from - https://css-tricks.com/working-with-javascript-media-queries/
-const mediaQuery = window.matchMedia('(max-width: 768px)')
-if (mediaQuery.matches) {
-  $('.footer').removeClass('fixed-bottom');
-}
-
-// Fade out the answer image over 10 seconds
-function imageFadeOut() {
-    $('.answer__image__picture').fadeTo(10000, 0.01).delay(100).queue(function(next){ // fade opacity so div box doesn't disappear but image does after 5 seconds
-          $('.option__image__picture').removeClass('hide'); // hide three images  // show three image options below
-            next(); 
-      });
-    };
-
-// Ensure answer image is randomly selected from the three options so the answer is always available
-function displayAnswer() {
-
-// array to store randomly selected images
-let answers = [
-  document.getElementById("imageA").src, // option 1 (left)
-  document.getElementById("imageB").src, // option 2 (center)
-  document.getElementById("imageC").src, /// option 3 (right)
-      ]; 
- 
-// generate random number and assign to answer image      
-let answerImage = Math.floor(Math.random()*answers.length); 
-  document.querySelector('.answer__image__picture').src = answers[answerImage];
 };
+function hideModal() {
+  welcomeModal.style.display = "none";
+};
+function shuffleImages() {
+    let currentLevel = document.querySelector('.level__selected').innerHTML;
+        if (currentLevel == "EGG") {
+        imagesArray = imagesArrayEgg;
+        } if (currentLevel == "CATERPILLAR") {
+        imagesArray = imagesArrayCaterpillar;  
+        } if (currentLevel == "BUTTERFLY") {
+        imagesArray = imagesArrayButterfly;
+            };          
 
-// If correct answer selected increment score in correct answer counter. Taken from CI challenge and modified
-function incrementScore() {
-    let oldScore = parseInt(document.querySelector('.correct__score__counter').innerText);
-    document.querySelector('.correct__score__counter').innerText = ++oldScore;
-}
+let number = Math.floor(Math.random()*imagesArray.length); 
+let number1 = Math.floor(Math.random()*imagesArray.length);  
+let number2 = Math.floor(Math.random()*imagesArray.length);
 
-// Check answer. When player clicks on an answer image, compare if it is the same as the image in result box. Base code on CI challenge and modified
-//https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class - understand how to target all elements will class 'option_image'
+document.getElementById("imageA").src = imagesArray[number]; 
+document.getElementById("imageB").src = imagesArray[number1];
+document.getElementById("imageC").src = imagesArray[number2]; 
 
-// target all three potential option boxes with class option_image
-let imageSelect = document.querySelectorAll('.option__image__picture'); 
-for (let i = 0 ; i < imageSelect.length ; i++){
-  imageSelect[i].addEventListener('click', checkAnswer); // check which image was selected
-}
+let answer1 = document.getElementById("imageA").src; 
+let answer2 = document.getElementById("imageB").src;
+let answer3 = document.getElementById("imageC").src;
 
-// https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div - how to find the source of the clicked button
-function checkAnswer (event) {
-
-    let answerImage = document.querySelector('.answer__image__picture').src;
-    btnClick = event.target.src;
-
-    if (btnClick == answerImage) { // is the image clicked on is the same as the results image
-        incrementScore(); // increment correct score
-        correctAnswerAlert(); // well done message
-        selectPlayingLevel();  
-        displayAnswer();
-        checkScore();
-        $('.option__image__picture').addClass('hide'); // hide three images
-        $('.clock__hand').removeClass('clock--hands--rotate'); // to start clock from beginning       
-      } else if (btnClick !== answerImage) {
-        incorrectAnswerAlert();
-      }
-}
-
-// Alert when correct answer selected
+if (answer1 === answer2) {
+    shuffleImages();
+} if (answer1 === answer3) {
+    shuffleImages();
+} if (answer2 === answer3) {
+    shuffleImages();
+}};
+function displayAnswer() {
+    let answers = [
+    document.getElementById("imageA").src,
+    document.getElementById("imageB").src,
+    document.getElementById("imageC").src,
+]; 
+    let answerImage = Math.floor(Math.random()*answers.length); 
+    document.querySelector('.answer__image__picture').src = answers[answerImage];
+};
+function displayOptionImage() {
+    $('.option__image__picture').removeClass('hide');
+};
+function imageFadeOut() {
+    $('.answer__image__picture').fadeTo(5000, 0.01).delay(100).queue(function(next){
+    displayOptionImage();
+    next(); 
+      });
+};
+function imageFadeIn() {
+    $('.answer__image__picture').fadeTo(100, 1);   
+};
+function startCountdownClock() {
+    $('.clock__hand').addClass('clock--hands--rotate');
+};
 function correctAnswerAlert () {
     swal({
         title: "You did it!",
@@ -107,13 +98,12 @@ function correctAnswerAlert () {
         icon: "success",
         button: "Keep playing",
 })
-    .then(() => {$('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown
-        imageFadeOut(); // answer starts to fade again and then three images appear
-        $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
+    .then(() => {
+        imageFadeIn();
+        imageFadeOut();
+        startCountdownClock();
     });
 };
-
-// Alert when incorrect answer selected
 function incorrectAnswerAlert () {
     swal({
         title: "That's not right",
@@ -122,41 +112,81 @@ function incorrectAnswerAlert () {
         button: "Try again!",
         });
 };
-
+function incrementScore() {
+    let oldScore = parseInt(document.querySelector('.correct__score__counter').innerText);
+    document.querySelector('.correct__score__counter').innerText = ++oldScore;
+};
+function playEggLevel() {
+    document.querySelector('.level__selected').innerHTML ="EGG";
+    $('.game__selected').removeClass('game--level--icon--caterpillar game--level--icon--butterfly').addClass('game--level--icon--egg');
+};
+function playCaterpillarLevel() {
+    document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
+    $('.game__selected').removeClass('game--level--icon--egg game--level--icon--butterfly').addClass('game--level--icon--caterpillar');
+};
+function playButterflyLevel() {
+    document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
+    $('.game__selected').removeClass('game--level--icon--egg game--level--icon--caterpillar').addClass('game--level--icon--butterfly');
+};
 function resetScore() {
     document.querySelector('.correct__score__counter').innerHTML = "0";
-}
+};
+function resetGame() {
+    $('.clock__hand').removeClass('clock--hands--rotate');
+    $('.option__image__picture').addClass('hide');
+    imageFadeIn();    
+};
+function startGame() {
+    hideModal();
+    shuffleImages();
+    displayAnswer();
+    imageFadeOut();
+    startCountdownClock();
+};
+function checkAnswer (event) {
+    let answerImage = document.querySelector('.answer__image__picture').src;
+    btnClick = event.target.src;
 
-// When score gets to 10 ask the player to move up a level
+    if (btnClick == answerImage) {
+        incrementScore();
+        correctAnswerAlert();
+        shuffleImages();
+        displayAnswer();
+        checkScore();
+        resetGame();
+      } else if (btnClick !== answerImage) {
+        incorrectAnswerAlert();
+      }
+};
 function checkScore () {
     let currentLevel = document.querySelector('.level__selected').innerHTML;
     let score = document.querySelector('.correct__score__counter').innerHTML;
-    if (score == 10) {
+    if (score == 2) {
         if (currentLevel == "EGG") {
             swal({
                 title: "You reached 10 - Trevor has now grown into a caterpillar!",
                 text: "Well done for completing this level!",
+                icon: "success",
                 button: "Let's try the next level!",
                 })
             .then(() => {
-              document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
-              $('.game__level__icon').removeClass('game--level--icon--egg').addClass('game--level--icon--caterpillar'); // add egg background image
-              $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
-              $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
+              playCaterpillarLevel();
+              imageFadeIn();
+              resetGame();                        
               startGame();
-              resetScore();                      
+              resetScore();                    
             });
             } if (currentLevel == "CATERPILLAR") {
             swal({
                 title: "You reached 10 - Trevor has now grown into a butterfly!",
                 text: "Great job!",
+                icon: "success",
                 button: "Let's try the next level!",
                 })
             .then(() => {            
-              document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
-              $('.game__level__icon').removeClass('game--level--icon--caterpillar').addClass('game--level--icon--butterfly'); // add egg background image
-              $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
-              $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
+              playButterflyLevel();
+              imageFadeIn();        
+              resetGame();
               startGame();
               resetScore();  
             });
@@ -164,15 +194,97 @@ function checkScore () {
             swal({
                 title: "You did it!",
                 text: "Well done for completing all of the levels - Trevor has flown away to play with his friends!",
+                icon: "success",
                 button: "Start again",
                 })
             .then(() => {
-                document.querySelector('.level__selected').innerHTML ="EGG";                
-                $('.game__level__icon').removeClass('game--level--icon--butterfly').addClass('game--level--icon--egg'); // add egg background image
-                $('.answer__image__picture').fadeTo(100, 1); // answer image back to opacity 1 so it is shown          
-                $('.clock__hand').addClass('clock--hands--rotate'); // rotate clock hands
+                playEggLevel();
+                imageFadeIn();
+                resetGame();         
                 startGame();
-                resetScore();                  
+                resetScore();              
             })}
     }
-}
+};
+function scrollToTop() {
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+};
+function letsPlay() {
+    swal({
+        title: "Ready?",
+        button: "Let's go!",
+})
+    .then(() => {
+        startGame();
+    });
+};
+function restartEggLevel() {
+    resetGame();
+    resetScore();
+    playEggLevel();
+    scrollToTop();
+    startGame();
+};
+function restartCaterpillarLevel() {
+    resetGame();
+    resetScore();
+    playCaterpillarLevel();
+    scrollToTop();
+    startGame();
+};
+function restartButterflyLevel() {
+    resetGame();
+    resetScore();
+    playButterflyLevel();
+    scrollToTop();
+    startGame();
+};
+let imagesArrayEgg = [
+    "./assets/images/egg_level/banana_single1.jpg",
+    "./assets/images/egg_level/apple_single1.jpg",
+    "./assets/images/egg_level/lemon_single1.jpg",
+    "./assets/images/egg_level/orange_single1.jpg",
+    "./assets/images/egg_level/pear_single1.jpg",
+    "./assets/images/egg_level/pineapple_single1.jpg",
+    "./assets/images/egg_level/strawberry_single1.jpg",
+        ];
+let imagesArrayCaterpillar = [
+    "./assets/images/caterpillar_level/banana_3.jpg",
+    "./assets/images/caterpillar_level/apple_3.jpg",
+    "./assets/images/caterpillar_level/lemon_3.jpg",
+    "./assets/images/caterpillar_level/orange_3.jpg",
+    "./assets/images/caterpillar_level/pear_3.jpg",
+    "./assets/images/caterpillar_level/pineapple_3.jpg",
+    "./assets/images/caterpillar_level/strawberry_3.jpg",   
+        ];
+let imagesArrayButterfly = [
+    "./assets/images/butterfly_level/apples_6.jpg",
+    "./assets/images/butterfly_level/apples_9.jpg",
+    "./assets/images/butterfly_level/bananas_4.jpg",
+    "./assets/images/butterfly_level/bananas_7.jpg",
+    "./assets/images/butterfly_level/bananas_9.jpg",
+    "./assets/images/butterfly_level/oranges_4.jpg",
+    "./assets/images/butterfly_level/oranges_5.jpg",
+    "./assets/images/butterfly_level/oranges_9.jpg",
+    "./assets/images/butterfly_level/pears_4.jpg",
+    "./assets/images/butterfly_level/pears_6.jpg",
+        ];
+
+readyToPlay.addEventListener('click', startGame);
+closeModal.addEventListener('click', hideModal);
+closeModal.addEventListener('click', letsPlay);
+for (let i = 0; i < levelEgg.length ; i++){
+levelEgg[i].addEventListener('click', restartEggLevel);
+};
+for (let i = 0; i < levelCaterpillar.length ; i++){
+levelCaterpillar[i].addEventListener('click', restartCaterpillarLevel);
+};
+for (let i = 0; i < levelButterfly.length ; i++){
+levelButterfly[i].addEventListener('click', restartButterflyLevel);
+};
+for (let i = 0 ; i < colorBtn.length ; i++){
+  colorBtn[i].addEventListener('click', changeBgColor);
+};
+for (let i = 0 ; i < imageSelect.length ; i++){
+  imageSelect[i].addEventListener('click', checkAnswer);
+};
