@@ -50,6 +50,8 @@
     width: 80%;
     height: 80vh;
     margin: 0 auto;
+    position: relative;
+    margin: 0 auto;
 }
 .game__section__middle__area {
     height: 220px;
@@ -68,6 +70,12 @@
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;    
+}
+.option__image__section {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
 }
 .bottom__section__info {
     text-align: center;
@@ -109,12 +117,6 @@
 }
 .nav__link__bottom {
     font-size: 15px;
-}
-.nav__link__left {
-    float: left;
-}
-.nav__link__right {
-    float: right;
 }
 .game__section__title {
     padding-top: 20px;
@@ -233,20 +235,20 @@
     display: block;
     position: relative;
     margin: 0 auto;
+    text-align: center;
     bottom: -10%;
 }
 .answer__image__picture {
-    height: auto;
-    width: 100%;   
+    width: 100%;  
 }
 .option__image__container {
     position: relative;
-    height: 175px;
     text-align: center;
+    padding-bottom: 10px;
 }
 .option__image__picture {
-    max-height: 80%;
-    max-width: 80%;
+    height: 100px;
+    width: 100px;
 }
 .option__image__picture:hover {
     cursor: pointer;
@@ -261,13 +263,6 @@
   width: 60%;
   height: 60%;
   overflow: scroll;
-}
-.modal__image__caterpillar {
-    height: auto;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 .modal__image__container {
     text-align: center;
@@ -292,6 +287,13 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.modal--image--caterpillar {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .btn--color--select--green {
     background-color: green;
@@ -382,68 +384,116 @@
 
 /***for mobile devices***/
 
-@media only screen and (max-width: 768px) {
-    .btn {
-        margin-top: 2px;
-        margin-bottom: 2px;
+@media only screen and (max-device-width: 768px) {
+    .nav {
         text-align: center;
+        font-size: 10px;
+        padding-top: 20px;
+    }
+    .btn {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        text-align: center;
+        height: 40px;
+        width: 70px;
+        font-size: 10px;
+    }
+    .game__section {
+        height: 100%;
     }
     .welcome__modal {
         padding-top: 20px;
+        padding-bottom: 50px;
     }
     .modal__content {
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
+    }
+    .game__section__middle__area {
+        height: 150px;
+        font-size: 10px;
+    }
+    .bottom__section__info {
+        font-size: 12px;
     }
     .modal__content__text {
-        font-size: 80%;
-    }
-    .btn__color__select {
-        height: 25px;
-        width: 60px;
         font-size: 10px;
+    }
+    .section__content__title {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .modal__image__title {
+        font-size: 16px;
+    }
+    .modal__level__icon {
+        height: 75px;
+        width: 100px;
+    }
+    .modal__level__text {
+        font-size: 10px;
+        width: 90%;
+        margin-bottom: 8px;
+    }
+    .option__image__section {
+        margin: 0 auto;
+    }
+    .answer__image__container {
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    .option__image__container {
+        margin: 0 auto;
+    }
+    .answer__image__picture {
+        width: 50%;
+    }
+    .option__image__picture {
+        height: 60px;
+        width: 60px;
     }
     .game__level__icon {
-        height: 50px;
-        width: 75px;
+        height: 60px;
+        width: 90px;
     }
-    .correct__score__star {
-        height: 50px;
-        font-size: 65px;
-        top: 0%;
+    .btn__start__play {
+        height: 75px;
+        width: 150px;
     }
-    .correct__score__counter {
-        font-size: 20px;
-        top: 3%;
+    .level__selected {
+        margin-bottom: 0;
+    }
+    .clock__container {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .star__container {
+        margin: 0 auto;
     }
     .clock__face {
-        float: none;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        width: 100px;
-        height: 100px;
-    }
-    .clock__numbers {
-        font-size: 10px;
+        width: 70px;
+        height: 70px;
+        font-size: 8px;
     }
     .clock__hand {
         width: 3px;
     }
-    .answer__image__container {
-        height: 150px;
-        width: 150px;
+    .correct__score__star {
+        height: 50px;
+        font-size: 50px;
+        top: 30%;
     }
-    .option__image__container {
-        height: 100px;
+    .correct__score__counter {
+        font-size: 20px;
+        top: 30%;
     }
-    .nav__link__bottom {
-        font-size: 10px;
+    .modal--image--caterpillar {
+        width: 100%;
     }
-    .nav__link__left {
-        float: none;
+    .btn--start--play--text {
+        font-size: 18px;
     }
-    .nav__link__right {
-        float: none;
+    .game--section--title--text {
+        font-size: 18px;
     }
 }

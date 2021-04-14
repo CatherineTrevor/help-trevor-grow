@@ -6,7 +6,8 @@ let readyToPlay = document.querySelector('.btn__start__play');
 let closeModal = document.querySelector('.modal__close');
 let colorBtn = document.querySelectorAll('.btn__color__select'); 
 let imageSelect = document.querySelectorAll('.option__image__picture'); 
-
+const mediaQuery = window.matchMedia('(max-width: 768px)')
+ 
 function changeBgColor() {
     btnSelect = event.target.innerText;
     bodyColor = document.querySelector('.body');
@@ -310,3 +311,6 @@ for (let i = 0 ; i < colorBtn.length ; i++){
 for (let i = 0 ; i < imageSelect.length ; i++){
   imageSelect[i].addEventListener('click', checkAnswer);
 };
+if (mediaQuery.matches) {
+  $('.footer').removeClass('fixed-bottom');
+}
