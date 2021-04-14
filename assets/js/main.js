@@ -46,8 +46,18 @@ function changeBgColor() {
                 break;                                                          
         }  
 };
+function scrollToTop() {
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+};
 function hideModal() {
   welcomeModal.style.display = "none";
+  scrollToTop();
+};
+function startCountdownClock() {
+    $('.clock__hand').addClass('clock--hands--rotate');
+};
+function resetCountdownClock() {
+    $('.clock__hand').removeClass('clock--hands--rotate');
 };
 function shuffleImages() {
     let currentLevel = document.querySelector('.level__selected').innerHTML;
@@ -78,204 +88,6 @@ if (answer1 === answer2) {
 } if (answer2 === answer3) {
     shuffleImages();
 }};
-function displayAnswer() {
-    let answers = [
-    document.getElementById("imageA").src,
-    document.getElementById("imageB").src,
-    document.getElementById("imageC").src,
-]; 
-    let answerImage = Math.floor(Math.random()*answers.length); 
-    document.querySelector('.answer__image__picture').src = answers[answerImage];
-};
-function displayOptionImage() {
-    $('.option__image__picture').removeClass('hide');
-};
-function imageFadeOut() {
-    $('.answer__image__picture').fadeTo(5000, 0.01).delay(100).queue(function(next){
-    displayOptionImage();
-    next(); 
-      });
-};
-function imageFadeIn() {
-    $('.answer__image__picture').fadeTo(100, 1);   
-};
-function startCountdownClock() {
-    $('.clock__hand').addClass('clock--hands--rotate');
-};
-function correctAnswerAlert () {
-    swal({
-        title: "You did it!",
-        text: "You got the right answer, well done!",
-        icon: "success",
-        button: "Keep playing",
-})
-    .then(() => {
-        shuffleImages();
-        imageFadeIn();
-        imageFadeOut();
-        startCountdownClock();
-    });
-};
-function incorrectAnswerAlert () {
-    swal({
-        title: "That's not right",
-        text: "Try again - Trevor knows you will get it right!",
-        icon: "error",
-        button: "Try again!",
-        });
-};
-function incrementScore() {
-    let oldScore = parseInt(document.querySelector('.correct__score__counter').innerText);
-    document.querySelector('.correct__score__counter').innerText = ++oldScore;
-};
-function playEggLevel() {
-    document.querySelector('.level__selected').innerHTML ="EGG";
-    $('.game__selected').removeClass('game--level--icon--caterpillar game--level--icon--butterfly').addClass('game--level--icon--egg');
-};
-function playCaterpillarLevel() {
-    document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
-    $('.game__selected').removeClass('game--level--icon--egg game--level--icon--butterfly').addClass('game--level--icon--caterpillar');
-};
-function playButterflyLevel() {
-    document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
-    $('.game__selected').removeClass('game--level--icon--egg game--level--icon--caterpillar').addClass('game--level--icon--butterfly');
-};
-function resetScore() {
-    document.querySelector('.correct__score__counter').innerHTML = "0";
-};
-function resetGame() {
-    clearGameFnc();    
-    $('.clock__hand').removeClass('clock--hands--rotate');
-    $('.option__image__picture').addClass('hide');
-};
-function startGame() {
-    shuffleImages();
-    displayAnswer();
-    imageFadeOut();
-    startCountdownClock();
-};
-var timeValue = null;
-function startGameFnc() {
-    timeValue = setTimeout(function() {
-        startGame();
-    }, 400);
-};
-function clearGameFnc() {
-    clearTimeout(timeValue);
-};
-function checkAnswer () {
-    let answerImage = document.querySelector('.answer__image__picture').src;
-    btnClick = event.target.src;
-        switch (answerImage) {
-            case btnClick: 
-            incrementScore();
-            correctAnswerAlert();
-            checkScore();
-            resetGame();
-            break; 
-            default: 
-            incorrectAnswerAlert();
-        }
-};
-function checkScore() {
-    let currentLevel = document.querySelector('.level__selected').innerHTML;
-    let score = document.querySelector('.correct__score__counter').innerHTML;
-        switch (score) {
-            case "2":
-                switch (currentLevel) {
-                    case "EGG":
-                    swal({
-                        title: "You reached 10 - Trevor has now grown into a caterpillar!",
-                        text: "Well done for completing this level!",
-                        icon: "success",
-                        button: "Let's try the next level!",
-                        })
-                    .then(() => {
-                        hideModal();
-                        playCaterpillarLevel();
-                        imageFadeIn();
-                        resetGame();                        
-                        startGame();
-                        resetScore();                    
-                    });
-                    break;                        
-                }
-                switch (currentLevel) {
-                    case "CATERPILLAR":
-                    swal({
-                        title: "You reached 10 - Trevor has now grown into a butterfly!",
-                        text: "Great job!",
-                        icon: "success",
-                        button: "Let's try the next level!",
-                        })
-                    .then(() => {            
-                        hideModal();
-                        playButterflyLevel();
-                        imageFadeIn();
-                        resetGame();                        
-                        startGame();
-                        resetScore();                    
-                    });
-                    break;                        
-                } 
-                switch (currentLevel) {
-                    case "BUTTERFLY":
-                    swal({
-                        title: "You did it!",
-                        text: "Well done for completing all of the levels - Trevor has flown away to play with his friends!",
-                        icon: "success",
-                        button: "Start again",
-                    })
-                    .then(() => {
-                        hideModal();
-                        playEggLevel();
-                        imageFadeIn();
-                        resetGame();         
-                        startGame();
-                        resetScore();                    
-                    });
-                    break;                        
-                } 
-            break;
-        }    
-};
-function scrollToTop() {
-    $('html, body').animate({ scrollTop: 0 }, 'fast');
-};
-function letsPlay() {
-    swal({
-        title: "Ready?",
-        button: "Let's go!",
-})
-    .then(() => {
-        hideModal();
-        startGame();
-    });
-};
-function restartEggLevel() {
-    hideModal();
-    resetGame();
-    resetScore();
-    playEggLevel();
-    scrollToTop();
-    startGameFnc();
-};
-function restartCaterpillarLevel() {
-    hideModal();
-    resetGame();
-    resetScore();
-    playCaterpillarLevel();
-    scrollToTop();
-    startGameFnc();
-};
-function restartButterflyLevel() {
-    hideModal();
-    resetGame();
-    resetScore();
-    playButterflyLevel();
-    scrollToTop();
-    startGameFnc();
-};
 let imagesArrayEgg = [
     "./assets/images/egg_level/banana_single1.jpg",
     "./assets/images/egg_level/apple_single1.jpg",
@@ -306,18 +118,192 @@ let imagesArrayButterfly = [
     "./assets/images/butterfly_level/pears_4.jpg",
     "./assets/images/butterfly_level/pears_6.jpg",
         ];
+function displayAnswer() {
+    let answers = [
+    document.getElementById("imageA").src,
+    document.getElementById("imageB").src,
+    document.getElementById("imageC").src,
+]; 
+    let answerImage = Math.floor(Math.random()*answers.length); 
+    document.querySelector('.answer__image__picture').src = answers[answerImage];
+};
+function displayOptionImage() {
+    $('.option__image__picture').removeClass('hide');
+};
+function hideOptionImage() {
+    $('.option__image__picture').addClass('hide');
+};
+function imageFadeOut() {
+    $('.answer__image__picture').fadeTo(5000, 0.01).delay(100).queue(function(next){
+    displayOptionImage();
+    next(); 
+      });
+};
+function resetGame() {
+    resetCountdownClock();
+    hideOptionImage();
+    imageFadeIn();
+};
+function playGame() {
+    imageFadeIn();    
+    shuffleImages();        
+    displayAnswer();
+    imageFadeOut();
+    startCountdownClock();
+};
+function checkAnswer () {
+    let answerImage = document.querySelector('.answer__image__picture').src;
+    btnClick = event.target.src;
+        switch (answerImage) {
+            case btnClick: 
+            incrementScore();
+            correctAnswerAlert();
+            hideOptionImage();    
+            resetCountdownClock();                           
+            checkScore();
+            break; 
+            default: 
+            incorrectAnswerAlert();
+        }
+};
+function incrementScore() {
+    let oldScore = parseInt(document.querySelector('.correct__score__counter').innerText);
+    document.querySelector('.correct__score__counter').innerText = ++oldScore;
+};
+function imageFadeIn() {
+    $('.answer__image__picture').fadeTo(100, 1);   
+};
+function correctAnswerAlert () {
+    swal({
+        title: "You did it!",
+        text: "You got the right answer, well done!",
+        icon: "success",
+        button: "Keep playing",
+})
+    .then(() => {
+        playGame(); 
+    });
+};
+function incorrectAnswerAlert () {
+    swal({
+        title: "That's not right",
+        text: "Try again - Trevor knows you will get it right!",
+        icon: "error",
+        button: "Try again!",
+        });
+};
+function checkScore() {
+    let currentLevel = document.querySelector('.level__selected').innerHTML;
+    let score = document.querySelector('.correct__score__counter').innerHTML;
+        switch (score) {
+            case "2":
+                switch (currentLevel) {
+                    case "EGG":
+                    swal({
+                        title: "You reached 10 - Trevor has now grown into a caterpillar!",
+                        text: "Well done for completing the Egg level!",
+                        icon: "success",
+                        button: "Let's try the next level!",
+                        })
+                    .then(() => {
+                        playCaterpillarLevel();
+                        resetScore();  
+                        playGame(); 
+                    });
+                    break;                        
+                }
+                switch (currentLevel) {
+                    case "CATERPILLAR":
+                    swal({
+                        title: "You reached 10 - Trevor has now grown into a butterfly!",
+                        text: "Great job!",
+                        icon: "success",
+                        button: "Let's try the final level!",
+                        })
+                    .then(() => {            
+                        playButterflyLevel();
+                        resetScore(); 
+                        playGame();                                                       
+                    });
+                    break;                        
+                } 
+                switch (currentLevel) {
+                    case "BUTTERFLY":
+                    swal({
+                        title: "You did it!",
+                        text: "Well done for completing all of the levels - Trevor has flown away to play with his friends!",
+                        icon: "success",
+                        button: "Start again",
+                    })
+                    .then(() => {
+                        playEggLevel();
+                        resetScore();  
+                        playGame();                                        
+                    });
+                    break;                        
+                } 
+            break;
+        }    
+};
+function playEggLevel() {
+    document.querySelector('.level__selected').innerHTML ="EGG";
+    $('.game__selected').removeClass('game--level--icon--caterpillar game--level--icon--butterfly').addClass('game--level--icon--egg');
+};
+function playCaterpillarLevel() {
+    document.querySelector('.level__selected').innerHTML ="CATERPILLAR";
+    $('.game__selected').removeClass('game--level--icon--egg game--level--icon--butterfly').addClass('game--level--icon--caterpillar');
+};
+function playButterflyLevel() {
+    document.querySelector('.level__selected').innerHTML ="BUTTERFLY";
+    $('.game__selected').removeClass('game--level--icon--egg game--level--icon--caterpillar').addClass('game--level--icon--butterfly');
+};
+function resetScore() {
+    document.querySelector('.correct__score__counter').innerHTML = "0";
+};
+function letsPlay() {
+    swal({
+        title: "Ready?",
+        button: "Let's go!",
+})
+    .then(() => {
+        hideModal();
+        playGame();
+    });
+};
+function startEggLevel() {
+    resetScore();
+    resetGame();
+    playEggLevel();
+    hideModal();
+    playGame();    
+};
+function startCaterpillarLevel() {
+    resetScore();
+    resetGame();
+    playCaterpillarLevel();
+    hideModal();
+    playGame();
+};
+function startButterflyLevel() {
+    resetScore();
+    resetGame();
+    playButterflyLevel();
+    hideModal();
+    playGame();    
+};
 
-readyToPlay.addEventListener('click', startGame);
+readyToPlay.addEventListener('click', hideModal);
+readyToPlay.addEventListener('click', playGame);
 closeModal.addEventListener('click', hideModal);
 closeModal.addEventListener('click', letsPlay);
 for (let i = 0; i < levelEgg.length ; i++){
-levelEgg[i].addEventListener('click', restartEggLevel);
+levelEgg[i].addEventListener('click', startEggLevel);
 };
 for (let i = 0; i < levelCaterpillar.length ; i++){
-levelCaterpillar[i].addEventListener('click', restartCaterpillarLevel);
+levelCaterpillar[i].addEventListener('click', startCaterpillarLevel);
 };
 for (let i = 0; i < levelButterfly.length ; i++){
-levelButterfly[i].addEventListener('click', restartButterflyLevel);
+levelButterfly[i].addEventListener('click', startButterflyLevel);
 };
 for (let i = 0 ; i < colorBtn.length ; i++){
   colorBtn[i].addEventListener('click', changeBgColor);
