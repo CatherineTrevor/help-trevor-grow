@@ -7,7 +7,7 @@ let closeModal = document.querySelector('.modal__close');
 let colorBtn = document.querySelectorAll('.btn__color__select'); 
 let imageSelect = document.querySelectorAll('.option__image__picture'); 
 const mediaQuery = window.matchMedia('(max-width: 768px)')
- 
+
 function changeBgColor() {
     btnSelect = event.target.innerText;
     bodyColor = document.querySelector('.body');
@@ -110,6 +110,7 @@ function correctAnswerAlert () {
         button: "Keep playing",
 })
     .then(() => {
+        shuffleImages();
         imageFadeIn();
         imageFadeOut();
         startCountdownClock();
@@ -143,16 +144,24 @@ function resetScore() {
     document.querySelector('.correct__score__counter').innerHTML = "0";
 };
 function resetGame() {
+    clearGameFnc();    
     $('.clock__hand').removeClass('clock--hands--rotate');
     $('.option__image__picture').addClass('hide');
-    imageFadeIn();    
 };
 function startGame() {
-    hideModal();
     shuffleImages();
     displayAnswer();
     imageFadeOut();
     startCountdownClock();
+};
+var timeValue = null;
+function startGameFnc() {
+    timeValue = setTimeout(function() {
+        startGame();
+    }, 400);
+};
+function clearGameFnc() {
+    clearTimeout(timeValue);
 };
 function checkAnswer () {
     let answerImage = document.querySelector('.answer__image__picture').src;
@@ -161,8 +170,6 @@ function checkAnswer () {
             case btnClick: 
             incrementScore();
             correctAnswerAlert();
-            shuffleImages();
-            displayAnswer();
             checkScore();
             resetGame();
             break; 
@@ -184,6 +191,7 @@ function checkScore() {
                         button: "Let's try the next level!",
                         })
                     .then(() => {
+                        hideModal();
                         playCaterpillarLevel();
                         imageFadeIn();
                         resetGame();                        
@@ -201,6 +209,7 @@ function checkScore() {
                         button: "Let's try the next level!",
                         })
                     .then(() => {            
+                        hideModal();
                         playButterflyLevel();
                         imageFadeIn();
                         resetGame();                        
@@ -218,6 +227,7 @@ function checkScore() {
                         button: "Start again",
                     })
                     .then(() => {
+                        hideModal();
                         playEggLevel();
                         imageFadeIn();
                         resetGame();         
@@ -238,29 +248,33 @@ function letsPlay() {
         button: "Let's go!",
 })
     .then(() => {
+        hideModal();
         startGame();
     });
 };
 function restartEggLevel() {
+    hideModal();
     resetGame();
     resetScore();
     playEggLevel();
     scrollToTop();
-    startGame();
+    startGameFnc();
 };
 function restartCaterpillarLevel() {
+    hideModal();
     resetGame();
     resetScore();
     playCaterpillarLevel();
     scrollToTop();
-    startGame();
+    startGameFnc();
 };
 function restartButterflyLevel() {
+    hideModal();
     resetGame();
     resetScore();
     playButterflyLevel();
     scrollToTop();
-    startGame();
+    startGameFnc();
 };
 let imagesArrayEgg = [
     "./assets/images/egg_level/banana_single1.jpg",

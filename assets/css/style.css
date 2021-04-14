@@ -247,8 +247,8 @@
     padding-bottom: 10px;
 }
 .option__image__picture {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 .option__image__picture:hover {
     cursor: pointer;
