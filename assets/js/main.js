@@ -141,6 +141,9 @@ function displayAnswer() {
 function imageFadeOut() {
     $('.answer__image__picture').fadeTo(5000, 0.01);
 }
+function imageFadeIn() {
+    $('.answer__image__picture').fadeTo(100, 1);   
+}
 function displayOptionImages() {
     $('.option__image__picture').removeClass('hide');
 }
@@ -176,9 +179,6 @@ function checkAnswer () {
 function incrementScore() {
     let oldScore = parseInt(document.querySelector('.correct__score__counter').innerText);
     document.querySelector('.correct__score__counter').innerText = ++oldScore;
-}
-function imageFadeIn() {
-    $('.answer__image__picture').fadeTo(100, 1);   
 }
 function correctAnswerAlert () {
     swal({

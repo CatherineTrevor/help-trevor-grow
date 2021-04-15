@@ -162,9 +162,11 @@ JavaScript is used to change the playing levels, so there is only one html file.
 
 ![wireframe_mobile_play](supporting_docs/wireframe_play_mobile.jpg)
 
-**Play area detail** <a name="play_detail"></a>
+**Play area detail** <a id="play_detail"></a>
 
 ![wireframe_images](supporting_docs/wireframe_images_detail.jpg)
+
+The game will not show the answer image at the same time as the three images below; the above wireframes are to show the position of the images when they appear.
 
 The game will have one file only, with the pop-up modal displaying over it. The images will be changed depending on the level selected using JavaScript.
 
