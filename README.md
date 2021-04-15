@@ -234,7 +234,7 @@ Free Formatter CSS - to beautify CSS code
 
 ## Testing
 
-See separate Testing file for information on testing and issues.
+[See separate Testing file](TESTING.md) for information on testing and issues.
 
 ## Deployment
 
@@ -283,13 +283,14 @@ Alternatively, select "Open with Github Desktop".
 
 ## Credits
 
-* Tutors at Code Institute: help with how to store used images in an array to ensure they didn't duplicate.
 * YouTube tutorials on JavaScript;
         * [Web Dev Simplified](https://www.youtube.com/watch?v=Ki0XXrlKlHY)
         * [Adam Khoury](https://www.youtube.com/watch?v=4uL9bAKOaVQ)  
 * [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp), 
 [hover](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 * [Stackoverflow](https://www.stackoverflow.com/) - [countdown timer](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown); 
+[jshint errors](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const)
+(https://stackoverflow.com/questions/8852765/jshint-and-jquery-is-not-defined)
 [target elements](https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class); 
 [find a clicked button value](https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - general JavaScript information
@@ -298,6 +299,8 @@ Alternatively, select "Open with Github Desktop".
 * [The Coding Train](https://www.youtube.com/watch?v=oPpnCh7InLY) - YouTube video to help understand branching in Github
 * [removebg](https://www.remove.bg/t/change-background) - remove the background of the images and replace with whitesmoke to match site background color
 * Narender Singh, my mentor at Code Institute for his feedback and support.
+* Tutors at Code Institute: help with how to store used images in an array to ensure they didn't duplicate.
+* Code Institute Slack forums.
 
 The idea for the game and all content is my own.
 
