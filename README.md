@@ -26,14 +26,18 @@
 
 # Project Overview
 
-This project is my Milestone Two project with the Code Institute. This project augments the lessons from module 1 regarding HTML5 and CSS, and introduces JavaScript and jQuery.
-Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A), with three images underneath (Images A, B and C), one of which is always the same as Image A ([see wireframe below](#play_detail)). Image A fades out after 10 seconds, and the three images below appear. The player then selects the same item from the three images below to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level.
+This site has been built as part of the Milestone Two project with the Code Institute. The project augments the lessons from module 1 regarding HTML5 and CSS, and introduces JavaScript and jQuery.
+Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A), with three images underneath 
+(Images A, B and C), one of which is always the same as Image A ([see wireframe below](#play_detail)). Image A fades out after 5 seconds, and the three images appear at the bottom. 
+The player then selects the same item from the three images below to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level.
 
 # User Experience Design
 
 ## Strategy
 
-The game is designed primarily for use on a desktop, with limited help needed from an adult where a player is able to follow the instructions, or use a mouse without assistance. For players that cannot use a mouse, the game is best played on a touch screen device (tablet, mobile phone for example). Receiving guidance from a qualified Early Years Manager to ensure the game is age appropriate, there must be nothing unecessary on the screen to distract the player, allowing them to focus on the game.
+The game is designed primarily for use on a desktop, with limited help needed from an adult where a player is able to follow the instructions, or use a mouse without assistance. 
+For players that cannot use a mouse, the game is best played on a touch screen device (tablet, mobile phone for example). Receiving guidance from a qualified Early Years Manager to ensure the game is age 
+appropriate, there must be nothing unecessary on the screen to distract the player, allowing them to focus on the game.
 
 The levels available increase in difficulty:
 
@@ -43,7 +47,8 @@ The levels available increase in difficulty:
     <img src="/assets/images/egg.jpg" height="200">
 </div>
 
-This is the simplest level. Image A is of one piece of fruit, which fades out after 10 seconds and the player then has unlimited time to click the corresponding image from the options below. The three image options below are visually very different from each other, to make the game age appropriate. The intended age for this level is 3.
+This is the simplest level. Image A is of one piece of fruit, which fades out after 5 seconds and the player then has unlimited time to click the corresponding image from the options below. 
+The three image options below are visually very different from each other, to make the game age appropriate. The intended age for this level is 3.
 
 **Caterpillar**
 
@@ -59,7 +64,8 @@ Image A contains 3 items of the same piece of fruit, but the options below still
     <img src="/assets/images/butterfly.jpg" height="200">
 </div>
 
-Designed as the hardest option, this will show a higher quantity of fruit Image A, and then differing quantities of different fruit below. This means the player must not only note the type of fruit, but also count it, making it slightly more difficult. The target age for this level is 5.
+Designed as the hardest option, this will show a higher quantity of fruit Image A, and then differing quantities of different fruit below. This means the player must not only note the type of fruit, 
+but also count it, making it slightly more difficult. The target age for this level is 5.
 
 Although there are three levels of difficulty, each level is loosely based on age range, but it is not intended as a test to see what "level" the child is at. The game is for fun can be played as many times as required.
 
@@ -67,7 +73,8 @@ Once the player reaches 10 points for a level, they are taken to the next level 
 
 ### Target Audience
 
-The target audience is both parents / adults with young children, as they will connect to the game and if needed, help the child to play. The players are intended to be children from approx. age 3 to 5. The game must be colorful and appealing to the player, whilst to a degree, educational and easy to play.
+The target audience is both parents / adults with young children, as they will connect to the game and if needed, help the child to play. The players are intended to be children from approx. age 3 to 5. 
+The game must be colorful and appealing to the player, whilst to a degree, educational and easy to play.
 
 ## User Stories
 
@@ -116,7 +123,8 @@ Based on the User Stories from the target audience, the game contains the follow
 
 **Future features**
 
-**Feature 1:** Animation. In the future I would like to show the Egg changing into a Caterpillar, then growing wings into a Butterfly and flying as the player moves through each level, to give more life to the game. At present I do not have the knowledge to create this feature.
+**Feature 1:** Animation. In the future I would like to show the Egg changing into a Caterpillar, then growing wings into a Butterfly and flying as the player moves through each level, to give more life to the game. 
+At present I do not have the knowledge to create this feature.
 
 **Feature 2:** More levels. The game is very basic, but if I had more time would like to build on the levels and include more options in each level, then more levels, up to age 7.
 
@@ -168,7 +176,8 @@ The game will have one file only, with the pop-up modal displaying over it. The 
 
 ### Typography
 
-The site uses Rocknroll from Google fonts, with sans-serif as a back up. It has been chosen as it looked "fun" and engaging to meet the requirements of the child target audience, but also easy to read for those just starting to learn.
+The site uses Rocknroll from Google fonts, with sans-serif as a back up. It has been chosen as it looked "fun" and engaging to meet the requirements of the child target audience, but also easy to read for those 
+just starting to learn.
 
 [Google Fonts - Rocknroll](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One)
 
@@ -210,7 +219,7 @@ This project uses the following libraries and frameworks:
 * [Balsamiq](http://www.balsamiq.com/) - used to create all wireframes
 * [Bootstrap](http://bootstrap.com/) - Bootstrap was used for part of grid structure and was heavily modified to meet the needs of the project
 * [Google Fonts](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One) - RocknRoll
-* [Font Awesome](http://www.fontawsome.com/) - used for the [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter
+* [Font Awesome](http://www.fontawsome.com/) - [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter, [copyright](https://fontawesome.com/icons/copyright?style=regular)
 * [BEM](http://getbem.com/introduction/) - used as the format for CSS
 * [Sweet Alert](https://sweetalert.js.org/) - used in replacement of the pop-up modal for correct and incorrect answers
 * [Tiny PNG](https://tinypng.com) - used to resize images to reduce site loading time
@@ -276,7 +285,8 @@ Alternatively, select "Open with Github Desktop".
 * YouTube tutorials on JavaScript;
         * [Web Dev Simplified](https://www.youtube.com/watch?v=Ki0XXrlKlHY)
         * [Adam Khoury](https://www.youtube.com/watch?v=4uL9bAKOaVQ)  
-* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp), [hover](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
+* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp), 
+[hover](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 * [Stackoverflow](https://www.stackoverflow.com/) - [countdown timer](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown); 
 [target elements](https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class); 
 [find a clicked button value](https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div)

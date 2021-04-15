@@ -203,26 +203,16 @@
     transform: translate(-50%, -50%);
     z-index: 1;
 }
-.clock__numbers {
-    color: whitesmoke;
-    font-family: 'RocknRoll One', sans-serif;
-    height: 100%;
-    position: absolute;
-    --rotation: 0;
-    text-align: center;
-    transform: rotate(var(--rotation));
-    width: 100%;
-}
 .clock__hand {
     background-color: whitesmoke;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     bottom: 50%;
-    height: 35%;
+    height: 45%;
     left: 50%;
     position: absolute;
     transform-origin: bottom;
-    width: 6px;
+    width: 8px;
     z-index: 1;
 }
 .answer__image__container {
@@ -348,15 +338,6 @@
 .game--level--icon--butterfly {
     background-image: url(../images/butterfly.jpg);
 }
-.clock--number--one { --rotation: 36deg; }
-.clock--number--two { --rotation: 72deg; }
-.clock--number--three { --rotation: 108deg; }
-.clock--number--four { --rotation: 144deg; }
-.clock--number--five { --rotation: 180deg; }
-.clock--number--six { --rotation: 216deg; }
-.clock--number--seven { --rotation: 252deg; }
-.clock--number--eight { --rotation: 288deg; }
-.clock--number--nine { --rotation: 324deg; }
 .clock--hands--rotate {
   animation: rotation 5s 0s linear;
 }
