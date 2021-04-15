@@ -116,7 +116,7 @@
     padding-bottom: 10px;
 }
 .nav__link__bottom {
-    font-size: 15px;
+    font-size: 12px;
 }
 .game__section__title {
     padding-top: 20px;
@@ -471,8 +471,8 @@
         margin: 0 auto;
     }
     .clock__face {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         font-size: 8px;
     }
     .clock__hand {
@@ -481,11 +481,11 @@
     .correct__score__star {
         height: 50px;
         font-size: 50px;
-        top: 30%;
+        top: 50%;
     }
     .correct__score__counter {
         font-size: 20px;
-        top: 30%;
+        top: 50%;
     }
     .modal--image--caterpillar {
         width: 100%;

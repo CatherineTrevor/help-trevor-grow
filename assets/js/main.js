@@ -61,13 +61,17 @@ function resetCountdownClock() {
 };
 function shuffleImages() {
     let currentLevel = document.querySelector('.level__selected').innerHTML;
-        if (currentLevel == "EGG") {
-        imagesArray = imagesArrayEgg;
-        } if (currentLevel == "CATERPILLAR") {
-        imagesArray = imagesArrayCaterpillar;  
-        } if (currentLevel == "BUTTERFLY") {
-        imagesArray = imagesArrayButterfly;
-            };          
+        switch (currentLevel) {
+            case "EGG":
+                imagesArray = imagesArrayEgg;
+                break;
+            case "CATERPILLAR":
+                imagesArray = imagesArrayCaterpillar;   
+                break;      
+            case "BUTTERFLY":
+                imagesArray = imagesArrayButterfly;
+                break;                                                
+        }
 
 let number = Math.floor(Math.random()*imagesArray.length); 
 let number1 = Math.floor(Math.random()*imagesArray.length);  
@@ -81,12 +85,15 @@ let answer1 = document.getElementById("imageA").src;
 let answer2 = document.getElementById("imageB").src;
 let answer3 = document.getElementById("imageC").src;
 
-if (answer1 === answer2) {
-    shuffleImages();
-} if (answer1 === answer3) {
-    shuffleImages();
-} if (answer2 === answer3) {
-    shuffleImages();
+    switch (answer1) {
+        case answer2:
+        case answer3:
+            shuffleImages();
+            break;
+    } switch (answer2) {
+            case answer3:
+            shuffleImages();
+            break;
 }};
 let imagesArrayEgg = [
     "./assets/images/egg_level/banana_single1.jpg",
@@ -127,28 +134,24 @@ function displayAnswer() {
     let answerImage = Math.floor(Math.random()*answers.length); 
     document.querySelector('.answer__image__picture').src = answers[answerImage];
 };
-function displayOptionImage() {
+function imageFadeOut() {
+    $('.answer__image__picture').fadeTo(5000, 0.01);
+};
+function displayOptionImages() {
     $('.option__image__picture').removeClass('hide');
 };
-function hideOptionImage() {
+function delayDisplayOptionImages() {
+  setTimeout(displayOptionImages, 5000);
+};
+function hideOptionImages() {
     $('.option__image__picture').addClass('hide');
 };
-function imageFadeOut() {
-    $('.answer__image__picture').fadeTo(5000, 0.01).delay(100).queue(function(next){
-    displayOptionImage();
-    next(); 
-      });
-};
-function resetGame() {
-    resetCountdownClock();
-    hideOptionImage();
-    imageFadeIn();
-};
 function playGame() {
-    imageFadeIn();    
-    shuffleImages();        
+    shuffleImages();   
+    imageFadeIn();        
     displayAnswer();
     imageFadeOut();
+    delayDisplayOptionImages();
     startCountdownClock();
 };
 function checkAnswer () {
@@ -158,7 +161,7 @@ function checkAnswer () {
             case btnClick: 
             incrementScore();
             correctAnswerAlert();
-            hideOptionImage();    
+            hideOptionImages();    
             resetCountdownClock();                           
             checkScore();
             break; 
@@ -196,7 +199,7 @@ function checkScore() {
     let currentLevel = document.querySelector('.level__selected').innerHTML;
     let score = document.querySelector('.correct__score__counter').innerHTML;
         switch (score) {
-            case "2":
+            case "10":
                 switch (currentLevel) {
                     case "EGG":
                     swal({
@@ -263,38 +266,45 @@ function resetScore() {
 function letsPlay() {
     swal({
         title: "Ready?",
-        button: "Let's go!",
+        timer: 2500,
 })
+    .then(() => swal({
+        title: "Let's go!",
+        timer: 2500,
+}))
     .then(() => {
         hideModal();
+        hideOptionImages();
         playGame();
-    });
+    })
 };
 function startEggLevel() {
+    resetCountdownClock();
+    hideOptionImages();
     resetScore();
-    resetGame();
+    imageFadeIn();
+    letsPlay();
     playEggLevel();
-    hideModal();
-    playGame();    
 };
 function startCaterpillarLevel() {
+    resetCountdownClock();
+    hideOptionImages();
     resetScore();
-    resetGame();
+    imageFadeIn();
+    letsPlay();
     playCaterpillarLevel();
-    hideModal();
-    playGame();
 };
 function startButterflyLevel() {
+    resetCountdownClock();
+    hideOptionImages();
     resetScore();
-    resetGame();
+    imageFadeIn();
+    letsPlay();
     playButterflyLevel();
-    hideModal();
-    playGame();    
 };
 
 readyToPlay.addEventListener('click', hideModal);
 readyToPlay.addEventListener('click', playGame);
-closeModal.addEventListener('click', hideModal);
 closeModal.addEventListener('click', letsPlay);
 for (let i = 0; i < levelEgg.length ; i++){
 levelEgg[i].addEventListener('click', startEggLevel);
@@ -313,4 +323,4 @@ for (let i = 0 ; i < imageSelect.length ; i++){
 };
 if (mediaQuery.matches) {
   $('.footer').removeClass('fixed-bottom');
-}
+};
