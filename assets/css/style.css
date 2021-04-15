@@ -1,57 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
 .body {
-    font-family: 'RocknRoll One', sans-serif;
-    font-size: 15px;
+
     background-color: red;
     color: darkslategray;
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 15px;
 }
 .nav {
     background-color: whitesmoke;
-    width: 80%;
     display: block;
     height: 100px;
     margin: auto auto;
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-top: 20px;
     text-align: right;
+    width: 80%;
 }
 .footer {
-    margin-bottom: 10px;
-    margin-right: 8px;
-    margin-left: 8px;
     color: whitesmoke;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 .btn {
+    border: none;
     border-radius: 8px;
     color: whitesmoke;
-    border: none;
-    margin-top: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 .btn:focus {
-    outline: none;
     box-shadow: none;
+    outline: none;
 }
 .welcome__modal {
-  position: fixed;
-  z-index: 1;
-  padding-top: 80px;
+  background-color: rgb(155, 143, 143);
+  background-color: rgba(155, 143, 143, 0.6);
+  height: 120%; 
   left: 0;
+  overflow: auto;
+  padding-top: 80px;
+  position: fixed;
   top: 0;
   width: 100%;
-  height: 120%;
-  overflow: auto; 
-  background-color: rgb(0,0,0,0.6); 
-  background-color: rgba(155, 143, 143, 0.6);
+  z-index: 1;
 }
 .game__section {
     background-color: whitesmoke;
-    width: 80%;
     height: 80vh;
     margin: 0 auto;
     position: relative;
-    margin: 0 auto;
+    width: 80%;
 }
 .game__section__middle__area {
     height: 220px;
@@ -60,56 +60,56 @@
     visibility: hidden;
 }
 .nav__link {
-    text-decoration: none;
     color: darkslategray;
-    font-weight: bold;
     font-size: 120%;   
+    font-weight: bold;
     text-align: right;
+    text-decoration: none;
 }
 .nav__link:hover {
-    text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;    
+    text-transform: uppercase;
 }
 .option__image__section {
-    position: absolute;
     bottom: 15px;
-    width: 100%;
+    position: absolute;
     text-align: center;
+    width: 100%;
 }
 .bottom__section__info {
-    text-align: center;
+    background-color: whitesmoke;
     display: block;
     height: fit-content;
     margin: auto auto;
-    margin-top: 20px;
     margin-bottom: 20px;
-    background-color: whitesmoke;
+    margin-top: 20px;
+    text-align: center;
     width: 80%;
 }
 .bottom__section__play {
+    margin: 0 auto;  
     padding-top: 10px;
     width: 90%;
-    margin: 0 auto;    
-}
+ }
 .bottom__section__about {
-    width: 90%;
     margin: 0 auto;    
+    width: 90%;
 }
 .bottom__section__contact {
+    margin: 0 auto;   
     padding-bottom: 20px;
     width: 90%;
-    margin: 0 auto;   
 }
 .clock__face {
-    width: 175px;
-    height: 175px;
     background-color: red;
     border-radius: 50%;
     display: block;
-    position: relative;
+    height: 175px;
     margin: 0 auto;
     margin-top: 20px;
+    position: relative;
+    width: 175px;
 }
 .nav__link__top {
     margin: 0 auto;
@@ -129,36 +129,33 @@
     text-align: center;
 }
 .btn__color__select {
+    column-gap: 6px;
     height: 50px;
     width: 120px;
-    column-gap: 6px;
 }
 .btn__start__play {
     background-color: darkslategray;
     height: 100px;
-    width: 250px;
     margin: 0 auto; 
+    width: 250px;
 }
 .btn__start__play:hover {
-    border: 2px solid darkslategray;
     background-color: whitesmoke;
+    border: 2px solid darkslategray;
     color: darkslategray;
     cursor: pointer;
     text-decoration: none;
 } 
 .game__level__icon {
-    border: none;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 100px;
-    width: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: whitesmoke;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    height: 100px;
+    margin: 10px;
     margin: 0 auto;
+    width: 200px;
 }
 .game__level__icon:hover {
     border: 3px solid darkslategray;
@@ -166,14 +163,14 @@
     cursor: pointer;
 }
 .modal__level__icon {
+    background-color: whitesmoke;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;  
     border: none;
     height: 150px;
-    width: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: whitesmoke;  
     margin: 0 auto;
+    width: 200px;
 }
 .modal__level__icon:hover {
     border: 3px solid darkslategray;
@@ -181,70 +178,69 @@
     cursor: pointer;
 }
 .modal__level__text {
-    width: 65%;
     font-size: 14px;
     margin: 0 auto;
+    width: 65%;
 }
 .correct__score__star {
-    height: 150px;
-    display: block;
-    position: relative; 
-    font-size: 150px;
     color: red;
-    text-align: center;   
-    position: absolute;
-    z-index: 1;
-    top: 50%;
+    display: block;
+    font-size: 150px;
+    height: 150px;
     left: 50%;
-    transform: translate(-50%, -50%);               
+    position: absolute;
+    text-align: center;   
+    top: 50%;
+    transform: translate(-50%, -50%);            
+    z-index: 1;
 }
 .correct__score__counter {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
     color: darkslategray;
+    font-size: 50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 .clock__numbers {
-    --rotation: 0;
-    position: absolute;
-    width: 100%;
+    color: whitesmoke;
+    font-family: 'RocknRoll One', sans-serif;
     height: 100%;
+    position: absolute;
+    --rotation: 0;
     text-align: center;
     transform: rotate(var(--rotation));
-    font-family: 'RocknRoll One', sans-serif;
-    color: whitesmoke;
+    width: 100%;
 }
 .clock__hand {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    width: 6px;
-    height: 35%;
+    background-color: whitesmoke;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    z-index: 1;
-    background-color: whitesmoke;
+    bottom: 50%;
+    height: 35%;
+    left: 50%;
+    position: absolute;
     transform-origin: bottom;
+    width: 6px;
+    z-index: 1;
 }
 .answer__image__container {
-    height: 200px;
-    width: 200px;
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
     bottom: -10%;
+    display: block;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 200px;
 }
 .answer__image__picture {
     width: 100%;  
 }
 .option__image__container {
+    padding-bottom: 10px;
     position: relative;
     text-align: center;
-    padding-bottom: 10px;
 }
 .option__image__picture {
     height: 150px;
@@ -255,18 +251,18 @@
     transform: scale(1.2);
 }
 .modal__content {
-  background-color: whitesmoke;
-  color: darkslategray;
-  margin: auto;
-  padding: 20px;
-  border: none;
-  width: 60%;
-  height: 60%;
-  overflow: scroll;
+    background-color: whitesmoke;
+    border: none;
+    color: darkslategray;
+    height: 60%;
+    margin: auto;
+    overflow: scroll;
+    padding: 20px;
+    width: 60%;
 }
 .modal__image__container {
-    text-align: center;
     margin-bottom: 15px;
+    text-align: center;
 }
 .modal__content__text {
     font-size: 16px;
@@ -278,70 +274,70 @@
 }
 .modal__close:hover,
 .modal__close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  transform: scale(1.2);
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1.2);
 }
 .section__content__title {
-    text-align: center;
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 .modal--image--caterpillar {
     height: auto;
-    width: 80%;
     margin: 0 auto;
-    padding-top: 15px;
     padding-bottom: 15px;
+    padding-top: 15px;
+    width: 80%;
 }
 .btn--color--select--green {
     background-color: green;
 }
 .btn--color--select--green:hover {
-    color: green;
+    background-color: whitesmoke;     
     border: 3px solid green;    
-    background-color: whitesmoke;        
+    color: green;   
 }
 .btn--color--select--purple {
     background-color: purple;
 }
 .btn--color--select--purple:hover {
-    color: purple;
-    border: 3px solid purple;    
     background-color: whitesmoke;        
+    border: 3px solid purple;    
+    color: purple;
 }
 .btn--color--select--pink {
     background-color: pink;
 }
 .btn--color--select--pink:hover {
-    color: pink;
-    border: 3px solid pink;    
     background-color: whitesmoke;        
+    border: 3px solid pink;    
+    color: pink;
 }
 .btn--color--select--red {
     background-color: red;
 }
 .btn--color--select--red:hover {
-    color: red;
-    border: 3px solid red;    
     background-color: whitesmoke;        
+    border: 3px solid red;    
+    color: red;
 }
 .btn--color--select--blue {
     background-color: blue;
 }
 .btn--color--select--blue:hover {
-    color: blue;
-    border: 3px solid blue;    
     background-color: whitesmoke;        
+    border: 3px solid blue;  
+    color: blue;
 }
 .btn--color--select--orange {
     background-color: orangered;
 }
 .btn--color--select--orange:hover {
-    color: orangered;
+    background-color: whitesmoke;      
     border: 3px solid orangered;    
-    background-color: whitesmoke;        
+    color: orangered; 
 }
 .game--level--icon--egg {
     background-image: url(../images/egg.jpg);
@@ -373,45 +369,43 @@
   }
 }
 .bottom--section--contact--link {
-    text-decoration: none;
     color:black;
+    text-decoration: none;
 }
 .bottom--section--contact--link:hover {
+    color: darkslategray;
     font-weight: bold;
     text-decoration: none;
-    color: darkslategray;
 }
-
-/***for mobile devices***/
 
 @media only screen and (max-device-width: 768px) {
     .nav {
-        text-align: center;
         font-size: 10px;
         padding-top: 20px;
+        text-align: center;
     }
     .btn {
-        margin-top: 6px;
-        margin-bottom: 6px;
-        text-align: center;
-        height: 40px;
-        width: 70px;
         font-size: 10px;
+        height: 40px;
+        margin-bottom: 6px;
+        margin-top: 6px;
+        text-align: center;
+        width: 70px;
     }
     .game__section {
         height: 100%;
     }
     .welcome__modal {
-        padding-top: 20px;
         padding-bottom: 50px;
+        padding-top: 20px;
     }
     .modal__content {
-        width: 90%;
         height: 90%;
+        width: 90%;
     }
     .game__section__middle__area {
-        height: 150px;
         font-size: 10px;
+        height: 150px;
     }
     .bottom__section__info {
         font-size: 12px;
@@ -420,8 +414,8 @@
         font-size: 10px;
     }
     .section__content__title {
-        margin-top: 5px;
         font-size: 16px;
+        margin-top: 5px;
     }
     .modal__image__title {
         font-size: 16px;
@@ -432,8 +426,8 @@
     }
     .modal__level__text {
         font-size: 10px;
-        width: 90%;
         margin-bottom: 8px;
+        width: 90%;
     }
     .option__image__section {
         margin: 0 auto;
@@ -464,23 +458,23 @@
         margin-bottom: 0;
     }
     .clock__container {
-        width: 50%;
         margin: 0 auto;
+        width: 50%;
     }
     .star__container {
         margin: 0 auto;
     }
     .clock__face {
-        width: 80px;
-        height: 80px;
         font-size: 8px;
+        height: 80px;
+        width: 80px;
     }
     .clock__hand {
         width: 3px;
     }
     .correct__score__star {
-        height: 50px;
         font-size: 50px;
+        height: 50px;
         top: 50%;
     }
     .correct__score__counter {
