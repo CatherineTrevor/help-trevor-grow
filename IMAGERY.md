@@ -1,4 +1,6 @@
-### Imagery
+# Imagery
+
+Information detailing the source of each image used.
 
 **Egg**
 
