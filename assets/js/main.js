@@ -3,9 +3,9 @@
 "-W117";true;
 
 const welcomeModal = document.querySelector('.welcome__modal'); 
-let levelEgg = document.querySelectorAll(".game--level--icon--egg");
-let levelCaterpillar = document.querySelectorAll(".game--level--icon--caterpillar");
-let levelButterfly = document.querySelectorAll(".game--level--icon--butterfly");
+let levelEgg = document.querySelectorAll('.level--egg');
+let levelCaterpillar = document.querySelectorAll('.level--caterpillar');
+let levelButterfly = document.querySelectorAll('.level--butterfly');
 let readyToPlay = document.querySelector('.btn__start__play');
 let closeModal = document.querySelector('.modal__close');
 let colorBtn = document.querySelectorAll('.btn__color__select'); 
@@ -311,13 +311,13 @@ readyToPlay.addEventListener('click', hideModal);
 readyToPlay.addEventListener('click', playGame);
 closeModal.addEventListener('click', letsPlay);
 for (let i = 0; i < levelEgg.length ; i++){
-levelEgg[i].addEventListener('click', startEggLevel);
+    levelEgg[i].addEventListener('click', startEggLevel);
 }
 for (let i = 0; i < levelCaterpillar.length ; i++){
-levelCaterpillar[i].addEventListener('click', startCaterpillarLevel);
+    levelCaterpillar[i].addEventListener('click', startCaterpillarLevel);
 }
 for (let i = 0; i < levelButterfly.length ; i++){
-levelButterfly[i].addEventListener('click', startButterflyLevel);
+    levelButterfly[i].addEventListener('click', startButterflyLevel);
 }
 for (let i = 0 ; i < colorBtn.length ; i++){
   colorBtn[i].addEventListener('click', changeBgColor);

@@ -329,6 +329,11 @@
     border: 3px solid orangered;    
     color: orangered; 
 }
+.current--game--icon:hover {
+    border: none;
+    border-radius: 0; 
+    cursor: auto;    
+}
 .game--level--icon--egg {
     background-image: url(../images/egg.jpg);
 }
