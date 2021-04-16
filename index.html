@@ -1,274 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>  
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Help Trevor Grow!" content="A free-to-play memory game for children | Learn basic fruits and numbers"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
-    <title>Help Trevor Grow!</title>
-</head>
-<!--main body background color to change when player selects relevant button-->
-<body class="body"> 
-    <!--link to open welcome pop-up modal-->
-    <div class="row nav">
-        <nav>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="Help Trevor Grow!" content="A free-to-play memory game for children | Learn basic fruits and numbers"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+      <script src="assets/js/main.js" defer></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+      <title>Help Trevor Grow!</title>
+   </head>
+   <!--main body background color to change when player selects relevant button-->
+   <body class="body">
+      <!--link to open welcome pop-up modal-->
+      <div class="row nav">
+         <nav>
             <a href="#infoSection" class="col-4 nav__link nav__link__top">
-                    How To Play
+            How To Play
             </a> 
             <a href="#aboutSection" class="col-4 nav__link nav__link__top">
-                    About
+            About
             </a>  
             <a href="#contactSection" class="col-4 nav__link nav__link__top">
-                    Contact
+            Contact
             </a>                                     
-        </nav>    
-        <div class="game__section__title">
+         </nav>
+         <div class="game__section__title">
             <h2 class="game--section--title--text">
-                Help Trevor Grow!
+               Help Trevor Grow!
             </h2>
-        </div>
-    </div>
-    <div class="game__section">
-        <div class="row justify-content-center">
+         </div>
+      </div>
+      <div class="game__section">
+         <div class="row justify-content-center">
             <p class="game__section__title">
-                Pick your colour scheme!
+               Pick your colour scheme!
             </p>
-        </div> 
-        <!--background color options-->               
-        <div class="row">
+         </div>
+         <!--background color options-->               
+         <div class="row">
             <div class="btn__container col-4 col-md-4 col-lg-2">
-                <button class="btn btn__color__select btn--color--select--green">
-                    GREEN
-                </button>
+               <button class="btn btn__color__select btn--color--select--green">
+               GREEN
+               </button>
             </div>
             <div class="btn__container col-4 col-md-4  col-lg-2">
-                <button class="btn btn__color__select btn--color--select--purple">
-                    PURPLE
-                </button>
+               <button class="btn btn__color__select btn--color--select--purple">
+               PURPLE
+               </button>
             </div>
             <div class="btn__container col-4 col-md-4 col-lg-2">
-                <button class="btn btn__color__select btn--color--select--pink">
-                    PINK
-                </button>
+               <button class="btn btn__color__select btn--color--select--pink">
+               PINK
+               </button>
             </div>
             <div class="btn__container col-4 col-md-4 col-lg-2">
-                <button class="btn btn__color__select btn--color--select--red">
-                    RED
-                </button>
+               <button class="btn btn__color__select btn--color--select--red">
+               RED
+               </button>
             </div>
             <div class="btn__container col-4 col-md-4 col-lg-2">
-                <button class="btn btn__color__select btn--color--select--blue">
-                    BLUE
-                </button>
+               <button class="btn btn__color__select btn--color--select--blue">
+               BLUE
+               </button>
             </div>
             <div class="btn__container col-4 col-md-4 col-lg-2">
-                <button class="btn btn__color__select btn--color--select--orange">
-                    ORANGE
-                </button>   
-            </div>                                                                        
-        </div>
-    <!--current game level icon-->
-    <div class="row game__section__middle__area">
-        <div class="col-4 game__section__text">
-            <p>
-                Current playing level
-            </p>
+               <button class="btn btn__color__select btn--color--select--orange">
+               ORANGE
+               </button>   
+            </div>
+         </div>
+         <!--current game level icon-->
+         <div class="row game__section__middle__area">
+            <div class="col-4 game__section__text">
+               <p>
+                  Current playing level
+               </p>
+               <div>
+                  <p class="level__selected">EGG</p>
+                  <div class="game__level__icon game__selected game--level--icon--egg"></div>
+               </div>
+            </div>
+            <div class="col-4 clock__container">
+               <div class="clock__face" id="clock_color_change">
+                  <div class="clock__hand" data-second-hand></div>
+               </div>
+            </div>
+            <!--correct answer counter increments 1 after every correct answer selected-->
+            <div class="col-4 game__section__text star__container">
+               <p>
+                  Your score
+               </p>
+               <i class="far fa-star correct__score__star"></i>
+               <p class="correct__score__counter">0</p>
+            </div>
+         </div>
+         <!--Countdown timer and Image A-->
+         <div>
+            <div class="answer__image__container">
+               <img src="assets/images/white_placeholder.jpg" class="answer__image__picture" id="answer" alt="Random piece of fruit image which slowly disappear">
+            </div>
+         </div>
+         <!---Three option images-->            
+         <div class="row option__image__section">
+            <div class="col-4 option__image__container">
+               <img src="assets/images/white_placeholder.jpg" class="option__image__picture hide" id="imageA" alt="Fruit option 1">
+            </div>
+            <div class="col-4 option__image__container">
+               <img src="assets/images/white_placeholder.jpg" class="option__image__picture hide" id="imageB" alt="Fruit option 2">
+            </div>
+            <div class="col-4 option__image__container">
+               <img src="assets/images/white_placeholder.jpg" class="option__image__picture hide" id="imageC" alt="Fruit option 3">   
+            </div>
+         </div>
+      </div>
+      <!--Welcome pop-up modal. Displays on page open and when link is clicked-->
+      <div class="welcome__modal">
+         <div class="modal__content container-fluid">
             <div>
-                <p class="level__selected">EGG</p>
-                <div class="game__level__icon game__selected game--level--icon--egg"></div> 
-            </div>
-        </div>
-        <div class="col-4 clock__container">
-            <div class="clock__face" id="clock_color_change">
-                <div class="clock__hand" data-second-hand></div>                                                                                                                      
-            </div>                    
-        </div>
-    <!--correct answer counter increments 1 after every correct answer selected-->
-        <div class="col-4 game__section__text star__container">
-            <p>
-                Your score
-            </p>
-            <i class="far fa-star correct__score__star"></i>
-            <p class="correct__score__counter">0</p>
-        </div>                           
-    </div>          
-<!--Countdown timer and Image A-->
-            <div>
-                <div class="answer__image__container">
-                   <img src="assets/images/white_placeholder.jpg" class="answer__image__picture" id="answer" alt="Random piece of fruit image which slowly disappear">
-                </div>
-            </div>
-<!---Three option images-->            
-            <div class="row option__image__section">
-                <div class="col-4 option__image__container">
-                    <img src="assets/images/white_placeholder.jpg" class="option__image__picture hide" id="imageA" alt="Fruit option 1">
-                </div>
-                <div class="col-4 option__image__container">
-                    <img src="assets/images/white_placeholder.jpg" class="option__image__picture hide" id="imageB" alt="Fruit option 2">
-                </div>
-                <div class="col-4 option__image__container">
-                    <img src="assets/images/white_placeholder.jpg" class="option__image__picture hide" id="imageC" alt="Fruit option 3">   
-                </div>
-            </div>
-        </div>            
-<!--Welcome pop-up modal. Displays on page open and when link is clicked-->
-    <div class="welcome__modal">
-        <div class="modal__content container-fluid">
-            <div>
-                <span class="modal__close">
-                    X
-                </span>
-                <h1 class="section__content__title">
-                    Welcome to Help Trevor Grow!
-                </h1>
+               <span class="modal__close">
+               X
+               </span>
+               <h1 class="section__content__title">
+                  Welcome to Help Trevor Grow!
+               </h1>
             </div>
             <div class="row">
-                <div class="col-12 modal__image__container">
-                    <img src="assets/images/modal_talking_caterpillar.jpg" class="modal--image--caterpillar" alt="Image of Trevor the Caterpillar">
-                </div>
-                <div class="col-12 modal__content__text">
-                    <p>
-                        Are you age three or older? Would you like to help our friend Trevor grow from an egg, into a caterpillar and finally a butterfly so he can fly away and be with his friends?
-                    </p>
-                    <p>
-                        If you said yes, then this game is for you!
-                    </p>
-                    <p>
-                        The fruit that Trevor wants to eat appears, but oh no, it fades away before he has a chance to take a bite! Select the same fruit from the options shown for Trevor to eat
-                         - pick the right answer, get a point and start a new turn!
-                    </p>
-                    <p>
-                        To play, select a level from the options below, or click the Let's Play button to go straight into the game, starting at Egg level. If you find using a mouse hard, maybe
-                        try a tablet or phone. Don't forget to pick your colour theme!
-                    </p>
-                    <p>
-                        Have fun and good luck!
-                    </p>              
-                </div>
-            </div>   
+               <div class="col-12 modal__image__container">
+                  <img src="assets/images/modal_talking_caterpillar.jpg" class="modal--image--caterpillar" alt="Image of Trevor the Caterpillar">
+               </div>
+               <div class="col-12 modal__content__text">
+                  <p>
+                     Are you age three or older? Would you like to help our friend Trevor grow from an egg, into a caterpillar and finally a butterfly so he can fly away and be with his friends?
+                  </p>
+                  <p>
+                     If you said yes, then this game is for you!
+                  </p>
+                  <p>
+                     The fruit that Trevor wants to eat appears, but oh no, it fades away before he has a chance to take a bite! Select the same fruit from the options shown for Trevor to eat
+                     - pick the right answer, get a point and start a new turn!
+                  </p>
+                  <p>
+                     To play, select a level from the options below, or click the Let's Play button to go straight into the game, starting at Egg level. If you find using a mouse hard, maybe
+                     try a tablet or phone. Don't forget to pick your colour theme!
+                  </p>
+                  <p>
+                     Have fun and good luck!
+                  </p>
+               </div>
+            </div>
             <div class="row modal__image__container">
-                <div class="col-lg-4 col-sm-12">
-                        <h2 class="modal__image__title">Egg</h2>
-                        <div class="modal__level__icon game--level--icon--egg" id="levelEgg"></div>                                    
-                        <p class="modal__level__text">
-                            If you are 3 and ready to help Trevor, this is a great place to start!
-                        </p>           
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                        <h2 class="modal__image__title">Caterpillar</h2>
-                        <div class="modal__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>                                    
-                        <p class="modal__level__text">
-                            Looking for something a bit harder? You might want to dive straight into the Caterpillar level!
-                        </p>           
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                        <h2 class="modal__image__title">Butterfly</h2>
-                        <div class="modal__level__icon game--level--icon--butterfly" id="levelButterfly"></div>                                    
-                        <p class="modal__level__text">
-                            A grown-up 5-year-old, huh? Trevor could do with your help at this final stage!
-                        </p>           
-                </div>  
+               <div class="col-lg-4 col-sm-12">
+                  <h2 class="modal__image__title">Egg</h2>
+                  <div class="modal__level__icon game--level--icon--egg" id="levelEgg"></div>
+                  <p class="modal__level__text">
+                     If you are 3 and ready to help Trevor, this is a great place to start!
+                  </p>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <h2 class="modal__image__title">Caterpillar</h2>
+                  <div class="modal__level__icon game--level--icon--caterpillar" id="levelCaterpillar"></div>
+                  <p class="modal__level__text">
+                     Looking for something a bit harder? You might want to dive straight into the Caterpillar level!
+                  </p>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <h2 class="modal__image__title">Butterfly</h2>
+                  <div class="modal__level__icon game--level--icon--butterfly" id="levelButterfly"></div>
+                  <p class="modal__level__text">
+                     A grown-up 5-year-old, huh? Trevor could do with your help at this final stage!
+                  </p>
+               </div>
             </div>
             <div class="row">
-                <div class="row btn btn__start__play">
-                    <h2 class="btn--start--play--text">
-                        Ready?
-                    </h2>
-                    <h2 class="btn--start--play--text">
-                        Let's play!
-                    </h2>                  
-                </div> 
-            </div>                                       
-        </div>    
-    </div>  
-<!--information below the game-->
-    <div class="row bottom__section__info">
-        <div class="bottom__section__play col-12">
+               <div class="row btn btn__start__play">
+                  <h2 class="btn--start--play--text">
+                     Ready?
+                  </h2>
+                  <h2 class="btn--start--play--text">
+                     Let's play!
+                  </h2>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--information below the game-->
+      <div class="row bottom__section__info">
+         <div class="bottom__section__play col-12">
             <h2 class="section__content__title" id="infoSection">
-                How to play
+               How to play
             </h2>
             <p>
-                The game has three levels: 
+               The game has three levels: 
             </p>
             <div class="row modal__image__container">
-                <div class="col-lg-4 col-sm-12">
-                        <h2>Egg</h2>
-                        <div class="game__level__icon game--level--icon--egg" id="selectEggInfoSection"></div>                                    
-                        <p class="modal__level__text">
-                            The simplest level, designed for approx. 3 years old.
-                        </p>           
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                        <h2>Caterpillar</h2>
-                        <div class="game__level__icon game--level--icon--caterpillar" id="selectCaterpillarInfoSection"></div>                                    
-                        <p class="modal__level__text">
-                            A bit harder, designed for approx. 4 years old.
-                        </p>           
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                        <h2>Butterfly</h2>
-                        <div class="game__level__icon game--level--icon--butterfly" id="selectButterflyInfoSection"></div>                                    
-                        <p class="modal__level__text">
-                            The hardest level, designed for approx. 5 years old. 
-                        </p>           
-                </div>                                              
-            </div>                
-                <p>
-                    These ages are just a guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
-                </p> 
-                <p>
-                    The fruit that Trevor wants to eat is shown in the centre of the playing area, but slowly disappears before Trevor can eat it. Three options then appear below it. 
-                    Select the correct option for Trevor to eat, gain a point and start a new turn! Once a level is completed, the next level starts.
-                </p>               
-        </div>
-        <div class="bottom__section__about col-12">
+               <div class="col-lg-4 col-sm-12">
+                  <h2>Egg</h2>
+                  <div class="game__level__icon game--level--icon--egg" id="selectEggInfoSection"></div>
+                  <p class="modal__level__text">
+                     The simplest level, designed for approx. 3 years old.
+                  </p>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <h2>Caterpillar</h2>
+                  <div class="game__level__icon game--level--icon--caterpillar" id="selectCaterpillarInfoSection"></div>
+                  <p class="modal__level__text">
+                     A bit harder, designed for approx. 4 years old.
+                  </p>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <h2>Butterfly</h2>
+                  <div class="game__level__icon game--level--icon--butterfly" id="selectButterflyInfoSection"></div>
+                  <p class="modal__level__text">
+                     The hardest level, designed for approx. 5 years old. 
+                  </p>
+               </div>
+            </div>
+            <p>
+               These ages are just guidance on the level of difficulty involved, they are not an indication of the level a child "should" be. This game is designed to be fun!
+            </p>
+            <p>
+               The fruit that Trevor wants to eat is shown in the centre of the playing area but slowly disappears before Trevor can eat it. Three options then appear below it. 
+               Select the correct option for Trevor to eat, gain a point and start a new turn! Once a level is completed, the next level starts.
+            </p>
+         </div>
+         <div class="bottom__section__about col-12">
             <h2 class="section__content__title" id="aboutSection">
-                About
+               About
             </h2>
             <p>
-                This free-to-play-game has been developed to help children from approximately age 3 and up to recognise basic fruits and numbers, with levels that increase slightly in difficulty as they complete
-                each one.
-            </p>  
+               This free-to-play game has been developed to help children from approximately age 3 and up to recognise basic fruits and numbers, with levels that increase slightly in difficulty as they complete
+               each one.
+            </p>
             <p>
-                The pop-up when the player selects an incorrect answer, is designed to help them understand that they got the answer wrong, but they can try again. Whereas when the correct 
-                answer is selected, the big green tick should help them feel good about their achievement and want to continue playing!    
-            </p>                 
+               The pop-up when the player selects an incorrect answer is designed to help them understand that they got the answer wrong, but they can try again. Whereas when the correct 
+               answer is selected, the big green tick should help them feel good about their achievement and want to continue playing!    
+            </p>
             <p>
-                Children don’t always get to choose things for themselves, so they have the option to change the colour of the background, giving them some power and control over the game!
-            </p>      
+               Children don’t always get to choose things for themselves, so they have the option to change the colour of the background, giving them some power and control over the game!
+            </p>
             <p>
-                If your child has difficulty using a mouse, a tablet or phone might be easier for them.
-            </p>                              
-        </div>
-        <div class="bottom__section__contact col-12">
+               If your child has difficulty using a mouse, a tablet or phone might be easier for them.
+            </p>
+         </div>
+         <div class="bottom__section__contact col-12">
             <h2 class="section__content__title" id="contactSection">
-                Contact
+               Contact
             </h2>
             <p>
-                We hope your child enjoys playing Help Trevor Grow!
+               We hope your child enjoys playing Help Trevor Grow!
             </p>
             <p>
-                If you have any questions or suggestions, please <a href="mailto:catfinlayson@icloud.com" class="bottom--section--contact--link">click here to send an email</a> and 
-                we will get in touch as soon as possible!
+               If you have any questions or suggestions, please <a href="mailto:catfinlayson@icloud.com" class="bottom--section--contact--link">click here to send an email</a> and 
+               we will get in touch as soon as possible!
             </p>
-        </div>
-    </div>
-<!--footer with game name and email address-->
-    <footer class="footer fixed-bottom">
-        <div>
+         </div>
+      </div>
+      <!--footer with game name and email address-->
+      <footer class="footer fixed-bottom">
+         <div>
             <span class="nav__link__bottom">
-                <i class="far fa-copyright"></i> 
-                    Help Trevor Grow 2021
+            <i class="far fa-copyright"></i> 
+            Help Trevor Grow 2021
             </span>
-        </div>
-    </footer>
-</body>
+         </div>
+      </footer>
+   </body>
 </html>
