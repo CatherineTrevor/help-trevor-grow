@@ -21,6 +21,7 @@ Testing conducted on the following browsers;
 * Chrome
 * Microsoft Edge
 * Firefox
+
 Family and friends were also invited to test the game and provide feedback, one of whom is a qualified Early Years Manager, specialising in development of pre-school aged children.
 
 **User story testing**
@@ -73,6 +74,10 @@ Based on much research and attempting setTimeout and numerous functions, it has 
 ![Bugfix 2](supporting_docs/bugfix_2.jpg)
 
 [#3: Images don't appear on published site](https://github.com/CatherineTrevor/help-trevor-grow/issues/3)
+
+[#4: Player selecting current playing level causes issues](https://github.com/CatherineTrevor/help-trevor-grow/issues/4)
+
+Discovered by a Slack user during testing.
 
 **Code validator**
 
