@@ -161,7 +161,7 @@ JavaScript is used to change the playing levels, so there is only one HTML file.
 
 ![wireframe_mobile_play](supporting_docs/wireframe_play_mobile.jpg)
 
-**Play area detail** <a id="play_detail"></a>
+**Play area detail** <a name="play_detail"></a>
 
 ![wireframe_images](supporting_docs/wireframe_images_detail.jpg)
 
@@ -187,7 +187,7 @@ The site uses Rocknroll from Google fonts, with sans-serif as a backup. It has b
 
 ### Color Scheme
 
-The site uses the following standard HTML colors:
+Due to the player audience, the site uses the following clear, simple colors:
 
 **Header and footer text:** white (#FFF)
 
@@ -211,15 +211,15 @@ This project uses the following languages:
 This project was created on [GitHub](http://www.github.com/) and uses the following libraries and frameworks:
 
 * [Balsamiq](http://www.balsamiq.com/) - used to create all wireframes
-* [Bootstrap](http://bootstrap.com/) - Bootstrap was used for part of the grid structure and was heavily modified to meet the needs of the project
+* [Bootstrap](http://getbootstrap.com/) - Bootstrap was used for part of the grid structure and was heavily modified to meet the needs of the project
 * [Google Fonts](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One) - RocknRoll
-* [Font Awesome](http://www.fontawsome.com/) - [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter, [copyright logo](https://fontawesome.com/icons/copyright?style=regular)
+* [Font Awesome](http://www.fontawesome.com/) - [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter, [copyright logo](https://fontawesome.com/icons/copyright?style=regular)
 * [BEM](http://getbem.com/introduction/) - used as the format for CSS
 * [Sweet Alert](https://sweetalert.js.org/) - used in replacement of the pop-up modal for correct and incorrect answers
 * [Tiny PNG](https://tinypng.com) - used to resize images to reduce site loading time
 * [Monday.com](https://view.monday.com/1055700560-c01e5354c02ab53b9f7b9e492d44d50f?r=use1) - used for project/task management
 * [Am I responsive](http://ami.responsivedesign.is/) - supplied the responsive image for the top of README.md
-* [Grammarly] (Example) - the free service to double-check grammar and spelling
+* [Grammarly](https://grammarly.com) - the free service to double-check grammar and spelling
 * [CSS Code beautify](https://codebeautify.org/cssvalidate#)
 * [Free HTML formatter](https://www.freeformatter.com/html-formatter.html)
 
@@ -274,18 +274,17 @@ Alternatively, select "Open with Github Desktop".
 
 ## Credits
 
-* YouTube tutorials on JavaScript - [Web Dev Simplified](https://www.youtube.com/watch?v=Ki0XXrlKlHY); [Adam Khoury](https://www.youtube.com/watch?v=4uL9bAKOaVQ)  
-* [The Coding Train](https://www.youtube.com/watch?v=oPpnCh7InLY) - YouTube video to help understand branching in Github
-* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp), 
+* YouTube tutorials on JavaScript - [Web Dev Simplified](https://www.youtube.com/watch?v=Ki0XXrlKlHY); [Adam Khoury](https://www.youtube.com/watch?v=4uL9bAKOaVQ); [The Coding Train](https://www.youtube.com/watch?v=oPpnCh7InLY) - YouTube video to help understand branching in Github
+* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp); 
 [hover](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 * [Stackoverflow](https://www.stackoverflow.com/) - [countdown timer](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown); 
-[jshint error](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const); [jshint error](https://stackoverflow.com/questions/8852765/jshint-and-jquery-is-not-defined);
+[jshint error](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const); [jshint jQuery error](https://stackoverflow.com/questions/8852765/jshint-and-jquery-is-not-defined);
 [target elements](https://stackoverflow.com/questions/22767609/add-event-listener-to-dom-elements-based-on-class); 
 [find a clicked button value](https://stackoverflow.com/questions/30499447/determine-which-button-was-clicked-inside-a-div)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - general JavaScript information
 * [CSS Tricks](https://css-tricks.com/working-with-javascript-media-queries/) - help using JavaScript to remove a class for a media query
 * [Coding Sight](https://codingsight.com/git-branching-naming-convention-best-practices/) - help to understand standard convention for branch naming in Github
-* [removebg](https://www.remove.bg/t/change-background) - remove the background of the images and replace with whitesmoke to the match site background color
+* [Removebg](https://www.remove.bg/t/change-background) - remove the background of the images and replace with whitesmoke to the match site background color
 * Code Institute mentor Narender Singh for his feedback and support.
 * Tutors at Code Institute: help with how to store used images in an array to ensure they didn't duplicate.
 * Code Institute Slack forums.
