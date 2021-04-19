@@ -379,6 +379,7 @@
         width: 90%;
     }
     .modal__content {
+        height: 75%;
         width: 80%;
     }
     .bottom__section__info {
@@ -412,7 +413,7 @@
         padding-top: 20px;
     }
     .modal__content {
-        height: 90%;
+        height: 80%;
         width: 90%;
     }
     .game__section__middle__area {

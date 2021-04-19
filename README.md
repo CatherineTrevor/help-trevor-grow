@@ -27,15 +27,16 @@
 # Project Overview
 
 This game has been built as part of the Milestone Two project with the Code Institute. The project augments the lessons from module 1 regarding HTML5 and CSS and introduces JavaScript and jQuery.
+
 Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A); it fades away after 5 seconds and then three images underneath appear (Images A, B and C), one of which is always the same as Image A ([see wireframe below](#play_detail)).  
-The player then selects the same item from the three images displayed to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level.
+The player selects the same item from the three images displayed to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level. To move to the next level, the player must reach 10 points.
 
 # User Experience Design
 
 ## Strategy
 
-The game is designed primarily for use on a desktop, with limited help needed from an adult where a player can follow the instructions or use a mouse without assistance. 
-For players that cannot use a mouse, the game is best played on a touch screen device (tablet, mobile phone for example). Receiving guidance from a qualified Early Years Manager to ensure the game is age-appropriate, there must be nothing unnecessary on the screen to distract the player, allowing them to focus on the game.
+The game is designed primarily for use on a desktop, with limited help needed from an adult where a player can follow instructions and/or use a mouse without assistance. 
+For players that cannot use a mouse, the game is best played on a touch screen device (tablet, mobile phone for example). Having received guidance from a qualified Early Years Manager to ensure the game is age-appropriate, there must be nothing unnecessary on the screen to distract the player, allowing them to focus on the game.
 
 The levels available increase in difficulty:
 
@@ -43,6 +44,12 @@ The levels available increase in difficulty:
 
 <div align="center">
     <img src="/assets/images/egg.jpg" height="200">
+</div>
+
+Game level example
+
+<div align="center">
+    <img src="/supporting_docs/egg_level_example.jpg" height="200">
 </div>
 
 This is the simplest level. Image A is of one piece of fruit, which fades out after 5 seconds and the player then has unlimited time to click the corresponding image from the options below. 
@@ -54,6 +61,13 @@ The three image options are visually different from each other, to make the game
     <img src="/assets/images/caterpillar.jpg" height="200">
 </div>
 
+Game level example
+
+<div align="center">
+    <img src="/supporting_docs/caterpillar_level_example.jpg" height="200">
+</div>
+
+
 Image A contains 3 items of the same piece of fruit, but the options below still differ enough to make it challenging. The target age for this level is 4.
 
 **Butterfly**
@@ -61,6 +75,13 @@ Image A contains 3 items of the same piece of fruit, but the options below still
 <div align="center">
     <img src="/assets/images/butterfly.jpg" height="200">
 </div>
+
+Game level example
+
+<div align="center">
+    <img src="/supporting_docs/butterfly_level_example.jpg" height="200">
+</div>
+
 
 Designed as the hardest option, this will show a higher quantity of fruit Image A, and then differing quantities of different fruit below. This means the player must not only note the type of fruit but also count it, making it slightly more difficult. The target age for this level is 5.
 
@@ -135,47 +156,7 @@ JavaScript is used to change the playing levels, so there is only one HTML file.
 
 ## Skeleton
 
-<<<<<<< HEAD
 For wireframes and game workflow [see separate Skeleton file.](SKELETON.md)
-=======
-**Wireframes**
-
-**Welcome pop-up modal | Desktop**
-
-![wireframe_desktop_welcome](supporting_docs/wireframe_modal_desktop.jpg)
-
-**Welcome pop-up modal | Tablet**
-
-![wireframe_tablet_welcome](supporting_docs/wireframe_modal_tablet.jpg)
-
-**Welcome pop-up modal | Mobile**
-
-![wireframe_mobile_welcome](supporting_docs/wireframe_modal_mobile.jpg)
-
-**Play | Desktop**
-
-![wireframe_desktop_play](supporting_docs/wireframe_play_desktop.jpg)
-
-**Play | Tablet**
-
-![wireframe_tablet_play](supporting_docs/wireframe_play_tablet.jpg)
-
-**Play | Mobile**
-
-![wireframe_mobile_play](supporting_docs/wireframe_play_mobile.jpg)
-
-**Play area detail** <a name="play_detail"></a>
-
-![wireframe_images](supporting_docs/wireframe_images_detail.jpg)
-
-The game will not show the answer image at the same time as the three images below; the above wireframes are to show the position of the images when they appear.
-
-The game will have one file only, with the pop-up modal displaying over it. The images will be changed depending on the level selected using JavaScript.
-
-**Workflow**
-
-![workflow](/supporting_docs/workflow.jpg)
->>>>>>> origin/master
 
 ## Surface
 

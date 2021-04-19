@@ -1,6 +1,5 @@
 /*jshint esversion: 6 */
 /*globals $:false */
-"-W117";true;
 
 let welcomeModal = document.querySelector('.welcome__modal'); 
 let modalGameIcons = document.querySelectorAll('.modal__level__icon');
@@ -127,7 +126,7 @@ function shuffleImages() {
         } if (answer2 === answer3) {
         shuffleImages();
 }}
-function displayAnswer() {
+function displayQuestionImage() {
     let answers = [
     document.getElementById("imageA").src,
     document.getElementById("imageB").src,
@@ -140,7 +139,7 @@ function imageFadeOut() {
     $('.answer__image__picture').fadeTo(5000, 0.01);
 }
 function imageFadeIn() {
-    $('.answer__image__picture').fadeTo(100, 1);   
+    $('.answer__image__picture').fadeTo(0, 1);   
 }
 function displayOptionImages() {
     $('.option__image__picture').removeClass('hide');
@@ -154,7 +153,7 @@ function hideOptionImages() {
 function playGame() {
     shuffleImages();   
     imageFadeIn();        
-    displayAnswer();
+    displayQuestionImage();
     imageFadeOut();
     delayDisplayOptionImages();
     startCountdownClock();
