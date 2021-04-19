@@ -14,7 +14,7 @@ const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 function changeBgColor() {
     let btnSelect = event.target.innerText;
-    let bodyColor = document.querySelector('.body');
+    let bodyColor = document.querySelector('.game__container');
     let starColor = document.querySelector('.correct__score__star');
     let clockColor = document.querySelector('.clock__face');        
         switch (btnSelect) {

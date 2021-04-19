@@ -77,29 +77,29 @@ The game must be colorful and appealing to the player, whilst to a degree, educa
 
 **Adult first-time site visitors**
 
-a. As an adult first-time visitor, I want to easily navigate the site and quickly start a game.
+    a. As an adult first-time visitor, I want to easily navigate the site and quickly start a game.
 
-b. As an adult first-time visitor, I want to understand how to play the game, so I can explain it to my child if necessary.
+    b. As an adult first-time visitor, I want to understand how to play the game, so I can explain it to my child if necessary.
 
-c. As an adult first-time visitor, I want to feel confident that the game is free-to-play and age-appropriate.
+    c. As an adult first-time visitor, I want to feel confident that the game is free-to-play and age-appropriate.
 
-d. As an adult first-time visitor, I want to understand what my child can gain from the game.
+    d. As an adult first-time visitor, I want to understand what my child can gain from the game.
 
-e. As an adult first-time visitor, I want to know how to make the game more personal such as changing the level or some aspect of the site.
+    e. As an adult first-time visitor, I want to know how to make the game more personal such as changing the level or some aspect of the site.
 
 **Child first-time visitor goals:**
 
-a. As a child first-time visitor, I want to quickly understand the rules of the game.
+    a. As a child first-time visitor, I want to quickly understand the rules of the game.
 
-b. As a child first-time visitor, I want to have fun playing an online game.
+    b. As a child first-time visitor, I want to have fun playing an online game.
 
-c. As a child first-time visitor, I want to have some independence in play and feel the game is personally for me, by making my own choices.
+    c. As a child first-time visitor, I want to have some independence in play and feel the game is personally for me, by making my own choices.
 
-d. As a child first-time visitor, I want to feel good when I select the correct option.
+    d. As a child first-time visitor, I want to feel good when I select the correct option.
 
-e. As a child first-time visitor, I want to understand that I got an answer wrong, but feel motivated to try again.
+    e. As a child first-time visitor, I want to understand that I got an answer wrong, but feel motivated to try again.
 
-f. As a child first-time visitor, I want to feel encouraged to try the next level.
+    f. As a child first-time visitor, I want to feel encouraged to try the next level.
 
 ## Scope
 
