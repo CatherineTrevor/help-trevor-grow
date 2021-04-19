@@ -27,14 +27,8 @@
 # Project Overview
 
 This game has been built as part of the Milestone Two project with the Code Institute. The project augments the lessons from module 1 regarding HTML5 and CSS and introduces JavaScript and jQuery.
-<<<<<<< HEAD
-
-Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A); it fades away after 5 seconds and then three images underneath appear (Images A, B and C), one of which is always the same as Image A ([see wireframe below](#play_detail)).  
-The player selects the same item from the three images displayed to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level. To move to the next level, the player must reach 10 points.
-=======
 Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A); it fades away after 5 seconds and then three images underneath appear (Images A, B and C), one of which is always the same as Image A ([see wireframe in SKELETON.md](SKELETON.md/#play_detail)).  
-The player then selects the same item from the three images displayed to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level.
->>>>>>> origin/master
+The player then selects the same item from the three images displayed to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level. To move to the next level, the player must reach 10 points.
 
 # User Experience Design
 
