@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
-
+/***Background***/
 .game__container {
     background-color: red;
     color: darkslategray;
@@ -8,6 +8,7 @@
     padding-bottom: 30px;
     padding-top: 30px;
 }
+/***Navigation***/
 .nav {
     background-color: whitesmoke;
     display: block;
@@ -15,50 +16,6 @@
     margin: auto auto;
     text-align: right;
     width: 80%;
-}
-.footer {
-    color: whitesmoke;
-    margin-bottom: 10px;
-    margin-left: 8px;
-    margin-right: 8px;
-}
-.btn {
-    border: none;
-    border-radius: 8px;
-    color: whitesmoke;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.btn:focus {
-    box-shadow: none;
-    outline: none;
-}
-.welcome__modal {
-    background-color: rgb(155, 143, 143);
-    background-color: rgba(155, 143, 143, 0.6);
-    height: 120%; 
-    left: 0;
-    overflow: auto;
-    padding-top: 80px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-.game__section {
-    background-color: whitesmoke;
-    height: 80vh;
-    margin: 0 auto;
-    margin-top: 20px;
-    position: relative;
-    width: 80%;
-}
-.game__section__middle__area {
-    height: 220px;
-    padding-top: 20px;
-}
-.hide {
-    visibility: hidden;
 }
 .nav__link {
     color: darkslategray;
@@ -72,34 +29,42 @@
     text-decoration: none;    
     text-transform: uppercase;
 }
-.option__image__section {
-    bottom: 15px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
+.nav__link__top {
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
-.bottom__section__info {
+/***Footer***/
+.footer {
+    color: whitesmoke;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.nav__link__bottom {
+    font-size: 12px;
+}
+/***Main playing area***/
+.btn {
+    border: none;
+    border-radius: 8px;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+.hide {
+    visibility: hidden;
+}
+.game__section {
     background-color: whitesmoke;
-    display: block;
-    height: fit-content;
-    margin: auto auto;
+    height: 80vh;
+    margin: 0 auto;
     margin-top: 20px;
-    text-align: center;
+    position: relative;
     width: 80%;
-}
-.bottom__section__play {
-    margin: 0 auto;  
-    padding-top: 10px;
-    width: 90%;
- }
-.bottom__section__about {
-    margin: 0 auto;    
-    width: 90%;
-}
-.bottom__section__contact {
-    margin: 0 auto;   
-    padding-bottom: 20px;
-    width: 90%;
 }
 .clock__face {
     background-color: red;
@@ -111,12 +76,15 @@
     position: relative;
     width: 175px;
 }
-.nav__link__top {
-    margin: 0 auto;
-    padding-bottom: 10px;
+.game__section__middle__area {
+    height: 220px;
+    padding-top: 20px;
 }
-.nav__link__bottom {
-    font-size: 12px;
+.option__image__section {
+    bottom: 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 .game__section__title {
     padding-top: 5px;
@@ -161,26 +129,6 @@
     border: 3px solid darkslategray;
     border-radius: 8px; 
     cursor: pointer;
-}
-.modal__level__icon {
-    background-color: whitesmoke;  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;  
-    border: none;
-    height: 150px;
-    margin: 0 auto;
-    width: 200px;
-}
-.modal__level__icon:hover {
-    border: 3px solid darkslategray;
-    border-radius: 8px; 
-    cursor: pointer;
-}
-.modal__level__text {
-    font-size: 14px;
-    margin: 0 auto;
-    width: 65%;
 }
 .correct__score__star {
     color: red;
@@ -241,47 +189,6 @@
 .option__image__picture:hover {
     cursor: pointer;
     transform: scale(1.2);
-}
-.modal__content {
-    background-color: whitesmoke;
-    border: none;
-    color: darkslategray;
-    height: 60%;
-    margin: auto;
-    overflow: scroll;
-    padding: 20px;
-    width: 60%;
-}
-.modal__image__container {
-    margin-bottom: 15px;
-    text-align: center;
-}
-.modal__content__text {
-    font-size: 16px;
-}
-.modal__close {
-    float: right;
-    font-size: 25px;
-    font-weight: bold;
-}
-.modal__close:hover,
-.modal__close:focus {
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    transform: scale(1.2);
-}
-.section__content__title {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-.modal--image--caterpillar {
-    height: auto;
-    margin: 0 auto;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    width: 80%;
 }
 .btn--color--select--green {
     background-color: green;
@@ -356,6 +263,104 @@
     transform: rotate(359deg);
   }
 }
+/***Introduction modal***/
+.welcome__modal {
+    background-color: rgb(155, 143, 143);
+    background-color: rgba(155, 143, 143, 0.6);
+    height: 120%; 
+    left: 0;
+    overflow: auto;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.modal__level__icon {
+    background-color: whitesmoke;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    border: none;
+    height: 150px;
+    margin: 0 auto;
+    width: 200px;
+}
+.modal__level__icon:hover {
+    border: 3px solid darkslategray;
+    border-radius: 8px; 
+    cursor: pointer;
+}
+.modal__level__text {
+    font-size: 14px;
+    margin: 0 auto;
+    width: 65%;
+}
+.modal__content {
+    background-color: whitesmoke;
+    border: none;
+    color: darkslategray;
+    height: 60%;
+    margin: auto;
+    overflow: scroll;
+    padding: 20px;
+    width: 60%;
+}
+.modal__image__container {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.modal__content__text {
+    font-size: 16px;
+}
+.modal__close {
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+.modal__close:hover,
+.modal__close:focus {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+.section__content__title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.modal--image--caterpillar {
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 80%;
+}
+/***Bottom information section***/
+.bottom__section__info {
+    background-color: whitesmoke;
+    display: block;
+    height: fit-content;
+    margin: auto auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+}
+.bottom__section__play {
+    margin: 0 auto;  
+    padding-top: 10px;
+    width: 90%;
+ }
+.bottom__section__about {
+    margin: 0 auto;    
+    width: 90%;
+}
+.bottom__section__contact {
+    margin: 0 auto;   
+    padding-bottom: 20px;
+    width: 90%;
+}
 .bottom--section--contact--link {
     color:black;
     text-decoration: none;
@@ -365,6 +370,7 @@
     font-weight: bold;
     text-decoration: none;
 }
+/***For tablets***/
 @media only screen and (max-width: 1024px) {
     .nav {
         width: 90%;
@@ -379,6 +385,7 @@
         width: 90%;
     }
 }
+/***For mobile devices***/
 @media only screen and (max-width: 768px) {
     .game__container {
         padding-bottom: 15px;
