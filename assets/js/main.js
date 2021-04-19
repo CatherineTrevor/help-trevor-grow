@@ -3,9 +3,10 @@
 "-W117";true;
 
 let welcomeModal = document.querySelector('.welcome__modal'); 
-let levelEgg = document.querySelectorAll('.level--egg');
-let levelCaterpillar = document.querySelectorAll('.level--caterpillar');
-let levelButterfly = document.querySelectorAll('.level--butterfly');
+let modalGameIcons = document.querySelectorAll('.modal__level__icon');
+let levelEgg = document.getElementById('level--egg');
+let levelCaterpillar = document.getElementById('level--caterpillar');
+let levelButterfly = document.getElementById('level--butterfly');
 let readyToPlay = document.querySelector('.btn__start__play');
 let closeModal = document.querySelector('.modal__close');
 let colorBtn = document.querySelectorAll('.btn__color__select'); 
@@ -279,43 +280,45 @@ function letsPlay() {
         playGame();
     });
 }
-function startEggLevel() {
-    resetCountdownClock();
-    hideOptionImages();
-    resetScore();
-    imageFadeIn();
+function playModalLevel() {
+
+    let modalGame = event.target.id;
+
+    if (modalGame == "modal--level--egg") {
+        playEggLevel();
+    } if (modalGame == "modal--level--caterpillar") {
+        playCaterpillarLevel();     
+    } if (modalGame == "modal--level--butterfly") {
+        playButterflyLevel();
+    }
     letsPlay();
-    playEggLevel();
 }
-function startCaterpillarLevel() {
+function startLevelGame(){
     resetCountdownClock();
     hideOptionImages();
     resetScore();
-    imageFadeIn();
     letsPlay();
-    playCaterpillarLevel();
-}
-function startButterflyLevel() {
-    resetCountdownClock();
-    hideOptionImages();
-    resetScore();
-    imageFadeIn();
-    letsPlay();
-    playButterflyLevel();
+
+    let gameSelect = event.target.id;
+
+    if (gameSelect == "level--egg") {
+        playEggLevel();
+    } if (gameSelect == "level--caterpillar") {
+        playCaterpillarLevel();     
+    } if (gameSelect == "level--butterfly") {
+        playButterflyLevel();
+    }
 }
 
 readyToPlay.addEventListener('click', hideModal);
 readyToPlay.addEventListener('click', playGame);
 closeModal.addEventListener('click', letsPlay);
-for (let i = 0; i < levelEgg.length ; i++){
-    levelEgg[i].addEventListener('click', startEggLevel);
+for (let i = 0 ; i < modalGameIcons.length ; i++){
+    modalGameIcons[i].addEventListener('click', playModalLevel);
 }
-for (let i = 0; i < levelCaterpillar.length ; i++){
-    levelCaterpillar[i].addEventListener('click', startCaterpillarLevel);
-}
-for (let i = 0; i < levelButterfly.length ; i++){
-    levelButterfly[i].addEventListener('click', startButterflyLevel);
-}
+levelEgg.addEventListener('click', startLevelGame);
+levelCaterpillar.addEventListener('click', startLevelGame);
+levelButterfly.addEventListener('click', startLevelGame);
 for (let i = 0 ; i < colorBtn.length ; i++){
   colorBtn[i].addEventListener('click', changeBgColor);
 }
