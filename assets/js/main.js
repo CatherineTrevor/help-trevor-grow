@@ -2,7 +2,7 @@
 /*globals $:false */
 "-W117";true;
 
-const welcomeModal = document.querySelector('.welcome__modal'); 
+let welcomeModal = document.querySelector('.welcome__modal'); 
 let levelEgg = document.querySelectorAll('.level--egg');
 let levelCaterpillar = document.querySelectorAll('.level--caterpillar');
 let levelButterfly = document.querySelectorAll('.level--butterfly');
@@ -10,7 +10,37 @@ let readyToPlay = document.querySelector('.btn__start__play');
 let closeModal = document.querySelector('.modal__close');
 let colorBtn = document.querySelectorAll('.btn__color__select'); 
 let imageSelect = document.querySelectorAll('.option__image__picture'); 
-const mediaQuery = window.matchMedia('(max-width: 768px)');
+let mediaQuery = window.matchMedia('(max-width: 768px)');
+let imagesArrayEgg = [
+    "./assets/images/egg_level/banana_single1.jpg",
+    "./assets/images/egg_level/apple_single1.jpg",
+    "./assets/images/egg_level/lemon_single1.jpg",
+    "./assets/images/egg_level/orange_single1.jpg",
+    "./assets/images/egg_level/pear_single1.jpg",
+    "./assets/images/egg_level/pineapple_single1.jpg",
+    "./assets/images/egg_level/strawberry_single1.jpg",
+        ];
+let imagesArrayCaterpillar = [
+    "./assets/images/caterpillar_level/banana_3.jpg",
+    "./assets/images/caterpillar_level/apple_3.jpg",
+    "./assets/images/caterpillar_level/lemon_3.jpg",
+    "./assets/images/caterpillar_level/orange_3.jpg",
+    "./assets/images/caterpillar_level/pear_3.jpg",
+    "./assets/images/caterpillar_level/pineapple_3.jpg",
+    "./assets/images/caterpillar_level/strawberry_3.jpg",   
+        ];
+let imagesArrayButterfly = [
+    "./assets/images/butterfly_level/apples_6.jpg",
+    "./assets/images/butterfly_level/apples_9.jpg",
+    "./assets/images/butterfly_level/bananas_4.jpg",
+    "./assets/images/butterfly_level/bananas_7.jpg",
+    "./assets/images/butterfly_level/bananas_9.jpg",
+    "./assets/images/butterfly_level/oranges_4.jpg",
+    "./assets/images/butterfly_level/oranges_5.jpg",
+    "./assets/images/butterfly_level/oranges_9.jpg",
+    "./assets/images/butterfly_level/pears_4.jpg",
+    "./assets/images/butterfly_level/pears_6.jpg",
+        ];
 
 function changeBgColor() {
     let btnSelect = event.target.innerText;
@@ -77,58 +107,25 @@ function shuffleImages() {
                 imagesArray = imagesArrayButterfly;
                 break;                                                
         }
-        let number = Math.floor(Math.random()*imagesArray.length); 
-        let number1 = Math.floor(Math.random()*imagesArray.length);  
-        let number2 = Math.floor(Math.random()*imagesArray.length);
+        let randomSelectionA = Math.floor(Math.random()*imagesArray.length); 
+        let randomSelectionB = Math.floor(Math.random()*imagesArray.length);  
+        let randomSelectionC = Math.floor(Math.random()*imagesArray.length);
 
-        document.getElementById("imageA").src = imagesArray[number]; 
-        document.getElementById("imageB").src = imagesArray[number1];
-        document.getElementById("imageC").src = imagesArray[number2]; 
+        document.getElementById("imageA").src = imagesArray[randomSelectionA]; 
+        document.getElementById("imageB").src = imagesArray[randomSelectionB];
+        document.getElementById("imageC").src = imagesArray[randomSelectionC]; 
 
         let answer1 = document.getElementById("imageA").src; 
         let answer2 = document.getElementById("imageB").src;
         let answer3 = document.getElementById("imageC").src;
 
-    switch (answer1) {
-        case answer2:
-        case answer3:
-            shuffleImages();
-            break;
-    } switch (answer2) {
-            case answer3:
-            shuffleImages();
-            break;
+        if (answer1 === answer2) {
+        shuffleImages();
+        } if (answer1 === answer3) {
+        shuffleImages();
+        } if (answer2 === answer3) {
+        shuffleImages();
 }}
-let imagesArrayEgg = [
-    "./assets/images/egg_level/banana_single1.jpg",
-    "./assets/images/egg_level/apple_single1.jpg",
-    "./assets/images/egg_level/lemon_single1.jpg",
-    "./assets/images/egg_level/orange_single1.jpg",
-    "./assets/images/egg_level/pear_single1.jpg",
-    "./assets/images/egg_level/pineapple_single1.jpg",
-    "./assets/images/egg_level/strawberry_single1.jpg",
-        ];
-let imagesArrayCaterpillar = [
-    "./assets/images/caterpillar_level/banana_3.jpg",
-    "./assets/images/caterpillar_level/apple_3.jpg",
-    "./assets/images/caterpillar_level/lemon_3.jpg",
-    "./assets/images/caterpillar_level/orange_3.jpg",
-    "./assets/images/caterpillar_level/pear_3.jpg",
-    "./assets/images/caterpillar_level/pineapple_3.jpg",
-    "./assets/images/caterpillar_level/strawberry_3.jpg",   
-        ];
-let imagesArrayButterfly = [
-    "./assets/images/butterfly_level/apples_6.jpg",
-    "./assets/images/butterfly_level/apples_9.jpg",
-    "./assets/images/butterfly_level/bananas_4.jpg",
-    "./assets/images/butterfly_level/bananas_7.jpg",
-    "./assets/images/butterfly_level/bananas_9.jpg",
-    "./assets/images/butterfly_level/oranges_4.jpg",
-    "./assets/images/butterfly_level/oranges_5.jpg",
-    "./assets/images/butterfly_level/oranges_9.jpg",
-    "./assets/images/butterfly_level/pears_4.jpg",
-    "./assets/images/butterfly_level/pears_6.jpg",
-        ];
 function displayAnswer() {
     let answers = [
     document.getElementById("imageA").src,
