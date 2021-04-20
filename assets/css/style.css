@@ -150,7 +150,7 @@ body {
     color: darkslategray;
     font-size: 50px;
     left: 50%;
-    padding-top: 10px;
+    padding-top: 20px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -168,7 +168,7 @@ body {
     width: 8px;
     z-index: 1;
 }
-.answer__image__container {
+.question__image__container {
     bottom: -10%;
     display: block;
     height: 200px;
@@ -177,7 +177,7 @@ body {
     text-align: center;
     width: 200px;
 }
-.answer__image__picture {
+.question__image__picture {
     width: 100%;  
 }
 .option__image__container {
@@ -416,7 +416,7 @@ body {
         padding-top: 20px;
     }
     .modal__content {
-        height: 80%;
+        height: 85%;
         width: 90%;
     }
     .game__section__middle__area {
@@ -452,14 +452,14 @@ body {
     .option__image__section {
         margin: 0 auto;
     }
-    .answer__image__container {
+    .question__image__container {
         height: 100px;
         margin-bottom: 40px;
     }
     .option__image__container {
         margin: 0 auto;
     }
-    .answer__image__picture {
+    .question__image__picture {
         width: 50%;
     }
     .option__image__picture {
@@ -500,6 +500,7 @@ body {
     }
     .correct__score__counter {
         font-size: 20px;
+        padding-top: 12px;
         top: 50%;
     }
     .modal--image--caterpillar {

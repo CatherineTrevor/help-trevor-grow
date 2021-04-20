@@ -115,31 +115,31 @@ function shuffleImages() {
         document.getElementById("imageB").src = imagesArray[randomSelectionB];
         document.getElementById("imageC").src = imagesArray[randomSelectionC]; 
 
-        let answer1 = document.getElementById("imageA").src; 
-        let answer2 = document.getElementById("imageB").src;
-        let answer3 = document.getElementById("imageC").src;
+        let option1 = document.getElementById("imageA").src; 
+        let option2 = document.getElementById("imageB").src;
+        let option3 = document.getElementById("imageC").src;
 
-        if (answer1 === answer2) {
+        if (option1 === option2) {
         shuffleImages();
-        } if (answer1 === answer3) {
+        } if (option1 === option3) {
         shuffleImages();
-        } if (answer2 === answer3) {
+        } if (option2 === option3) {
         shuffleImages();
 }}
 function displayQuestionImage() {
-    let answers = [
+    let options = [
     document.getElementById("imageA").src,
     document.getElementById("imageB").src,
     document.getElementById("imageC").src,
 ]; 
-    let answerImage = Math.floor(Math.random()*answers.length); 
-    document.querySelector('.answer__image__picture').src = answers[answerImage];
+    let questionImage = Math.floor(Math.random()*options.length); 
+    document.querySelector('.question__image__picture').src = options[questionImage];
 }
 function imageFadeOut() {
-    $('.answer__image__picture').fadeTo(5000, 0.01);
+    $('.question__image__picture').fadeTo(5000, 0.01);
 }
 function imageFadeIn() {
-    $('.answer__image__picture').fadeTo(0, 1);   
+    $('.question__image__picture').fadeTo(0, 1);   
 }
 function displayOptionImages() {
     $('.option__image__picture').removeClass('hide');
@@ -159,9 +159,9 @@ function playGame() {
     startCountdownClock();
 }
 function checkAnswer () {
-    let answerImage = document.querySelector('.answer__image__picture').src;
+    let questionImage = document.querySelector('.question__image__picture').src;
     let btnClick = event.target.src;
-        switch (answerImage) {
+        switch (questionImage) {
             case btnClick: 
             incrementScore();
             correctAnswerAlert();
