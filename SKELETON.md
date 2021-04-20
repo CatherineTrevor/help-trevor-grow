@@ -26,7 +26,7 @@
 
 ![wireframe_mobile_play](supporting_docs/wireframe_play_mobile.jpg)
 
-**Play area detail** <a id="play_detail"></a>
+**Play area detail** <a name="play_detail"></a>
 
 ![wireframe_images](supporting_docs/wireframe_images_detail.jpg)
 
