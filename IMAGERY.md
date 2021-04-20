@@ -62,10 +62,14 @@ Image by <a href="https://pixabay.com/users/skitterphoto-324082/?utm_source=link
 
 Image by <a href="https://pixabay.com/users/varintorn-2453766/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2121307">Varintorn Kantawong</a> from <a href="https://pixabay.com/photos/lemon-fruit-vegetable-2121307/">Pixabay</a>
 
-For the caterpillar and butterfly levels which uses images of multiple fruits, the images were created using MS Powerpoint.
+**Multiple fruit**
+
+<img src="/assets/images/caterpillar_level/orange_3.jpg" height="100">
+
+For the caterpillar and butterfly levels which uses images of multiple fruits, the single fruit images were copied using MS PowerPoint, to create the images of multiple fruit.
 
 **Talking Trevor**
 
 <img src="/assets/images/modal_talking_caterpillar.jpg" height="100">
 
-This image was created using MS Powerpoint.
+This image was created using MS PowerPoint.

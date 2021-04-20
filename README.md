@@ -27,8 +27,10 @@
 # Project Overview
 
 This game has been built as part of the Milestone Two project with the Code Institute. The project augments the lessons from module 1 regarding HTML5 and CSS and introduces JavaScript and jQuery.
-Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A); it fades away after 5 seconds and then three images underneath appear (Images A, B and C), one of which is always the same as Image A ([see wireframe in SKELETON.md](SKELETON.md/#play_detail)).  
-The player then selects the same item from the three images displayed to gain a point and move to a new image. There are three levels, each slightly more difficult than the last level. To move to the next level, the player must reach 10 points.
+
+Help Trevor Grow is a free-to-play, simple memory game designed for children approx. age 3 - 5 years old. One item of fruit is displayed in the middle of the playing area (Image A); it fades away after 5 seconds and then three images appear underneath (Images A, B and C), one of which is always the same as Image A ([see wireframe in SKELETON.md](SKELETON.md/#play_detail)).
+
+The player clicks on one of the three options, and if it is the same as the image originally displayed, they gain a point and move to a new image. There are three levels, each slightly more difficult than the last. To move to the next level, the player must reach 10 points.
 
 # User Experience Design
 
@@ -37,7 +39,7 @@ The player then selects the same item from the three images displayed to gain a 
 The game is designed primarily for use on a desktop, with limited help needed from an adult where a player can follow instructions and/or use a mouse without assistance. 
 For players that cannot use a mouse, the game is best played on a touch screen device (tablet, mobile phone for example). Having received guidance from a qualified Early Years Manager to ensure the game is age-appropriate, there must be nothing unnecessary on the screen to distract the player, allowing them to focus on the game.
 
-The levels available increase in difficulty:
+The levels increase in difficulty:
 
 **Egg**
 
@@ -82,7 +84,7 @@ Game level example
 </div>
 
 
-Designed as the hardest option, this will show a higher quantity of fruit Image A, and then differing quantities of different fruit below. This means the player must not only note the type of fruit but also count it, making it slightly more difficult. The target age for this level is 5.
+Designed as the hardest option, this shows a higher quantity of fruit in Image A, and then differing quantities of different fruit below. The player must not only note the type of fruit but also count it as there may appear the same type of fruit in the options, making it slightly more difficult. The target age for this level is 5.
 
 Although there are three levels of difficulty, each level is loosely based on age range, but it is not intended as a test to see what "level" the child is at. The game is for fun can be played as many times as required.
 
@@ -109,7 +111,7 @@ The game must be colorful and appealing to the player, whilst to a degree, educa
 
 **Child first-time visitor goals:**
 
-    a. As a child first-time visitor, I want to quickly understand the rules of the game.
+    a. As a child first-time visitor, I want to quickly understand how to play the game.
 
     b. As a child first-time visitor, I want to have fun playing an online game.
 
@@ -129,14 +131,14 @@ Based on the User Stories from the target audience, the game contains the follow
 
  Feature  | Details  |
 |---|---|
-| Nav bar| Links to "How to play", "About" and "Contact" info always from the top of the page |
+| Nav bar| Links to "How to play", "About" and "Contact" info always from the top of the page. |
 | Introduction pop-up modal | Basic information about the game and how to play. This pop-up modal displays automatically on site opening, so there is only one file/page. |
 | Footer | Copyright logo.  |
-| Images | Fun, colorful, age-appropriate. The images of the fruit will be very simple, with nothing else included (i.e. not in a basket or on a tree).  |
+| Images | Fun, colorful, age-appropriate. The images of the fruit will be very simple, with nothing else included (i.e. not in a basket, on a tree and without words).  |
 | About | Background information about why the game exists. This will be displayed underneath the playing area. |
 | Contact | Email address.  |
 | Play | Large colorful buttons representing each level, to start and play the game, so it is clear to the player what they should do.  |
-| Color options | Color options to change the background so the player can personalise the game and have an appropriate level of control. |
+| Color options | Color options to change the background so the player can personalize the game and have an appropriate level of control. |
 | Correct / Incorrect answer pop-up | Clear information, whether the player selected the correct or incorrect answer. |
 | Correct answer marker | Clear information that the player has answered the questions correctly which increments the score after every correct answer. There will not be a counter for incorrect answers. |
 
@@ -195,7 +197,7 @@ This project uses the following languages:
 This project was created on [GitHub](http://www.github.com/) and uses the following libraries and frameworks:
 
 * [Balsamiq](http://www.balsamiq.com/) - used to create all wireframes
-* [Bootstrap](http://getbootstrap.com/) - Bootstrap was used for part of the grid structure and was heavily modified to meet the needs of the project
+* [Bootstrap](http://getbootstrap.com/) - Bootstrap was used for the grid structure and buttons, and was heavily modified to meet the needs of the project
 * [Google Fonts](https://fonts.google.com/specimen/RocknRoll+One?preview.text_type=custom&preview.text=Help%20feed%20Trevor%20the%20Caterpillar!&selection.family=RocknRoll+One) - RocknRoll
 * [Font Awesome](http://www.fontawesome.com/) - [star](https://fontawesome.com/icons/star?style=regular) for the correct answer counter, [copyright logo](https://fontawesome.com/icons/copyright?style=regular)
 * [BEM](http://getbem.com/introduction/) - used as the format for CSS
@@ -259,7 +261,7 @@ Alternatively, select "Open with Github Desktop".
 ## Credits
 
 * YouTube tutorials on JavaScript - [Web Dev Simplified](https://www.youtube.com/watch?v=Ki0XXrlKlHY); [Adam Khoury](https://www.youtube.com/watch?v=4uL9bAKOaVQ); [The Coding Train](https://www.youtube.com/watch?v=oPpnCh7InLY) - YouTube video to help understand branching in Github
-* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade To]( https://www.w3schools.com/jquery/jquery_fade.asp); 
+* [W3 Schools](https://www.w3schools.com) - [modal pop-ups](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal); [fade to]( https://www.w3schools.com/jquery/jquery_fade.asp); 
 [hover](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 * [Stackoverflow](https://www.stackoverflow.com/) - [countdown timer](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown); 
 [jshint error](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const); [jshint jQuery error](https://stackoverflow.com/questions/8852765/jshint-and-jquery-is-not-defined);

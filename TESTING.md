@@ -38,7 +38,7 @@ The following gives examples of where the deployed site meets the needs of the u
 
 | User story | Requirement met
 |---|---|
-| a. As a child first-time visitor, I want to quickly understand the rules of the game. | ![Userstory Child A](supporting_docs/userstory_child_a.jpg) |
+| a. As a child first-time visitor, I want to quickly understand how to play the game. | ![Userstory Child A](supporting_docs/userstory_child_a.jpg) |
 | b. As a child first-time visitor, I want to have fun playing an online game. | Feedback from numerous testers: their children enjoyed playing the game, gaining a new point and moving to the next level. They also enjoyed changing the colors in the game, which many did whilst playing. |
 | c. As a child first-time visitor, I want to have some independence in play and feel the game is personally for me, by making my own choices. | ![Userstory Child C](supporting_docs/userstory_child_c.jpg)|
 | d. As a child first-time visitor, I want to feel good when I select the correct option. | ![Userstory Child D](supporting_docs/userstory_child_d.jpg)|
@@ -79,7 +79,7 @@ Based on much research and attempting setTimeout and numerous functions, it has 
 
 Discovered by a Slack user during testing.
 
-**Code validator**
+**Code validators**
 
 **HTML**
 
